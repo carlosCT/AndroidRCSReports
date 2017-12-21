@@ -765,7 +765,7 @@ input[type="checkbox"]:checked + label:before {
     font-size: 14px;
     display: block;
     padding: 0px 15px;
-    margin-top: 10px;
+    margin-top: 5px;
     margin-bottom: 10px;
     color: rgb(88,88,88);
 }
@@ -788,9 +788,9 @@ hr {
     position: relative;
     z-index: 20;
     padding: 0 5%;
-    height: 44px;
+    height: 40px;
     width: 100%;
-    line-height: 32pt;
+    line-height: 30pt;
 }
 .item.selected{    
     color: #fff;
@@ -829,9 +829,9 @@ hr {
 .store h1{
     width: 100%;
     height: 32px;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;    
-    line-height: 1.6em;
+    line-height: 2.2em;
     white-space: pre-line;
     color: #111;
 }
@@ -870,21 +870,22 @@ hr {
 }
 .actual p,.global p,
 .actual i,.global i,
-.actual span,.global span{
+.actual span,.global span,
+.aditional p, .aditional i, .aditional span{
     display: inline-block;
 }
-.actual i,.global i{
+.actual i,.global i,.aditional i{
     width: 12%;
     font-size: 16px;
     font-style: normal;
     color: #0000CD;
 }
-.actual p,.global p{
+.actual p,.global p,.aditional p{
     width: 26.5%;
     font-size: 16px;
     text-align: left;
 }
-.actual span,.global span{
+.actual span,.global span,.aditional span{
     width: 23%;
     padding-right: 0;
     padding-top: 4pt;
@@ -893,6 +894,10 @@ hr {
     font-size: 16px;
     text-align: center;
     color: white !important;
+}
+.aditional p{
+    padding-top:17px;
+    padding-bottom:17px;
 }
 .actual span.red, .global span.red{
     background-color: #CE291E;
@@ -904,6 +909,10 @@ hr {
 }
 .actual span.ambar, .global span.ambar {
     background-color: #FF8C00;
+    border-radius: 8pt;
+}
+.aditional span.blue{
+    background-color: #0000CD;
     border-radius: 8pt;
 }
 
@@ -1791,16 +1800,17 @@ text{
     }
     .actual i, .global i,
     .actual p, .global p,
-    .actual span, .global span {
+    .actual span, .global span,
+    .aditional i,.aditional p,.aditional span {
         font-size: 18pt;
     }
-    .actual p, .global p{
+    .actual p, .global p, .aditional p{
         width: 31.5%;
     }
-    .actual i, .global i {
+    .actual i, .global i, .aditional i {
         width: 9%;
     }
-    .actual span, .global span {
+    .actual span, .global span, .aditional span {
         width: 19%;
     }
     .actual span, .global span{
@@ -1928,7 +1938,7 @@ text{
     .hybrid_bg{
         background-image: url('../img/background_667.jpg') !important;    
     }
-    .actual span, .global span{
+    .actual span, .global span, .aditional span{
         padding-top: 8px;
         padding-bottom: 8px;
         border-radius: 4pt;
@@ -1937,10 +1947,10 @@ text{
     .store{
         padding: 4pt 6%;
     }
-    .actual i, .global i {
+    .actual i, .global i, .aditional i {
         width: 11%;
     }
-    .actual p, .global p {
+    .actual p, .global p, .aditional p {
         width: 23.5%;
     }
     .innerLi {
@@ -1991,15 +2001,15 @@ text{
     .item .box, .menu .box{
         padding-left: 80px;
     }
-    .actual i, .global i {
+    .actual i, .global i, .aditional i {
         width: 13%;
         font-size: 11pt;
     }
-    .actual p, .global p {
+    .actual p, .global p, .aditional p {
         width: 26.5%;
         font-size: 10pt;
     }
-    .actual span, .global span {
+    .actual span, .global span, .aditional span {
         width: 21%;
         padding:0 4pt;
         padding-top: 6pt;
