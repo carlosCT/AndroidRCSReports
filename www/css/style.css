@@ -1234,10 +1234,14 @@ div[class^="detalle-"] span{
     font-size: 14px;
     display: inline-block;
 }
-.infoReport1 i{width: 15%; color: #0000CD;}
+.infoReport1 i{
+    width: 15%; 
+    color: #0000CD;
+    padding-bottom: 10px;
+}
 .infoReport1 span{
     width: 28%;
-    vertical-align: -webkit-baseline-middle;
+    vertical-align: text-top;
 }
 
 
@@ -1838,13 +1842,16 @@ text{
     .modal-dialog{
         width: 525px;
     }
+    .dictionary-modal{
+        width: 640px;
+    }
     .infoReport1 i, .infoReport1 span,
     .modal-title{
         font-size: 15pt;
     }
     .infoReport1 span{
         width: 38%;
-        vertical-align: inherit; 
+        vertical-align: text-top; 
     }
     .infoReport1 i{
         width: 11%;
