@@ -158,7 +158,7 @@ function downloadByCompany() {
 
     var lblNumVisits = "";
     var lblNumTx = "";
-    var lblConversionRate = "";
+    //var lblConversionRate = "";
     var lblAvgTicket = "";
     var lblUnitPerTx = "";
 
@@ -207,64 +207,64 @@ function downloadByCompany() {
                                 lblGlobalGoal = "MS:";
                                 lblGlobalSale = "VS:";
 
-                                lblNumVisits = "VIH";
-                                lblNumTx = "TXH";
-                                lblConversionRate = "RCH";
-                                lblAvgTicket = "TPH";
-                                lblUnitPerTx = "UTH";
+                                lblNumVisits = "VIH:";
+                                lblNumTx = "TXH:";
+                                //lblConversionRate = "RCH:";
+                                lblAvgTicket = "TPH:";
+                                lblUnitPerTx = "UTH:";
                             } else if (option == 2) {
                                 lblCurrentGoal = "MA:";
                                 lblCurrentSale = "VA:";
                                 lblGlobalGoal = "MS:";
                                 lblGlobalSale = "VS:";
 
-                                lblNumVisits = "VIA";
-                                lblNumTx = "TXA";
-                                lblConversionRate = "RCA";
-                                lblAvgTicket = "TPA";
-                                lblUnitPerTx = "UTA";
+                                lblNumVisits = "VIA:";
+                                lblNumTx = "TXA:";
+                                //lblConversionRate = "RCA:";
+                                lblAvgTicket = "TPA:";
+                                lblUnitPerTx = "UTA:";
                             } else if (option == 3) {
                                 lblCurrentGoal = "MS:";
                                 lblCurrentSale = "VS:";
                                 lblGlobalGoal = "MM:";
                                 lblGlobalSale = "VM:";
 
-                                lblNumVisits = "VIS";
-                                lblNumTx = "TXS";
-                                lblConversionRate = "RCS";
-                                lblAvgTicket = "TPS";
-                                lblUnitPerTx = "UTS";
+                                lblNumVisits = "VIS:";
+                                lblNumTx = "TXS:";
+                                //lblConversionRate = "RCS:";
+                                lblAvgTicket = "TPS:";
+                                lblUnitPerTx = "UTS:";
                             } else if (option == 4) {
                                 lblCurrentGoal = "MM:";
                                 lblCurrentSale = "VM:";
                                 lblGlobalGoal = "MAH:";
                                 lblGlobalSale = "VAH:";
 
-                                lblNumVisits = "VIM";
-                                lblNumTx = "TXM";
-                                lblConversionRate = "RCM";
-                                lblAvgTicket = "TPM";
-                                lblUnitPerTx = "UTM";
+                                lblNumVisits = "VIM:";
+                                lblNumTx = "TXM:";
+                                //lblConversionRate = "RCM:";
+                                lblAvgTicket = "TPM:";
+                                lblUnitPerTx = "UTM:";
                             } else if (option == 5) {
                                 lblCurrentGoal = "MAH:";
                                 lblCurrentSale = "VAH:";
                                 lblGlobalGoal = "MAC:";
                                 lblGlobalSale = "VAC:";
 
-                                lblNumVisits = "VIA";
-                                lblNumTx = "TXA";
-                                lblConversionRate = "RCA";
-                                lblAvgTicket = "TPA";
-                                lblUnitPerTx = "UTA";
+                                lblNumVisits = "VIA:";
+                                lblNumTx = "TXA:";
+                                //lblConversionRate = "RCA:";
+                                lblAvgTicket = "TPA:";
+                                lblUnitPerTx = "UTA:";
                             }else if (option == 6) {
                                 lblCurrentGoal = "MAP:";
                                 lblCurrentSale = "VAP:";
 
-                                lblNumVisits = "VIP";
-                                lblNumTx = "TXP";
-                                lblConversionRate = "RCP";
-                                lblAvgTicket = "ATP";
-                                lblUnitPerTx = "UTP";
+                                lblNumVisits = "VIP:";
+                                lblNumTx = "TXP:";
+                                //lblConversionRate = "RCP:";
+                                lblAvgTicket = "ATP:";
+                                lblUnitPerTx = "UTP:";
                             }
                         } else {
                             if (option == 1) {
@@ -273,64 +273,64 @@ function downloadByCompany() {
                                 lblGlobalGoal = "WG:";
                                 lblGlobalSale = "WS:";
 
-                                lblNumVisits = "TVI";
-                                lblNumTx = "TTX";
-                                lblConversionRate = "TCR";
-                                lblAvgTicket = "TAT";
-                                lblUnitPerTx = "TUT";
+                                lblNumVisits = "TVI:";
+                                lblNumTx = "TTX:";
+                                //lblConversionRate = "TCR:";
+                                lblAvgTicket = "TAT:";
+                                lblUnitPerTx = "TUT:";
                             } else if (option == 2) {
                                 lblCurrentGoal = "YG:";
                                 lblCurrentSale = "YS:";
                                 lblGlobalGoal = "WG:";
                                 lblGlobalSale = "WS:";
 
-                                lblNumVisits = "YVI";
-                                lblNumTx = "YTX";
-                                lblConversionRate = "YCR";
-                                lblAvgTicket = "YAT";
-                                lblUnitPerTx = "YUT";
+                                lblNumVisits = "YVI:";
+                                lblNumTx = "YTX:";
+                                //lblConversionRate = "YCR:";
+                                lblAvgTicket = "YAT:";
+                                lblUnitPerTx = "YUT:";
                             } else if (option == 3) {
                                 lblCurrentGoal = "WG:";
                                 lblCurrentSale = "WS:";
                                 lblGlobalGoal = "MG:";
                                 lblGlobalSale = "MS:";
 
-                                lblNumVisits = "WVI";
-                                lblNumTx = "WTX";
-                                lblConversionRate = "WCR";
-                                lblAvgTicket = "WAT";
-                                lblUnitPerTx = "WUT";
+                                lblNumVisits = "WVI:";
+                                lblNumTx = "WTX:";
+                                //lblConversionRate = "WCR:";
+                                lblAvgTicket = "WAT:";
+                                lblUnitPerTx = "WUT:";
                             } else if (option == 4) {
                                 lblCurrentGoal = "MG:";
                                 lblCurrentSale = "MS:";
                                 lblGlobalGoal = "AG:";
                                 lblGlobalSale = "AS:";
 
-                                lblNumVisits = "MVI";
-                                lblNumTx = "MTX";
-                                lblConversionRate = "MCR";
-                                lblAvgTicket = "MAT";
-                                lblUnitPerTx = "MUT";
+                                lblNumVisits = "MVI:";
+                                lblNumTx = "MTX:";
+                                //lblConversionRate = "MCR:";
+                                lblAvgTicket = "MAT:";
+                                lblUnitPerTx = "MUT:";
                             } else if (option == 5) {
                                 lblCurrentGoal = "AG:";
                                 lblCurrentSale = "AS:";
                                 lblGlobalGoal = "CG:";
                                 lblGlobalSale = "CS:";
 
-                                lblNumVisits = "AVI";
-                                lblNumTx = "ATX";
-                                lblConversionRate = "ACR";
-                                lblAvgTicket = "AAT";
-                                lblUnitPerTx = "AUT";
+                                lblNumVisits = "AVI:";
+                                lblNumTx = "ATX:";
+                                //lblConversionRate = "ACR:";
+                                lblAvgTicket = "AAT:";
+                                lblUnitPerTx = "AUT:";
                             }else if (option == 6) {
                                 lblCurrentGoal = "LYG:";
                                 lblCurrentSale = "LYS:";
 
-                                lblNumVisits = "LVI";
-                                lblNumTx = "LTX";
-                                lblConversionRate = "LCR";
-                                lblAvgTicket = "LAT";
-                                lblUnitPerTx = "LUT";
+                                lblNumVisits = "LVI:";
+                                lblNumTx = "LTX:";
+                                //lblConversionRate = "LCR:";
+                                lblAvgTicket = "LAT:";
+                                lblUnitPerTx = "LUT:";
                             }
                         }
 
@@ -442,25 +442,24 @@ function downloadByCompany() {
                                 mostrar += "<p>" + parseFloat(payTotalGlobal).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
                                 mostrar += "<span class='" + colorGlobal + "'>" + percentGlobal + " %</span>";
                                 mostrar += "</div>";
+
+                                //Additional information (conversion rate)
+                                mostrar += "<hr>"
+                                mostrar += "<div class='aditional'>";
+                                mostrar += "<i>" + lblNumVisits + "</i>";
+                                mostrar += "<p>" + parseFloat(numVisits).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
+                                mostrar += "<i>" + lblNumTx + "</i>";
+                                mostrar += "<p>" + parseFloat(numTx).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
+                                mostrar += "<span class='" + colorConvRate + "'>" + conversionRate + " %</span>";
+                                mostrar += "</div>";
+
+                                mostrar += "<div class='aditional'>";
+                                mostrar += "<i>" + lblAvgTicket + "</i>";
+                                mostrar += "<p>" + parseFloat(avgTicket).toFixed(1).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
+                                mostrar += "<i>" + lblUnitPerTx + "</i>";
+                                mostrar += "<p>" + parseFloat(unitPerTx).toFixed(1).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
+                                mostrar += "</div>";
                             }
-
-                            //Additional information (conversion rate)
-                            mostrar += "<hr>"
-                            mostrar += "<div class='aditional'>";
-                            mostrar += "<i>" + lblNumVisits + "</i>";
-                            mostrar += "<p>" + parseFloat(numVisits).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
-                            mostrar += "<i>" + lblNumTx + "</i>";
-                            mostrar += "<p>" + parseFloat(numTx).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
-                            mostrar += "<span class='" + colorConvRate + "'>" + conversionRate + " %</span>";
-                            mostrar += "</div>";
-
-                            mostrar += "<div class='aditional'>";
-                            mostrar += "<i>" + lblAvgTicket + "</i>";
-                            mostrar += "<p>" + parseFloat(avgTicket).toFixed(1).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
-                            mostrar += "<i>" + lblUnitPerTx + "</i>";
-                            mostrar += "<p>" + parseFloat(unitPerTx).toFixed(1).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
-                            mostrar += "</div>";
-                            
                         });
                             mostrar +="<div id='graphCompanyDetails' class='graphic showGraphic'>";
                             mostrar += "</div>";
@@ -573,7 +572,7 @@ function downloadByRegion() {
 
     var lblNumVisits = "";
     var lblNumTx = "";
-    var lblConversionRate = "";
+    //var lblConversionRate = "";
     var lblAvgTicket = "";
     var lblUnitPerTx = "";
 
@@ -625,64 +624,64 @@ function downloadByRegion() {
                                 lblGlobalGoal = "MS:";
                                 lblGlobalSale = "VS:";
 
-                                lblNumVisits = "VIH";
-                                lblNumTx = "TXH";
-                                lblConversionRate = "RCH";
-                                lblAvgTicket = "TPH";
-                                lblUnitPerTx = "UTH";
+                                lblNumVisits = "VIH:";
+                                lblNumTx = "TXH:";
+                                //lblConversionRate = "RCH:";
+                                lblAvgTicket = "TPH:";
+                                lblUnitPerTx = "UTH:";
                             } else if (option == 2) {
                                 lblCurrentGoal = "MA:";
                                 lblCurrentSale = "VA:";
                                 lblGlobalGoal = "MS:";
                                 lblGlobalSale = "VS:";
 
-                                lblNumVisits = "VIA";
-                                lblNumTx = "TXA";
-                                lblConversionRate = "RCA";
-                                lblAvgTicket = "TPA";
-                                lblUnitPerTx = "UTA";
+                                lblNumVisits = "VIA:";
+                                lblNumTx = "TXA:";
+                                //lblConversionRate = "RCA:";
+                                lblAvgTicket = "TPA:";
+                                lblUnitPerTx = "UTA:";
                             } else if (option == 3) {
                                 lblCurrentGoal = "MS:";
                                 lblCurrentSale = "VS:";
                                 lblGlobalGoal = "MM:";
                                 lblGlobalSale = "VM:";
 
-                                lblNumVisits = "VIS";
-                                lblNumTx = "TXS";
-                                lblConversionRate = "RCS";
-                                lblAvgTicket = "TPS";
-                                lblUnitPerTx = "UTS";
+                                lblNumVisits = "VIS:";
+                                lblNumTx = "TXS:";
+                                //lblConversionRate = "RCS:";
+                                lblAvgTicket = "TPS:";
+                                lblUnitPerTx = "UTS:";
                             } else if (option == 4) {
                                 lblCurrentGoal = "MM:";
                                 lblCurrentSale = "VM:";
                                 lblGlobalGoal = "MAH:";
                                 lblGlobalSale = "VAH:";
 
-                                lblNumVisits = "VIM";
-                                lblNumTx = "TXM";
-                                lblConversionRate = "RCM";
-                                lblAvgTicket = "TPM";
-                                lblUnitPerTx = "UTM";
+                                lblNumVisits = "VIM:";
+                                lblNumTx = "TXM:";
+                                //lblConversionRate = "RCM:";
+                                lblAvgTicket = "TPM:";
+                                lblUnitPerTx = "UTM:";
                             } else if (option == 5) {
                                 lblCurrentGoal = "MAH:";
                                 lblCurrentSale = "VAH:";
                                 lblGlobalGoal = "MAC:";
                                 lblGlobalSale = "VAC:";
 
-                                lblNumVisits = "VIA";
-                                lblNumTx = "TXA";
-                                lblConversionRate = "RCA";
-                                lblAvgTicket = "TPA";
-                                lblUnitPerTx = "UTA";
+                                lblNumVisits = "VIA:";
+                                lblNumTx = "TXA:";
+                                //lblConversionRate = "RCA:";
+                                lblAvgTicket = "TPA:";
+                                lblUnitPerTx = "UTA:";
                             }else if (option == 6) {
                                 lblCurrentGoal = "MAP:";
                                 lblCurrentSale = "VAP:";
 
-                                lblNumVisits = "VIP";
-                                lblNumTx = "TXP";
-                                lblConversionRate = "RCP";
-                                lblAvgTicket = "ATP";
-                                lblUnitPerTx = "UTP";
+                                lblNumVisits = "VIP:";
+                                lblNumTx = "TXP:";
+                                //lblConversionRate = "RCP:";
+                                lblAvgTicket = "ATP:";
+                                lblUnitPerTx = "UTP:";
                             }
                         } else {
                             if (option == 1) {
@@ -691,64 +690,64 @@ function downloadByRegion() {
                                 lblGlobalGoal = "WG:";
                                 lblGlobalSale = "WS:";
 
-                                lblNumVisits = "TVI";
-                                lblNumTx = "TTX";
-                                lblConversionRate = "TCR";
-                                lblAvgTicket = "TAT";
-                                lblUnitPerTx = "TUT";
+                                lblNumVisits = "TVI:";
+                                lblNumTx = "TTX:";
+                                //lblConversionRate = "TCR:";
+                                lblAvgTicket = "TAT:";
+                                lblUnitPerTx = "TUT:";
                             } else if (option == 2) {
                                 lblCurrentGoal = "YG:";
                                 lblCurrentSale = "YS:";
                                 lblGlobalGoal = "WG:";
                                 lblGlobalSale = "WS:";
 
-                                lblNumVisits = "YVI";
-                                lblNumTx = "YTX";
-                                lblConversionRate = "YCR";
-                                lblAvgTicket = "YAT";
-                                lblUnitPerTx = "YUT";
+                                lblNumVisits = "YVI:";
+                                lblNumTx = "YTX:";
+                                //lblConversionRate = "YCR:";
+                                lblAvgTicket = "YAT:";
+                                lblUnitPerTx = "YUT:";
                             } else if (option == 3) {
                                 lblCurrentGoal = "WG:";
                                 lblCurrentSale = "WS:";
                                 lblGlobalGoal = "MG:";
                                 lblGlobalSale = "MS:";
 
-                                lblNumVisits = "WVI";
-                                lblNumTx = "WTX";
-                                lblConversionRate = "WCR";
-                                lblAvgTicket = "WAT";
-                                lblUnitPerTx = "WUT";
+                                lblNumVisits = "WVI:";
+                                lblNumTx = "WTX:";
+                                //lblConversionRate = "WCR:";
+                                lblAvgTicket = "WAT:";
+                                lblUnitPerTx = "WUT:";
                             } else if (option == 4) {
                                 lblCurrentGoal = "MG:";
                                 lblCurrentSale = "MS:";
                                 lblGlobalGoal = "AG:";
                                 lblGlobalSale = "AS:";
 
-                                lblNumVisits = "MVI";
-                                lblNumTx = "MTX";
-                                lblConversionRate = "MCR";
-                                lblAvgTicket = "MAT";
-                                lblUnitPerTx = "MUT";
+                                lblNumVisits = "MVI:";
+                                lblNumTx = "MTX:";
+                                //lblConversionRate = "MCR:";
+                                lblAvgTicket = "MAT:";
+                                lblUnitPerTx = "MUT:";
                             } else if (option == 5) {
                                 lblCurrentGoal = "AG:";
                                 lblCurrentSale = "AS:";
                                 lblGlobalGoal = "CG:";
                                 lblGlobalSale = "CS:";
 
-                                lblNumVisits = "AVI";
-                                lblNumTx = "ATX";
-                                lblConversionRate = "ACR";
-                                lblAvgTicket = "AAT";
-                                lblUnitPerTx = "AUT";
+                                lblNumVisits = "AVI:";
+                                lblNumTx = "ATX:";
+                                //lblConversionRate = "ACR:";
+                                lblAvgTicket = "AAT:";
+                                lblUnitPerTx = "AUT:";
                             }else if (option == 6) {
                                 lblCurrentGoal = "LYG:";
                                 lblCurrentSale = "LYS:";
 
-                                lblNumVisits = "LVI";
-                                lblNumTx = "LTX";
-                                lblConversionRate = "LCR";
-                                lblAvgTicket = "LAT";
-                                lblUnitPerTx = "LUT";
+                                lblNumVisits = "LVI:";
+                                lblNumTx = "LTX:";
+                                //lblConversionRate = "LCR:";
+                                lblAvgTicket = "LAT:";
+                                lblUnitPerTx = "LUT:";
                             }
                         }
 
@@ -868,35 +867,29 @@ function downloadByRegion() {
                                 mostrar += "<i class='type'>" + lblGlobalSale + "</i>";
                                 mostrar += "<p class='sale-number'>" + parseFloat(payTotalGlobal).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
                                 mostrar += "<span class='" + colorGlobal + "'>" + percentGlobal + " %</span>";
+                                mostrar += "</div>";
 
+                                //Additional information (conversion rate)
+                                mostrar += "<div class='aditional'>";
+                                mostrar += "<i>" + lblNumVisits + "</i>";
+                                mostrar += "<p>" + parseFloat(numVisits).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
+                                mostrar += "<i>" + lblNumTx + "</i>";
+                                mostrar += "<p>" + parseFloat(numTx).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
+                                mostrar += "<span class='" + colorConvRate + "'>" + conversionRate + " %</span>";
+                                mostrar += "</div>";
+
+                                mostrar += "<div class='aditional'>";
+                                mostrar += "<i>" + lblAvgTicket + "</i>";
+                                mostrar += "<p>" + parseFloat(avgTicket).toFixed(1).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
+                                mostrar += "<i>" + lblUnitPerTx + "</i>";
+                                mostrar += "<p>" + parseFloat(unitPerTx).toFixed(1).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
                                 mostrar += "</div>";
                             }
                             
-                            //Additional information (conversion rate)
-                            mostrar += "<div class='aditional'>";
-                            mostrar += "<i>" + lblNumVisits + "</i>";
-                            mostrar += "<p>" + parseFloat(numVisits).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
-                            mostrar += "<i>" + lblNumTx + "</i>";
-                            mostrar += "<p>" + parseFloat(numTx).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
-                            mostrar += "<span class='" + colorConvRate + "'>" + conversionRate + " %</span>";
-                            mostrar += "</div>";
-
-                            mostrar += "<div class='aditional'>";
-                            mostrar += "<i>" + lblAvgTicket + "</i>";
-                            mostrar += "<p>" + parseFloat(avgTicket).toFixed(1).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
-                            mostrar += "<i>" + lblUnitPerTx + "</i>";
-                            mostrar += "<p>" + parseFloat(unitPerTx).toFixed(1).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
-                            mostrar += "</div>";
-                            
                             mostrar += "<div class='region_store regionList' id='graph_region"+cont+"' >"
-                           
                             mostrar += "</div>";
 
-                            
                             mostrar += "</div><hr>";
-
-                           
-
                         });
                         //mostrar += "</div>";
                         $("#items").append(mostrar);
@@ -1018,7 +1011,7 @@ function downloadByStore(regionCode) {
 
     var lblNumVisits = "";
     var lblNumTx = "";
-    var lblConversionRate = "";
+    //var lblConversionRate = "";
     var lblAvgTicket = "";
     var lblUnitPerTx = "";
 
@@ -1073,64 +1066,64 @@ function downloadByStore(regionCode) {
                                 lblGlobalGoal = "MS:";
                                 lblGlobalSale = "VS:";
 
-                                lblNumVisits = "VIH";
-                                lblNumTx = "TXH";
-                                lblConversionRate = "RCH";
-                                lblAvgTicket = "TPH";
-                                lblUnitPerTx = "UTH";
+                                lblNumVisits = "VIH:";
+                                lblNumTx = "TXH:";
+                                //lblConversionRate = "RCH:";
+                                lblAvgTicket = "TPH:";
+                                lblUnitPerTx = "UTH:";
                             } else if (option == 2) {
                                 lblCurrentGoal = "MA:";
                                 lblCurrentSale = "VA:";
                                 lblGlobalGoal = "MS:";
                                 lblGlobalSale = "VS:";
 
-                                lblNumVisits = "VIA";
-                                lblNumTx = "TXA";
-                                lblConversionRate = "RCA";
-                                lblAvgTicket = "TPA";
-                                lblUnitPerTx = "UTA";
+                                lblNumVisits = "VIA:";
+                                lblNumTx = "TXA:";
+                                //lblConversionRate = "RCA:";
+                                lblAvgTicket = "TPA:";
+                                lblUnitPerTx = "UTA:";
                             } else if (option == 3) {
                                 lblCurrentGoal = "MS:";
                                 lblCurrentSale = "VS:";
                                 lblGlobalGoal = "MM:";
                                 lblGlobalSale = "VM:";
 
-                                lblNumVisits = "VIS";
-                                lblNumTx = "TXS";
-                                lblConversionRate = "RCS";
-                                lblAvgTicket = "TPS";
-                                lblUnitPerTx = "UTS";
+                                lblNumVisits = "VIS:";
+                                lblNumTx = "TXS:";
+                                //lblConversionRate = "RCS:";
+                                lblAvgTicket = "TPS:";
+                                lblUnitPerTx = "UTS:";
                             } else if (option == 4) {
                                 lblCurrentGoal = "MM:";
                                 lblCurrentSale = "VM:";
                                 lblGlobalGoal = "MAH:";
                                 lblGlobalSale = "VAH:";
 
-                                lblNumVisits = "VIM";
-                                lblNumTx = "TXM";
-                                lblConversionRate = "RCM";
-                                lblAvgTicket = "TPM";
-                                lblUnitPerTx = "UTM";
+                                lblNumVisits = "VIM:";
+                                lblNumTx = "TXM:";
+                                //lblConversionRate = "RCM:";
+                                lblAvgTicket = "TPM:";
+                                lblUnitPerTx = "UTM:";
                             } else if (option == 5) {
                                 lblCurrentGoal = "MAH:";
                                 lblCurrentSale = "VAH:";
                                 lblGlobalGoal = "MAC:";
                                 lblGlobalSale = "VAC:";
 
-                                lblNumVisits = "VIA";
-                                lblNumTx = "TXA";
-                                lblConversionRate = "RCA";
-                                lblAvgTicket = "TPA";
-                                lblUnitPerTx = "UTA";
+                                lblNumVisits = "VIA:";
+                                lblNumTx = "TXA:";
+                                //lblConversionRate = "RCA:";
+                                lblAvgTicket = "TPA:";
+                                lblUnitPerTx = "UTA:";
                             }else if(option==6){
                                 lblCurrentGoal = "MAP:";
                                 lblCurrentSale = "VAP:";
 
-                                lblNumVisits = "VIP";
-                                lblNumTx = "TXP";
-                                lblConversionRate = "RCP";
-                                lblAvgTicket = "ATP";
-                                lblUnitPerTx = "UTP";
+                                lblNumVisits = "VIP:";
+                                lblNumTx = "TXP:";
+                                //lblConversionRate = "RCP:";
+                                lblAvgTicket = "ATP:";
+                                lblUnitPerTx = "UTP:";
                             }
                         } else {
                             if (option == 1) {
@@ -1139,64 +1132,64 @@ function downloadByStore(regionCode) {
                                 lblGlobalGoal = "WG:";
                                 lblGlobalSale = "WS:";
 
-                                lblNumVisits = "TVI";
-                                lblNumTx = "TTX";
-                                lblConversionRate = "TCR";
-                                lblAvgTicket = "TAT";
-                                lblUnitPerTx = "TUT";
+                                lblNumVisits = "TVI:";
+                                lblNumTx = "TTX:";
+                                //lblConversionRate = "TCR:";
+                                lblAvgTicket = "TAT:";
+                                lblUnitPerTx = "TUT:";
                             } else if (option == 2) {
                                 lblCurrentGoal = "YG:";
                                 lblCurrentSale = "YS:";
                                 lblGlobalGoal = "WG:";
                                 lblGlobalSale = "WS:";
 
-                                lblNumVisits = "YVI";
-                                lblNumTx = "YTX";
-                                lblConversionRate = "YCR";
-                                lblAvgTicket = "YAT";
-                                lblUnitPerTx = "YUT";
+                                lblNumVisits = "YVI:";
+                                lblNumTx = "YTX:";
+                                //lblConversionRate = "YCR:";
+                                lblAvgTicket = "YAT:";
+                                lblUnitPerTx = "YUT:";
                             } else if (option == 3) {
                                 lblCurrentGoal = "WG:";
                                 lblCurrentSale = "WS:";
                                 lblGlobalGoal = "MG:";
                                 lblGlobalSale = "MS:";
 
-                                lblNumVisits = "WVI";
-                                lblNumTx = "WTX";
-                                lblConversionRate = "WCR";
-                                lblAvgTicket = "WAT";
-                                lblUnitPerTx = "WUT";
+                                lblNumVisits = "WVI:";
+                                lblNumTx = "WTX:";
+                                //lblConversionRate = "WCR:";
+                                lblAvgTicket = "WAT:";
+                                lblUnitPerTx = "WUT:";
                             } else if (option == 4) {
                                 lblCurrentGoal = "MG:";
                                 lblCurrentSale = "MS:";
                                 lblGlobalGoal = "AG:";
                                 lblGlobalSale = "AS:";
 
-                                lblNumVisits = "MVI";
-                                lblNumTx = "MTX";
-                                lblConversionRate = "MCR";
-                                lblAvgTicket = "MAT";
-                                lblUnitPerTx = "MUT";
+                                lblNumVisits = "MVI:";
+                                lblNumTx = "MTX:";
+                                //lblConversionRate = "MCR:";
+                                lblAvgTicket = "MAT:";
+                                lblUnitPerTx = "MUT:";
                             } else if (option == 5) {
                                 lblCurrentGoal = "AG:";
                                 lblCurrentSale = "AS:";
                                 lblGlobalGoal = "CG:";
                                 lblGlobalSale = "CS:";
 
-                                lblNumVisits = "AVI";
-                                lblNumTx = "ATX";
-                                lblConversionRate = "ACR";
-                                lblAvgTicket = "AAT";
-                                lblUnitPerTx = "AUT";
+                                lblNumVisits = "AVI:";
+                                lblNumTx = "ATX:";
+                                //lblConversionRate = "ACR:";
+                                lblAvgTicket = "AAT:";
+                                lblUnitPerTx = "AUT:";
                             }else if(option == 6){
                                 lblCurrentGoal = "LYG:";
                                 lblCurrentSale = "LYS:";
 
-                                lblNumVisits = "LVI";
-                                lblNumTx = "LTX";
-                                lblConversionRate = "LCR";
-                                lblAvgTicket = "LAT";
-                                lblUnitPerTx = "LUT";
+                                lblNumVisits = "LVI:";
+                                lblNumTx = "LTX:";
+                                //lblConversionRate = "LCR:";
+                                lblAvgTicket = "LAT:";
+                                lblUnitPerTx = "LUT:";
                             }
                         }
 
@@ -1346,30 +1339,29 @@ function downloadByStore(regionCode) {
                                 mostrar += "<span class='" + colorGlobal + "'>" + percentGlobal + " %</span>";
 
                                 mostrar += "</div>";
+
+                                //Additional information (conversion rate)
+                                mostrar += "<div class='aditional'>";
+                                mostrar += "<i>" + lblNumVisits + "</i>";
+                                mostrar += "<p>" + parseFloat(numVisits).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
+                                mostrar += "<i>" + lblNumTx + "</i>";
+                                mostrar += "<p>" + parseFloat(numTx).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
+                                mostrar += "<span class='" + colorConvRate + "'>" + conversionRate + " %</span>";
+                                mostrar += "</div>";
+
+                                mostrar += "<div class='aditional'>";
+                                mostrar += "<i>" + lblAvgTicket + "</i>";
+                                mostrar += "<p>" + parseFloat(avgTicket).toFixed(1).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
+                                mostrar += "<i>" + lblUnitPerTx + "</i>";
+                                mostrar += "<p>" + parseFloat(unitPerTx).toFixed(1).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
+                                mostrar += "</div>";
                             }
-
-                            //Additional information (conversion rate)
-                            mostrar += "<div class='aditional'>";
-                            mostrar += "<i>" + lblNumVisits + "</i>";
-                            mostrar += "<p>" + parseFloat(numVisits).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
-                            mostrar += "<i>" + lblNumTx + "</i>";
-                            mostrar += "<p>" + parseFloat(numTx).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
-                            mostrar += "<span class='" + colorConvRate + "'>" + conversionRate + " %</span>";
-                            mostrar += "</div>";
-
-                            mostrar += "<div class='aditional'>";
-                            mostrar += "<i>" + lblAvgTicket + "</i>";
-                            mostrar += "<p>" + parseFloat(avgTicket).toFixed(1).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
-                            mostrar += "<i>" + lblUnitPerTx + "</i>";
-                            mostrar += "<p>" + parseFloat(unitPerTx).toFixed(1).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
-                            mostrar += "</div>";
 
                             mostrar +="<div id='graph" + indice + "' class='graphic showGraphic'>";
                             mostrar += "</div>";
                             // mostrar += "</div><hr>";
                             mostrar += "</div>";
                             $("#items").append(mostrar);
-                            
 
                             mostrar = "";
                             indice++;
