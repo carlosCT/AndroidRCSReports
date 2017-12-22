@@ -68,12 +68,12 @@ function responsiveReport1() {
     var selectGeneral = $('.select-general').height();
     if ($('#divRegion').css('display') == 'none') {//no hay region
         if($('#divFilter').css('display') == 'none'){
-            $('.list').height(windowh - headerh - selectdateP - selectGeneral -20);
+            $('.list').height(windowh - headerh - selectdateP - 20);
         }else{
-            $('.list').height(windowh - headerh - selectdateP - selectGeneral -60);
+            $('.list').height(windowh - headerh - selectdateP  - 40);
         } 
     } else {
-        $('.list').height(windowh - headerh - selectdateP - selectGeneral - 70);
+        $('.list').height(windowh - headerh - selectdateP  - 50);
     }
     $('.graphic').empty();
 }
@@ -1127,16 +1127,16 @@ function downloadByStore(regionCode) {
                             }
                         } else {
                             if (option == 1) {
-                                lblCurrentGoal = "TG:";
-                                lblCurrentSale = "TS:";
-                                lblGlobalGoal = "WG:";
-                                lblGlobalSale = "WS:";
+                                lblCurrentGoal = "TG";
+                                lblCurrentSale = "TS";
+                                lblGlobalGoal = "WG";
+                                lblGlobalSale = "WS";
 
-                                lblNumVisits = "TVI:";
-                                lblNumTx = "TTX:";
+                                lblNumVisits = "TVI";
+                                lblNumTx = "TTX";
                                 //lblConversionRate = "TCR:";
-                                lblAvgTicket = "TAT:";
-                                lblUnitPerTx = "TUT:";
+                                lblAvgTicket = "TAT";
+                                lblUnitPerTx = "TUT";
                             } else if (option == 2) {
                                 lblCurrentGoal = "YG:";
                                 lblCurrentSale = "YS:";
