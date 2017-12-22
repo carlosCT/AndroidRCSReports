@@ -784,6 +784,7 @@ hr {
     border-top: 1px solid rgb(200, 199, 204);
     -webkit-transform: translate3d(0,1px,0);
     transform: translate3d(0,1px,0);
+    width: 100%;
 }
 
 .item{
@@ -803,10 +804,11 @@ hr {
 .item.innerLi>div,
 .item>.date{
     float: right;
-    /*font-size: 14px;*/
-    /*padding-right: 4%;*/
-    /*line-height: 3.3em;*/
-    height: 44px;
+    /*font-size: 14px;
+    padding-right: 4%;
+    line-height: 3.3em;
+    height: 44px;*/
+    height: 40px;
     font-size: 12px;
     padding-right: 15%;
     line-height: 3.5em;
@@ -2023,11 +2025,12 @@ text{
     .actual i, .global i, .aditional i {
         /*width: 13%;
         font-size: 11pt;*/
-        width: 14%;
+        width: 12%;
         font-size: 9pt;
     }
     .actual p, .global p, .aditional p {
-        width: 26.5%;
+        /*width: 26.5%;*/
+        width: 28.5%;
         font-size: 10pt;
     }
     .actual span, .global span, .aditional span {
@@ -2168,6 +2171,7 @@ text{
     float: left;
     padding: 0px;
     margin: 0px;
+    margin-bottom: 2px;
 }
 
 .css__section--2:nth-child(2) {
