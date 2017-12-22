@@ -250,20 +250,20 @@ function MSG_COMBO_FILTER_STORE(){
 }
 
 function MSG_LBL_DET_DIC_1(){
-    $('#TodayGoal').text("MH:");
-    $('#TodaySale').text("VH:");
-    $('#YesterdayGoal').text("MA:");
-    $('#YesterdaySale').text("VA:");
-    $('#WeekGoal').text("MS:");
-    $('#WeekSale').text("VS:");
-    $('#MonthGoal').text("MM:");
-    $('#MonthSale').text("VM:");
-    $('#AnnualGoal').text("MAH:");
-    $('#AnnualSale').text("VAH:");
-    $('#CompleteYearGoal').text("MAC:");
-    $('#CompleteYerSale').text("VAC:");
-    $('#LastYearGoal').text("MAP:");
-    $('#LastYearSale').text("VAP:");
+    $('#TodayGoal').text("MH");
+    $('#TodaySale').text("VH");
+    $('#YesterdayGoal').text("MA");
+    $('#YesterdaySale').text("VA");
+    $('#WeekGoal').text("MS");
+    $('#WeekSale').text("VS");
+    $('#MonthGoal').text("MM");
+    $('#MonthSale').text("VM");
+    $('#AnnualGoal').text("MAH");
+    $('#AnnualSale').text("VAH");
+    $('#CompleteYearGoal').text("MAC");
+    $('#CompleteYerSale').text("VAC");
+    $('#LastYearGoal').text("MAP");
+    $('#LastYearSale').text("VAP");
     $('#report1TG').text("Meta de Hoy");
     $('#report1TS').text("Venta de Hoy");
     $('#report1YG').text("Meta de Ayer");

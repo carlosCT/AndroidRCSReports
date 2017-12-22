@@ -876,6 +876,8 @@ hr {
     display: inline-block;
     text-overflow: ellipsis;
     overflow: hidden;
+    font-size: 11px;
+    text-align: right;
 }
 .actual p,.global p,
 .actual i,.global i,
@@ -1237,7 +1239,12 @@ div[class^="detalle-"] span{
 
 #ui-datepicker-div { display: block !important; }
 
-.infoReport1{display: block; width: 100%; margin-bottom: 11px;}
+.infoReport1 {
+    display: block;
+    width: 100%;
+    /*margin-bottom: 11px;*/
+    margin-bottom: 5px;
+}
 .infoReport1 i,
 .infoReport1 span{
     width: 25%;
@@ -1246,13 +1253,31 @@ div[class^="detalle-"] span{
     display: inline-block;
 }
 .infoReport1 i{
-    width: 15%; 
+    /*width: 15%;*/
+    width: 13%;
     color: #0000CD;
-    padding-bottom: 10px;
+    /* padding-bottom: 10px; */
+    vertical-align: text-top;
+    font-size: 12px;
+    padding-left: 5px;
+    box-sizing: border-box;
+    line-height: 15px;
 }
 .infoReport1 span{
-    width: 28%;
+    /*width: 34%;*/
+    width: 36%;
     vertical-align: text-top;
+    font-size: 12px;
+    line-height: 15px;
+    margin-bottom: 5px;
+    padding-right: 5px;
+    box-sizing: border-box;
+    padding-left: 10px;
+}
+
+.infoReport1 span:before {
+    content: ': ';
+    margin-left: -7px;
 }
 
 
@@ -1465,6 +1490,25 @@ button.delete{
 @media only screen and (min-width : 320px) and (max-width : 568px) { 
     .list_store{
         height: 180px;
+    }
+
+    .select-dateP .innerLi {
+        line-height: initial;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        box-sizing: border-box;
+    }
+
+   .select-dateP .innerLi #lblTodayP {
+        line-height: 10px;
+    }
+
+   .select-dateP .innerLi #time {
+        float: initial;
+        line-height: 8px;
+        font-size: 11px;
+        height: initial;
+        padding-right: initial;
     }
 }
 
@@ -2133,8 +2177,7 @@ text{
         padding: 0 3pt;
         overflow: hidden;
         text-overflow: ellipsis;
-    }
-    
+    }    
 }
 
 .radio_wrapper input, .radio_wrapper label{
@@ -2196,3 +2239,42 @@ text{
     content: ':  ';
 }
 
+.select-dateP .innerLi {
+    line-height: initial;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    box-sizing: border-box;
+}
+
+.select-dateP .innerLi #lblTodayP,
+.select-dateP .innerLi #lblToday,
+.select-dateP .innerLi #lblYesterday,
+.select-dateP .innerLi #lblWeek,
+.select-dateP .innerLi #lblMonth,
+.select-dateP .innerLi #lblYear,
+.select-dateP .innerLi #lblLastYear {
+    line-height: 10px;
+    font-size: 14px;
+    float: initial;
+    height: initial;
+    margin-bottom: 10px;
+}
+
+.select-dateP .innerLi #time,
+.select-dateP .innerLi #today,
+.select-dateP .innerLi #yesterday,
+.select-dateP .innerLi #week,
+.select-dateP .innerLi #month,
+.select-dateP .innerLi #year,
+.select-dateP .innerLi #lastYear {
+    float: initial;
+    line-height: 8px;
+    font-size: 11px;
+    height: initial;
+    padding-right: initial;
+}
+
+.css__modal--dictionary {
+    overflow: scroll;
+    height: 405px;
+}

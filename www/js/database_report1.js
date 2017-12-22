@@ -1061,16 +1061,16 @@ function downloadByStore(regionCode) {
 
                         if (current_lang == 'es') {
                             if (option == 1) {
-                                lblCurrentGoal = "MH:";
-                                lblCurrentSale = "VH:";
-                                lblGlobalGoal = "MS:";
-                                lblGlobalSale = "VS:";
+                                lblCurrentGoal = "MH";
+                                lblCurrentSale = "VH";
+                                lblGlobalGoal = "MS";
+                                lblGlobalSale = "VS";
 
-                                lblNumVisits = "VIH:";
-                                lblNumTx = "TXH:";
+                                lblNumVisits = "VIH";
+                                lblNumTx = "TXH";
                                 //lblConversionRate = "RCH:";
-                                lblAvgTicket = "TPH:";
-                                lblUnitPerTx = "UTH:";
+                                lblAvgTicket = "TPH";
+                                lblUnitPerTx = "UTH";
                             } else if (option == 2) {
                                 lblCurrentGoal = "MA:";
                                 lblCurrentSale = "VA:";
