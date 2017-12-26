@@ -76,6 +76,10 @@ function responsiveReport1() {
         $('.list').height(windowh - headerh - selectdateP  - 50);
     }
     $('.graphic').empty();
+
+    //altura responsive del modal "show_info" - FJ
+    let altModal = Number(windowh - 70) + 'px';
+    $('.css__modal--dictionary').css('height', altModal);
 }
 
 
