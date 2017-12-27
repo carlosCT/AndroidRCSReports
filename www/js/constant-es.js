@@ -130,7 +130,7 @@ function MSG_LBL_CHANGE_ALIAS_SERVERS() {
     $("#servers_list").html("Servidores");
 }
 function MSG_LBL_CHANGE_ALIAS_CLOSE() {
-    $(".close").html("Cerrar");
+    $(".close").html("X");
     $(".close.back").html("Atrás");
 }
 
@@ -829,7 +829,7 @@ function changeLanguage6(){
 //Language7
 function changeLanguage7(){
     $('#txtpreferences').text('Atrás');
-    $(".close").html("Cerrar");
+    $(".close").html("X");
     MSG_COMPANY_1();
     MSG_LBL_COMPANY_1();
     MSG_LBL_REGION_1();
@@ -860,7 +860,7 @@ function changeLanguage7(){
 //Language8
 function changeLanguage8(){
     $('#txtpreferences').text('Atrás');
-    $(".close").html("Cerrar");
+    $(".close").html("X");
     MSG_COMPANY_1();
     MSG_LBL_COMPANY_1();
     MSG_LBL_REGION_1();

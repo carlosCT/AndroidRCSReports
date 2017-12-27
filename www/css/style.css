@@ -1016,6 +1016,19 @@ div[class^="detalle-"] span{
     left: 2px;
 }
 
+.close {
+    background: #999 !important;
+    border-radius: 50%;
+    width: 23px;
+    height: 23px;
+    font-size: 12px !important;
+    line-height: 15px !important;
+    color: white;
+    cursor: pointer !important;
+    top: 8px;
+    right: 6px;
+}
+
 #lblToday,#lblYesterday,#lblWeek,#lblMonth,#lblYear,#lblLastYear{
     display: inline-block;
 }
