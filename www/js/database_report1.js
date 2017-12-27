@@ -358,7 +358,7 @@ function downloadByCompany() {
                             goalAmountGlobal = parseFloat(goalAmountGlobal.replace(",", ".")).toFixed(0);
                             payTotal = parseFloat(payTotal.replace(",", ".")).toFixed(0);
                             payTotalGlobal = parseFloat(payTotalGlobal.replace(",", ".")).toFixed(0);
-                            conversionRate = parseFloat(conversionRate.replace(",", ".")).toFixed(0);
+                            conversionRate = parseFloat(conversionRate.replace(",", "."));
                             avgTicket = parseFloat(avgTicket.replace(",", ".")).toFixed(1);
                             unitPerTx = parseFloat(unitPerTx.replace(",", ".")).toFixed(1);
 
@@ -776,7 +776,7 @@ function downloadByRegion() {
                             goalAmountGlobal = parseFloat(goalAmountGlobal.replace(",", ".")).toFixed(0);
                             payTotal = parseFloat(payTotal.replace(",", ".")).toFixed(0);
                             payTotalGlobal = parseFloat(payTotalGlobal.replace(",", ".")).toFixed(0);
-                            conversionRate = parseFloat(conversionRate.replace(",", ".")).toFixed(0);
+                            conversionRate = parseFloat(conversionRate.replace(",", "."));
                             avgTicket = parseFloat(avgTicket.replace(",", ".")).toFixed(1);
                             unitPerTx = parseFloat(unitPerTx.replace(",", ".")).toFixed(1);
 
@@ -1218,7 +1218,7 @@ function downloadByStore(regionCode) {
                             goalAmountGlobal = parseFloat(goalAmountGlobal.replace(",", ".")).toFixed(0);
                             payTotal = parseFloat(payTotal.replace(",", ".")).toFixed(0);
                             payTotalGlobal = parseFloat(payTotalGlobal.replace(",", ".")).toFixed(0);
-                            conversionRate = parseFloat(conversionRate.replace(",", ".")).toFixed(0);
+                            conversionRate = parseFloat(conversionRate.replace(",", "."));
                             avgTicket = parseFloat(avgTicket.replace(",", ".")).toFixed(1);
                             unitPerTx = parseFloat(unitPerTx.replace(",", ".")).toFixed(1);
                             var color = "";
@@ -1670,7 +1670,7 @@ function storeWitdhGraphic2(indice,regionCode) {
                                 goalAmountGlobal = parseFloat(goalAmountGlobal.replace(",", ".")).toFixed(0);
                                 payTotal = parseFloat(payTotal.replace(",", ".")).toFixed(0);
                                 payTotalGlobal = parseFloat(payTotalGlobal.replace(",", ".")).toFixed(0);
-                                conversionRate = parseFloat(conversionRate.replace(",", ".")).toFixed(0);
+                                conversionRate = parseFloat(conversionRate.replace(",", "."));
                                 avgTicket = parseFloat(avgTicket.replace(",", ".")).toFixed(1);
                                 unitPerTx = parseFloat(unitPerTx.replace(",", ".")).toFixed(1);
 
