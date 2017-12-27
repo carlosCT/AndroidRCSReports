@@ -822,7 +822,7 @@ hr {
     background-size: 22px 15px;
     background-repeat: no-repeat;
     background-position: right center;
-    padding-left: 6%;
+    /*padding-left: 6%;*/
     font-weight: bold;
     font-size: 14pt;
 }
@@ -1266,26 +1266,27 @@ div[class^="detalle-"] span{
     display: inline-block;
 }
 .infoReport1 i{
-    /*width: 15%;*/
-    width: 13%;
-    color: #0000CD;
-    /* padding-bottom: 10px; */
-    vertical-align: text-top;
-    font-size: 12px;
-    padding-left: 5px;
-    box-sizing: border-box;
-    line-height: 15px;
+   /*width: 15%;*/
+   width: 17%;
+   color: #0000CD ;
+   /*padding-bottom: 10px;*/
+   vertical-align: text-top;
+   font-size: 6pt;
+   padding-left: 5px;
+   box-sizing: border-box;
+   line-height: 14px;
+   font-weight: 500;
 }
 .infoReport1 span{
-    /*width: 34%;*/
-    width: 36%;
-    vertical-align: text-top;
-    font-size: 12px;
-    line-height: 15px;
-    margin-bottom: 5px;
-    padding-right: 5px;
-    box-sizing: border-box;
-    padding-left: 10px;
+   /*width: 34%;*/
+   width: 32%;
+   vertical-align: text-top;
+   font-size: 10px;
+   line-height: 14px;
+   margin-bottom: 5px;
+   padding-right: 5px;
+   box-sizing: border-box;
+   padding-left: 10px;    
 }
 
 .infoReport1 span:before {
@@ -1473,7 +1474,7 @@ button.delete{
     color: #000;
     line-height: 40px;
     /*padding: 0 20px;*/
-    padding: 0 10px;
+    padding-left: 2.5%;
 }
 .filterGoal{
     position: absolute;
@@ -1483,13 +1484,15 @@ button.delete{
     /*font-size: 14px;*/
     font-size: 13px;
     font-weight: bold;
-    padding-right: 4%;
+    /*padding-right: 4%;*/
+    padding-right: 2%;
     line-height: 3.3em;
     color: rgb(88,88,88);
 }
 .filterCaret {
     position: absolute;
-    right: 15px;
+    /*right: 15px;*/
+    right: 10px;
     top: 20px;
 }
 .open>.dropdown-menu {
@@ -2083,12 +2086,12 @@ text{
     .actual i, .global i, .aditional i {
         /*width: 13%;
         font-size: 11pt;*/
-        width: 12%;
-        font-size: 9pt;
+        width: 15%;
+        font-size: 7pt;
     }
     .actual p, .global p, .aditional p {
         /*width: 26.5%;*/
-        width: 28.5%;
+        width: 25.5%;
         font-size: 10pt;
     }
     .actual span, .global span, .aditional span {
@@ -2127,6 +2130,8 @@ text{
     }
     .store h1 {
         height: 26px;
+        font-size: 12px;
+        text-transform: uppercase;
     }
     #divlistado{
         height: 112px;
@@ -2167,6 +2172,49 @@ text{
         font-size: 12px;
     }
 }
+
+/* Landscape */
+@media only screen and (min-width: 569px) and (max-width: 667px) {
+    .innerLi {
+        font-size: 12pt;
+        font-size: 14px;
+    }
+
+    .store {
+        padding: 2pt 4% 6pt;
+    }
+
+    .store h1 {
+        font-size: 13px;
+    }
+
+    .actual i, .global i, .aditional i {
+        width: 15%;
+    }
+
+    .actual p, .global p, .aditional p {
+        width: 24.5%;
+    }
+
+    .actual span, .global span, .aditional span {
+        width: 21%;
+    }
+
+    .infoReport1 i {
+        width: 17%;
+        font-size: 8pt;
+        padding-left: 5px;
+        line-height: 14px;
+    }    
+
+    .infoReport1 span {
+        width: 32%;
+        font-size: 12px;
+        line-height: 17px;
+        margin-bottom: 10px;
+    }
+}
+
 
 /* Landscape */
 @media only screen and (min-width: 320px) and (max-width: 667px) and (orientation: landscape) {
