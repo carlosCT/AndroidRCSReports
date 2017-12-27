@@ -250,126 +250,162 @@ function MSG_COMBO_FILTER_STORE(){
 }
 
 function MSG_LBL_DET_DIC_1(){
-    $('#TodayGoal').text("MH");
-    $('#TodaySale').text("VH");
 
-    $('#TodayVisits').text("VIH");
-    $('#TodayTx').text("TH");
-    //$('#TodayConversionRate').text("RCH");
-    $('#TodayAvgTicket').text("TPH");
-    $('#TodayUnitPerTx').text("UTH");
+    $('#GoalPeriod').text("MET");
+    $('#SalesPeriod').text("VEN");
 
-    $('#YesterdayGoal').text("MA");
-    $('#YesterdaySale').text("VA");
+    $('#WeekGoal').text("METSEM");
+    $('#WeekSale').text("VENSEM");
 
-    $('#YesterdayVisits').text("VIA");
-    $('#YesterdayTx').text("TA");
-    //$('#YesterdayConversionRate').text("RCA");
-    $('#YesterdayAvgTicket').text("TPA");
-    $('#YesterdayUnitPerTx').text("UTA");
+    $('#MonthGoal').text("METMEN");
+    $('#MonthSale').text("VENMEN");
 
-    $('#WeekGoal').text("MS");
-    $('#WeekSale').text("VS");
+    $('#ThisYearGoal').text("METAÑO");
+    $('#ThisYearSale').text("VENAÑO");
 
-    $('#WeekVisits').text("VIS");
-    $('#WeekTx').text("TS");
-    //$('#WeekConversionRate').text("RCS");
-    $('#WeekAvgTicket').text("TPS");
-    $('#WeekUnitPerTx').text("UTS");
+    $('#CompleteYearGoal').text("METACOM");
+    $('#CompleteYearSale').text("VENACOM");
 
-    $('#MonthGoal').text("MM");
-    $('#MonthSale').text("VM");
+    $('#LastYearGoal').text("METAPAS");
+    $('#LastYearSale').text("VENAPAS");
 
-    $('#MonthVisits').text("VIM");
-    $('#MonthTx').text("TM");
-    //$('#MonthConversionRate').text("RCM");
-    $('#MonthAvgTicket').text("TPM");
-    $('#MonthUnitPerTx').text("UTM");
-
-    $('#ThisYearGoal').text("MAH");
-    $('#ThisYearSale').text("VAH");
-
-    $('#ThisYearVisits').text("VIAH");
-    $('#ThisYearTx').text("TAH");
-    //$('#ThisYearConversionRate').text("RCAH");
-    $('#ThisYearAvgTicket').text("TPAH");
-    $('#ThisYearUnitPerTx').text("UTAH");
-
-    $('#CompleteYearGoal').text("MAC");
-    $('#CompleteYearSale').text("VAC");
-
-    $('#LastYearGoal').text("MAP");
-    $('#LastYearSale').text("VAP");
-
-    $('#LastYearVisits').text("VIAP");
-    $('#LastYearTx').text("TAP");
-    //$('#LastYearConversionRate').text("RCAP");
-    $('#LastYearAvgTicket').text("TPAP");
-    $('#LastYearUnitPerTx').text("UTAP");
+    $('#Visitors').text("VISIT");
+    $('#Trans').text("TRAN");
+    $('#AvgTicket').text("TPROM");
+    $('#UnitPerTrans').text("UTRA");
 
 
-    $('#report1TG').text("Meta de Hoy");
-    $('#report1TS').text("Venta de Hoy");
+    $('#report1GP').text("Meta del periodo");
+    $('#report1SP').text("Ventas del periodo");
 
-    $('#report1TV').text("Visitas de Hoy");
-    $('#report1TT').text("Transacciones de Hoy");
-    //$('#report1TCR').text("Ratio de Conversión de Hoy");
-    $('#report1TAT').text("Ticket Promedio de Hoy");
-    $('#report1TUT').text("Unidad Por Transacción de Hoy");
+    $('#report1WG').text("Meta de la semana a la fecha");
+    $('#report1WS').text("Ventas de la semana a la fecha");
+
+    $('#report1MG').text("Meta del mes a la fecha");
+    $('#report1MS').text("Ventas del mes a la fecha");
+
+    $('#report1TYG').text("Meta del año a la fecha");
+    $('#report1TYS').text("Ventas del año a la fecha");
+
+    $('#report1CYG').text("Meta del año completo");
+    $('#report1CYS').text("Ventas del año completo");
+
+    $('#report1LYG').text("Meta del año pasado");
+    $('#report1LYS').text("Ventas del año pasado");
+
+    $('#report1VISIT').text("Visitantes del periodo");
+    $('#report1TRAN').text("Transacciones del periodo");
+    $('#report1AVTK').text("Ticket promedio del periodo");
+    $('#report1UTRA').text("Unidad por transacción del periodo");
+
+    // $('#TodayGoal').text("MH");
+    // $('#TodaySale').text("VH");
+
+    // $('#TodayVisits').text("VIH");
+    // $('#TodayTx').text("TH");
+    // $('#TodayAvgTicket').text("TPH");
+    // $('#TodayUnitPerTx').text("UTH");
+
+    // $('#YesterdayGoal').text("MA");
+    // $('#YesterdaySale').text("VA");
+
+    // $('#YesterdayVisits').text("VIA");
+    // $('#YesterdayTx').text("TA");
+    // $('#YesterdayAvgTicket').text("TPA");
+    // $('#YesterdayUnitPerTx').text("UTA");
+
+    // $('#WeekGoal').text("MS");
+    // $('#WeekSale').text("VS");
+
+    // $('#WeekVisits').text("VIS");
+    // $('#WeekTx').text("TS");
+    // $('#WeekAvgTicket').text("TPS");
+    // $('#WeekUnitPerTx').text("UTS");
+
+    // $('#MonthGoal').text("MM");
+    // $('#MonthSale').text("VM");
+
+    // $('#MonthVisits').text("VIM");
+    // $('#MonthTx').text("TM");
+    // $('#MonthAvgTicket').text("TPM");
+    // $('#MonthUnitPerTx').text("UTM");
+
+    // $('#ThisYearGoal').text("MAH");
+    // $('#ThisYearSale').text("VAH");
+
+    // $('#ThisYearVisits').text("VIAH");
+    // $('#ThisYearTx').text("TAH");
+    // $('#ThisYearAvgTicket').text("TPAH");
+    // $('#ThisYearUnitPerTx').text("UTAH");
+
+    // $('#CompleteYearGoal').text("MAC");
+    // $('#CompleteYearSale').text("VAC");
+
+    // $('#LastYearGoal').text("MAP");
+    // $('#LastYearSale').text("VAP");
+
+    // $('#LastYearVisits').text("VIAP");
+    // $('#LastYearTx').text("TAP");
+    // $('#LastYearAvgTicket').text("TPAP");
+    // $('#LastYearUnitPerTx').text("UTAP");
 
 
-    $('#report1YG').text("Meta de Ayer");
-    $('#report1YS').text("Venta de Ayer");
+    // $('#report1TG').text("Meta de Hoy");
+    // $('#report1TS').text("Venta de Hoy");
 
-    $('#report1YV').text("Visitas de Ayer");
-    $('#report1YT').text("Transacciones de Ayer");
-    //$('#report1YCR').text("Ratio de Conversión de Ayer");
-    $('#report1YAT').text("Ticket Promedio de Ayer");
-    $('#report1YUT').text("Unidad Por Transacción de Ayer");
-
-
-    $('#report1WG').text("Meta de Semana a Hoy");
-    $('#report1WS').text("Venta de Semana a Hoy");
-
-    $('#report1WV').text("Visitas de Semana a Hoy");
-    $('#report1WT').text("Transacciones de Semana a Hoy");
-    //$('#report1WCR').text("Ratio de Conversión de Semana a Hoy");
-    $('#report1WAT').text("Ticket Promedio de Semana a Hoy");
-    $('#report1WUT').text("Unidad Por Transacción de Semana a Hoy");
+    // $('#report1TV').text("Visitas de Hoy");
+    // $('#report1TT').text("Transacciones de Hoy");
+    // $('#report1TAT').text("Ticket Promedio de Hoy");
+    // $('#report1TUT').text("Unidad Por Transacción de Hoy");
 
 
-    $('#report1MG').text("Meta de Mes a Hoy");
-    $('#report1MS').text("Venta de Mes a Hoy");
+    // $('#report1YG').text("Meta de Ayer");
+    // $('#report1YS').text("Venta de Ayer");
 
-    $('#report1MV').text("Visitas de Mes a Hoy");
-    $('#report1MT').text("Transacciones de Mes a Hoy");
-    //$('#report1MCR').text("Ratio de Conversión de Mes a Hoy");
-    $('#report1MAT').text("Ticket Promedio de Mes a Hoy");
-    $('#report1MUT').text("Unidad Por Transacción de Mes a Hoy");
-
-
-    $('#report1TYG').text("Meta de Año a Hoy");
-    $('#report1TYS').text("Venta de Año a Hoy");
-
-    $('#report1TYV').text("Visitas de Año a Hoy");
-    $('#report1TYT').text("Transacciones de Año a Hoy");
-    //$('#report1TYCR').text("Ratio de Conversión de Año a Hoy");
-    $('#report1TYAT').text("Ticket Promedio de Año a Hoy");
-    $('#report1TYUT').text("Unidad Por Transacción de Año a Hoy");
+    // $('#report1YV').text("Visitas de Ayer");
+    // $('#report1YT').text("Transacciones de Ayer");
+    // $('#report1YAT').text("Ticket Promedio de Ayer");
+    // $('#report1YUT').text("Unidad Por Transacción de Ayer");
 
 
-    $('#report1CYG').text("Meta del Año Completo");
-    $('#report1CYS').text("Venta del Año Completo");
+    // $('#report1WG').text("Meta de Semana a Hoy");
+    // $('#report1WS').text("Venta de Semana a Hoy");
+
+    // $('#report1WV').text("Visitas de Semana a Hoy");
+    // $('#report1WT').text("Transacciones de Semana a Hoy");
+    // $('#report1WAT').text("Ticket Promedio de Semana a Hoy");
+    // $('#report1WUT').text("Unidad Por Transacción de Semana a Hoy");
 
 
-    $('#report1LYG').text("Meta del Año Pasado");
-    $('#report1LYS').text("Venta del Año Pasado");
+    // $('#report1MG').text("Meta de Mes a Hoy");
+    // $('#report1MS').text("Venta de Mes a Hoy");
 
-    $('#report1LYV').text("Visitas del Año Pasado");
-    $('#report1LYT').text("Transacciones del Año Pasado");
-    //$('#report1LYCR').text("Ratio de Conversión del Año Pasado");
-    $('#report1LYAT').text("Ticket Promedio del Año Pasado");
-    $('#report1LYUT').text("Unidad Por Transacción del Año Pasado");
+    // $('#report1MV').text("Visitas de Mes a Hoy");
+    // $('#report1MT').text("Transacciones de Mes a Hoy");
+    // $('#report1MAT').text("Ticket Promedio de Mes a Hoy");
+    // $('#report1MUT').text("Unidad Por Transacción de Mes a Hoy");
+
+
+    // $('#report1TYG').text("Meta de Año a Hoy");
+    // $('#report1TYS').text("Venta de Año a Hoy");
+
+    // $('#report1TYV').text("Visitas de Año a Hoy");
+    // $('#report1TYT').text("Transacciones de Año a Hoy");
+    // $('#report1TYAT').text("Ticket Promedio de Año a Hoy");
+    // $('#report1TYUT').text("Unidad Por Transacción de Año a Hoy");
+
+
+    // $('#report1CYG').text("Meta del Año Completo");
+    // $('#report1CYS').text("Venta del Año Completo");
+
+
+    // $('#report1LYG').text("Meta del Año Pasado");
+    // $('#report1LYS').text("Venta del Año Pasado");
+
+    // $('#report1LYV').text("Visitas del Año Pasado");
+    // $('#report1LYT').text("Transacciones del Año Pasado");
+    // $('#report1LYAT').text("Ticket Promedio del Año Pasado");
+    // $('#report1LYUT').text("Unidad Por Transacción del Año Pasado");
 
 
     $('#lblChooseRegion').text('Elegir Región');

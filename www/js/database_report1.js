@@ -205,137 +205,174 @@ function downloadByCompany() {
                     if (data.quantity > 0) {
                         var mostrar = "";
                         if (current_lang == 'es') {
-                            if (option == 1) {
-                                lblCurrentGoal = "MH";
-                                lblCurrentSale = "VH";
-                                lblGlobalGoal = "MS";
-                                lblGlobalSale = "VS";
 
-                                lblNumVisits = "VIH";
-                                lblNumTx = "TH";
+                            lblCurrentGoal = "MET";
+                            lblCurrentSale = "VEN";
+
+                            if (option == 1) {
+                                // lblCurrentGoal = "MH";
+                                // lblCurrentSale = "VH";
+                                lblGlobalGoal = "METSEM";
+                                lblGlobalSale = "VENSEM";
+
+                                //lblNumVisits = "VIH";
+                                //lblNumTx = "TH";
                                 //lblConversionRate = "RCH";
-                                lblAvgTicket = "TPH";
-                                lblUnitPerTx = "UTH";
+                                //lblAvgTicket = "TPH";
+                                //lblUnitPerTx = "UTH";
                             } else if (option == 2) {
-                                lblCurrentGoal = "MA";
-                                lblCurrentSale = "VA";
-                                lblGlobalGoal = "MS";
-                                lblGlobalSale = "VS";
+                                // lblCurrentGoal = "MA";
+                                // lblCurrentSale = "VA";
+                                lblGlobalGoal = "METSEM";
+                                lblGlobalSale = "VENSEM";
 
-                                lblNumVisits = "VIA";
-                                lblNumTx = "TA";
-                                //lblConversionRate = "RCA";
-                                lblAvgTicket = "TPA";
-                                lblUnitPerTx = "UTA";
+                                // lblNumVisits = "VIA";
+                                // lblNumTx = "TA";
+                                // lblConversionRate = "RCA";
+                                // lblAvgTicket = "TPA";
+                                // lblUnitPerTx = "UTA";
                             } else if (option == 3) {
-                                lblCurrentGoal = "MS";
-                                lblCurrentSale = "VS";
-                                lblGlobalGoal = "MM";
-                                lblGlobalSale = "VM";
+                                // lblCurrentGoal = "MS";
+                                // lblCurrentSale = "VS";
+                                lblGlobalGoal = "METMEN";
+                                lblGlobalSale = "VENMEN";
 
-                                lblNumVisits = "VIS";
-                                lblNumTx = "TS";
-                                //lblConversionRate = "RCS";
-                                lblAvgTicket = "TPS";
-                                lblUnitPerTx = "UTS";
+                                // lblNumVisits = "VIS";
+                                // lblNumTx = "TS";
+                                // lblConversionRate = "RCS";
+                                // lblAvgTicket = "TPS";
+                                // lblUnitPerTx = "UTS";
                             } else if (option == 4) {
-                                lblCurrentGoal = "MM";
-                                lblCurrentSale = "VM";
-                                lblGlobalGoal = "MAH";
-                                lblGlobalSale = "VAH";
+                                // lblCurrentGoal = "MM";
+                                // lblCurrentSale = "VM";
+                                lblGlobalGoal = "METAÑO";
+                                lblGlobalSale = "VENAÑO";
+                                // lblCurrentGoal = "MA";
+                                // lblCurrentSale = "VA";
 
-                                lblNumVisits = "VIAH";
-                                lblNumTx = "TAH";
-                                //lblConversionRate = "RCAH";
-                                lblAvgTicket = "TPAH";
-                                lblUnitPerTx = "UTAH";
+                                // lblNumVisits = "VIAH";
+                                // lblNumTx = "TAH";
+                                // lblConversionRate = "RCAH";
+                                // lblAvgTicket = "TPAH";
+                                // lblUnitPerTx = "UTAH";
                             } else if (option == 5) {
-                                lblCurrentGoal = "MAH";
-                                lblCurrentSale = "VAH";
-                                lblGlobalGoal = "MAC";
-                                lblGlobalSale = "VAC";
+                                // lblCurrentGoal = "MAH";
+                                // lblCurrentSale = "VAH";
+                                lblGlobalGoal = "METACOM";
+                                lblGlobalSale = "VENACOM";
+                                // lblGlobalGoal = "MAC";
+                                // lblGlobalSale = "VAC";
 
-                                lblNumVisits = "VIAH";
-                                lblNumTx = "TAP";
-                                //lblConversionRate = "RCAP";
-                                lblAvgTicket = "TPAP";
-                                lblUnitPerTx = "UTAP";
+                                // lblNumVisits = "VIAH";
+                                // lblNumTx = "TAP";
+                                // lblConversionRate = "RCAP";
+                                // lblAvgTicket = "TPAP";
+                                // lblUnitPerTx = "UTAP";
                             }else if (option == 6) {
-                                lblCurrentGoal = "MAP";
-                                lblCurrentSale = "VAP";
+                                lblCurrentGoal = "METAPAS";
+                                lblCurrentSale = "VENAPAS";
+                                // lblCurrentGoal = "MAP";
+                                // lblCurrentSale = "VAP";
 
-                                lblNumVisits = "VIAP";
-                                lblNumTx = "TAP";
-                                //lblConversionRate = "RCP";
-                                lblAvgTicket = "ATP";
-                                lblUnitPerTx = "UTP";
+                                // lblNumVisits = "VIAP";
+                                // lblNumTx = "TAP";
+                                // lblConversionRate = "RCP";
+                                // lblAvgTicket = "ATP";
+                                // lblUnitPerTx = "UTP";
                             }
+
+                            lblNumVisits = "VISIT";
+                            lblNumTx = "TRAN";
+                            lblAvgTicket = "TPROM";
+                            lblUnitPerTx = "UTRA";
+
                         } else {
+
+                            lblCurrentGoal = "GOA";
+                            lblCurrentSale = "SAL";
+
                             if (option == 1) {
-                                lblCurrentGoal = "TG";
-                                lblCurrentSale = "TS";
-                                lblGlobalGoal = "WG";
-                                lblGlobalSale = "WS";
+                                // lblCurrentGoal = "TG";
+                                // lblCurrentSale = "TS";
+                                lblGlobalGoal = "WKGOA";
+                                lblGlobalSale = "WKSAL";
+                                // lblGlobalGoal = "WG";
+                                // lblGlobalSale = "WS";
 
-                                lblNumVisits = "TV";
-                                lblNumTx = "TT";
-                                //lblConversionRate = "TCR";
-                                lblAvgTicket = "TAT";
-                                lblUnitPerTx = "TUT";
+                                // lblNumVisits = "TV";
+                                // lblNumTx = "TT";
+                                // lblConversionRate = "TCR";
+                                // lblAvgTicket = "TAT";
+                                // lblUnitPerTx = "TUT";
                             } else if (option == 2) {
-                                lblCurrentGoal = "YG";
-                                lblCurrentSale = "YS";
-                                lblGlobalGoal = "WG";
-                                lblGlobalSale = "WS";
+                                // lblCurrentGoal = "YG";
+                                // lblCurrentSale = "YS";
+                                lblGlobalGoal = "WKGOA";
+                                lblGlobalSale = "WKSAL";
+                                // lblGlobalGoal = "WG";
+                                // lblGlobalSale = "WS";
 
-                                lblNumVisits = "YV";
-                                lblNumTx = "YT";
-                                //lblConversionRate = "YCR";
-                                lblAvgTicket = "YAT";
-                                lblUnitPerTx = "YUT";
+                                // lblNumVisits = "YV";
+                                // lblNumTx = "YT";
+                                // lblConversionRate = "YCR";
+                                // lblAvgTicket = "YAT";
+                                // lblUnitPerTx = "YUT";
                             } else if (option == 3) {
-                                lblCurrentGoal = "WG";
-                                lblCurrentSale = "WS";
-                                lblGlobalGoal = "MG";
-                                lblGlobalSale = "MS";
+                                // lblCurrentGoal = "WG";
+                                // lblCurrentSale = "WS";
+                                lblGlobalGoal = "MONGOA";
+                                lblGlobalSale = "MONSAL";
+                                // lblGlobalGoal = "MG";
+                                // lblGlobalSale = "MS";
 
-                                lblNumVisits = "WV";
-                                lblNumTx = "WT";
-                                //lblConversionRate = "WCR";
-                                lblAvgTicket = "WAT";
-                                lblUnitPerTx = "WUT";
+                                // lblNumVisits = "WV";
+                                // lblNumTx = "WT";
+                                // lblConversionRate = "WCR";
+                                // lblAvgTicket = "WAT";
+                                // lblUnitPerTx = "WUT";
                             } else if (option == 4) {
-                                lblCurrentGoal = "MG";
-                                lblCurrentSale = "MS";
-                                lblGlobalGoal = "TYG";
-                                lblGlobalSale = "TYS";
+                                // lblCurrentGoal = "MG";
+                                // lblCurrentSale = "MS";
+                                lblGlobalGoal = "TYGOA";
+                                lblGlobalSale = "TYSAL";
+                                // lblGlobalGoal = "TYG";
+                                // lblGlobalSale = "TYS";
 
-                                lblNumVisits = "MV";
-                                lblNumTx = "MT";
-                                //lblConversionRate = "MCR";
-                                lblAvgTicket = "MAT";
-                                lblUnitPerTx = "MUT";
+                                // lblNumVisits = "MV";
+                                // lblNumTx = "MT";
+                                // lblConversionRate = "MCR";
+                                // lblAvgTicket = "MAT";
+                                // lblUnitPerTx = "MUT";
                             } else if (option == 5) {
-                                lblCurrentGoal = "TYG";
-                                lblCurrentSale = "TYS";
-                                lblGlobalGoal = "CYG";
-                                lblGlobalSale = "CYS";
+                                // lblCurrentGoal = "TYG";
+                                // lblCurrentSale = "TYS";
+                                lblGlobalGoal = "CYGOA";
+                                lblGlobalSale = "CYSAL";
+                                // lblGlobalGoal = "CYG";
+                                // lblGlobalSale = "CYS";
 
-                                lblNumVisits = "TYV";
-                                lblNumTx = "TYT";
-                                //lblConversionRate = "TYCR";
-                                lblAvgTicket = "TYAT";
-                                lblUnitPerTx = "TYUT";
+                                // lblNumVisits = "TYV";
+                                // lblNumTx = "TYT";
+                                // lblConversionRate = "TYCR";
+                                // lblAvgTicket = "TYAT";
+                                // lblUnitPerTx = "TYUT";
                             }else if (option == 6) {
-                                lblCurrentGoal = "LYG";
-                                lblCurrentSale = "LYS";
+                                lblCurrentGoal = "LYGOA";
+                                lblCurrentSale = "LYSAL";
+                                // lblCurrentGoal = "LYG";
+                                // lblCurrentSale = "LYS";
 
-                                lblNumVisits = "LYV";
-                                lblNumTx = "LYT";
-                                //lblConversionRate = "LYCR";
-                                lblAvgTicket = "LYAT";
-                                lblUnitPerTx = "LYUT";
+                                // lblNumVisits = "LYV";
+                                // lblNumTx = "LYT";
+                                // lblConversionRate = "LYCR";
+                                // lblAvgTicket = "LYAT";
+                                // lblUnitPerTx = "LYUT";
                             }
+
+                            lblNumVisits = "VISIT";
+                            lblNumTx = "TRAN";
+                            lblAvgTicket = "AVTK";
+                            lblUnitPerTx = "UTRA";
                         }
 
                         mostrar += "<div id='divByCompany'>";
@@ -621,137 +658,174 @@ function downloadByRegion() {
                         //mostrar += "<div id='divByRegion'>";
 
                         if (current_lang == 'es') {
-                            if (option == 1) {
-                                lblCurrentGoal = "MH";
-                                lblCurrentSale = "VH";
-                                lblGlobalGoal = "MS";
-                                lblGlobalSale = "VS";
 
-                                lblNumVisits = "VIH";
-                                lblNumTx = "TH";
+                            lblCurrentGoal = "MET";
+                            lblCurrentSale = "VEN";
+
+                            if (option == 1) {
+                                // lblCurrentGoal = "MH";
+                                // lblCurrentSale = "VH";
+                                lblGlobalGoal = "METSEM";
+                                lblGlobalSale = "VENSEM";
+
+                                //lblNumVisits = "VIH";
+                                //lblNumTx = "TH";
                                 //lblConversionRate = "RCH";
-                                lblAvgTicket = "TPH";
-                                lblUnitPerTx = "UTH";
+                                //lblAvgTicket = "TPH";
+                                //lblUnitPerTx = "UTH";
                             } else if (option == 2) {
-                                lblCurrentGoal = "MA";
-                                lblCurrentSale = "VA";
-                                lblGlobalGoal = "MS";
-                                lblGlobalSale = "VS";
+                                // lblCurrentGoal = "MA";
+                                // lblCurrentSale = "VA";
+                                lblGlobalGoal = "METSEM";
+                                lblGlobalSale = "VENSEM";
 
-                                lblNumVisits = "VIA";
-                                lblNumTx = "TA";
-                                //lblConversionRate = "RCA";
-                                lblAvgTicket = "TPA";
-                                lblUnitPerTx = "UTA";
+                                // lblNumVisits = "VIA";
+                                // lblNumTx = "TA";
+                                // lblConversionRate = "RCA";
+                                // lblAvgTicket = "TPA";
+                                // lblUnitPerTx = "UTA";
                             } else if (option == 3) {
-                                lblCurrentGoal = "MS";
-                                lblCurrentSale = "VS";
-                                lblGlobalGoal = "MM";
-                                lblGlobalSale = "VM";
+                                // lblCurrentGoal = "MS";
+                                // lblCurrentSale = "VS";
+                                lblGlobalGoal = "METMEN";
+                                lblGlobalSale = "VENMEN";
 
-                                lblNumVisits = "VIS";
-                                lblNumTx = "TS";
-                                //lblConversionRate = "RCS";
-                                lblAvgTicket = "TPS";
-                                lblUnitPerTx = "UTS";
+                                // lblNumVisits = "VIS";
+                                // lblNumTx = "TS";
+                                // lblConversionRate = "RCS";
+                                // lblAvgTicket = "TPS";
+                                // lblUnitPerTx = "UTS";
                             } else if (option == 4) {
-                                lblCurrentGoal = "MM";
-                                lblCurrentSale = "VM";
-                                lblGlobalGoal = "MAH";
-                                lblGlobalSale = "VAH";
+                                // lblCurrentGoal = "MM";
+                                // lblCurrentSale = "VM";
+                                lblGlobalGoal = "METAÑO";
+                                lblGlobalSale = "VENAÑO";
+                                // lblCurrentGoal = "MA";
+                                // lblCurrentSale = "VA";
 
-                                lblNumVisits = "VIAH";
-                                lblNumTx = "TAH";
-                                //lblConversionRate = "RCAH";
-                                lblAvgTicket = "TPAH";
-                                lblUnitPerTx = "UTAH";
+                                // lblNumVisits = "VIAH";
+                                // lblNumTx = "TAH";
+                                // lblConversionRate = "RCAH";
+                                // lblAvgTicket = "TPAH";
+                                // lblUnitPerTx = "UTAH";
                             } else if (option == 5) {
-                                lblCurrentGoal = "MAH";
-                                lblCurrentSale = "VAH";
-                                lblGlobalGoal = "MAC";
-                                lblGlobalSale = "VAC";
+                                // lblCurrentGoal = "MAH";
+                                // lblCurrentSale = "VAH";
+                                lblGlobalGoal = "METACOM";
+                                lblGlobalSale = "VENACOM";
+                                // lblGlobalGoal = "MAC";
+                                // lblGlobalSale = "VAC";
 
-                                lblNumVisits = "VIAH";
-                                lblNumTx = "TAP";
-                                //lblConversionRate = "RCAP";
-                                lblAvgTicket = "TPAP";
-                                lblUnitPerTx = "UTAP";
+                                // lblNumVisits = "VIAH";
+                                // lblNumTx = "TAP";
+                                // lblConversionRate = "RCAP";
+                                // lblAvgTicket = "TPAP";
+                                // lblUnitPerTx = "UTAP";
                             }else if (option == 6) {
-                                lblCurrentGoal = "MAP";
-                                lblCurrentSale = "VAP";
+                                lblCurrentGoal = "METAPAS";
+                                lblCurrentSale = "VENAPAS";
+                                // lblCurrentGoal = "MAP";
+                                // lblCurrentSale = "VAP";
 
-                                lblNumVisits = "VIAP";
-                                lblNumTx = "TAP";
-                                //lblConversionRate = "RCP";
-                                lblAvgTicket = "ATP";
-                                lblUnitPerTx = "UTP";
+                                // lblNumVisits = "VIAP";
+                                // lblNumTx = "TAP";
+                                // lblConversionRate = "RCP";
+                                // lblAvgTicket = "ATP";
+                                // lblUnitPerTx = "UTP";
                             }
+
+                            lblNumVisits = "VISIT";
+                            lblNumTx = "TRAN";
+                            lblAvgTicket = "TPROM";
+                            lblUnitPerTx = "UTRA";
+
                         } else {
+
+                            lblCurrentGoal = "GOA";
+                            lblCurrentSale = "SAL";
+
                             if (option == 1) {
-                                lblCurrentGoal = "TG";
-                                lblCurrentSale = "TS";
-                                lblGlobalGoal = "WG";
-                                lblGlobalSale = "WS";
+                                // lblCurrentGoal = "TG";
+                                // lblCurrentSale = "TS";
+                                lblGlobalGoal = "WKGOA";
+                                lblGlobalSale = "WKSAL";
+                                // lblGlobalGoal = "WG";
+                                // lblGlobalSale = "WS";
 
-                                lblNumVisits = "TV";
-                                lblNumTx = "TT";
-                                //lblConversionRate = "TCR";
-                                lblAvgTicket = "TAT";
-                                lblUnitPerTx = "TUT";
+                                // lblNumVisits = "TV";
+                                // lblNumTx = "TT";
+                                // lblConversionRate = "TCR";
+                                // lblAvgTicket = "TAT";
+                                // lblUnitPerTx = "TUT";
                             } else if (option == 2) {
-                                lblCurrentGoal = "YG";
-                                lblCurrentSale = "YS";
-                                lblGlobalGoal = "WG";
-                                lblGlobalSale = "WS";
+                                // lblCurrentGoal = "YG";
+                                // lblCurrentSale = "YS";
+                                lblGlobalGoal = "WKGOA";
+                                lblGlobalSale = "WKSAL";
+                                // lblGlobalGoal = "WG";
+                                // lblGlobalSale = "WS";
 
-                                lblNumVisits = "YV";
-                                lblNumTx = "YT";
-                                //lblConversionRate = "YCR";
-                                lblAvgTicket = "YAT";
-                                lblUnitPerTx = "YUT";
+                                // lblNumVisits = "YV";
+                                // lblNumTx = "YT";
+                                // lblConversionRate = "YCR";
+                                // lblAvgTicket = "YAT";
+                                // lblUnitPerTx = "YUT";
                             } else if (option == 3) {
-                                lblCurrentGoal = "WG";
-                                lblCurrentSale = "WS";
-                                lblGlobalGoal = "MG";
-                                lblGlobalSale = "MS";
+                                // lblCurrentGoal = "WG";
+                                // lblCurrentSale = "WS";
+                                lblGlobalGoal = "MONGOA";
+                                lblGlobalSale = "MONSAL";
+                                // lblGlobalGoal = "MG";
+                                // lblGlobalSale = "MS";
 
-                                lblNumVisits = "WV";
-                                lblNumTx = "WT";
-                                //lblConversionRate = "WCR";
-                                lblAvgTicket = "WAT";
-                                lblUnitPerTx = "WUT";
+                                // lblNumVisits = "WV";
+                                // lblNumTx = "WT";
+                                // lblConversionRate = "WCR";
+                                // lblAvgTicket = "WAT";
+                                // lblUnitPerTx = "WUT";
                             } else if (option == 4) {
-                                lblCurrentGoal = "MG";
-                                lblCurrentSale = "MS";
-                                lblGlobalGoal = "TYG";
-                                lblGlobalSale = "TYS";
+                                // lblCurrentGoal = "MG";
+                                // lblCurrentSale = "MS";
+                                lblGlobalGoal = "TYGOA";
+                                lblGlobalSale = "TYSAL";
+                                // lblGlobalGoal = "TYG";
+                                // lblGlobalSale = "TYS";
 
-                                lblNumVisits = "MV";
-                                lblNumTx = "MT";
-                                //lblConversionRate = "MCR";
-                                lblAvgTicket = "MAT";
-                                lblUnitPerTx = "MUT";
+                                // lblNumVisits = "MV";
+                                // lblNumTx = "MT";
+                                // lblConversionRate = "MCR";
+                                // lblAvgTicket = "MAT";
+                                // lblUnitPerTx = "MUT";
                             } else if (option == 5) {
-                                lblCurrentGoal = "TYG";
-                                lblCurrentSale = "TYS";
-                                lblGlobalGoal = "CYG";
-                                lblGlobalSale = "CYS";
+                                // lblCurrentGoal = "TYG";
+                                // lblCurrentSale = "TYS";
+                                lblGlobalGoal = "CYGOA";
+                                lblGlobalSale = "CYSAL";
+                                // lblGlobalGoal = "CYG";
+                                // lblGlobalSale = "CYS";
 
-                                lblNumVisits = "TYV";
-                                lblNumTx = "TYT";
-                                //lblConversionRate = "TYCR";
-                                lblAvgTicket = "TYAT";
-                                lblUnitPerTx = "TYUT";
+                                // lblNumVisits = "TYV";
+                                // lblNumTx = "TYT";
+                                // lblConversionRate = "TYCR";
+                                // lblAvgTicket = "TYAT";
+                                // lblUnitPerTx = "TYUT";
                             }else if (option == 6) {
-                                lblCurrentGoal = "LYG";
-                                lblCurrentSale = "LYS";
+                                lblCurrentGoal = "LYGOA";
+                                lblCurrentSale = "LYSAL";
+                                // lblCurrentGoal = "LYG";
+                                // lblCurrentSale = "LYS";
 
-                                lblNumVisits = "LYV";
-                                lblNumTx = "LYT";
-                                //lblConversionRate = "LYCR";
-                                lblAvgTicket = "LYAT";
-                                lblUnitPerTx = "LYUT";
+                                // lblNumVisits = "LYV";
+                                // lblNumTx = "LYT";
+                                // lblConversionRate = "LYCR";
+                                // lblAvgTicket = "LYAT";
+                                // lblUnitPerTx = "LYUT";
                             }
+
+                            lblNumVisits = "VISIT";
+                            lblNumTx = "TRAN";
+                            lblAvgTicket = "AVTK";
+                            lblUnitPerTx = "UTRA";
                         }
 
 
@@ -1063,137 +1137,174 @@ function downloadByStore(regionCode) {
                         var indice = 0;
 
                         if (current_lang == 'es') {
-                            if (option == 1) {
-                                lblCurrentGoal = "MH";
-                                lblCurrentSale = "VH";
-                                lblGlobalGoal = "MS";
-                                lblGlobalSale = "VS";
 
-                                lblNumVisits = "VIH";
-                                lblNumTx = "TH";
+                            lblCurrentGoal = "MET";
+                            lblCurrentSale = "VEN";
+
+                            if (option == 1) {
+                                // lblCurrentGoal = "MH";
+                                // lblCurrentSale = "VH";
+                                lblGlobalGoal = "METSEM";
+                                lblGlobalSale = "VENSEM";
+
+                                //lblNumVisits = "VIH";
+                                //lblNumTx = "TH";
                                 //lblConversionRate = "RCH";
-                                lblAvgTicket = "TPH";
-                                lblUnitPerTx = "UTH";
+                                //lblAvgTicket = "TPH";
+                                //lblUnitPerTx = "UTH";
                             } else if (option == 2) {
-                                lblCurrentGoal = "MA";
-                                lblCurrentSale = "VA";
-                                lblGlobalGoal = "MS";
-                                lblGlobalSale = "VS";
+                                // lblCurrentGoal = "MA";
+                                // lblCurrentSale = "VA";
+                                lblGlobalGoal = "METSEM";
+                                lblGlobalSale = "VENSEM";
 
-                                lblNumVisits = "VIA";
-                                lblNumTx = "TA";
-                                //lblConversionRate = "RCA";
-                                lblAvgTicket = "TPA";
-                                lblUnitPerTx = "UTA";
+                                // lblNumVisits = "VIA";
+                                // lblNumTx = "TA";
+                                // lblConversionRate = "RCA";
+                                // lblAvgTicket = "TPA";
+                                // lblUnitPerTx = "UTA";
                             } else if (option == 3) {
-                                lblCurrentGoal = "MS";
-                                lblCurrentSale = "VS";
-                                lblGlobalGoal = "MM";
-                                lblGlobalSale = "VM";
+                                // lblCurrentGoal = "MS";
+                                // lblCurrentSale = "VS";
+                                lblGlobalGoal = "METMEN";
+                                lblGlobalSale = "VENMEN";
 
-                                lblNumVisits = "VIS";
-                                lblNumTx = "TS";
-                                //lblConversionRate = "RCS";
-                                lblAvgTicket = "TPS";
-                                lblUnitPerTx = "UTS";
+                                // lblNumVisits = "VIS";
+                                // lblNumTx = "TS";
+                                // lblConversionRate = "RCS";
+                                // lblAvgTicket = "TPS";
+                                // lblUnitPerTx = "UTS";
                             } else if (option == 4) {
-                                lblCurrentGoal = "MM";
-                                lblCurrentSale = "VM";
-                                lblGlobalGoal = "MAH";
-                                lblGlobalSale = "VAH";
+                                // lblCurrentGoal = "MM";
+                                // lblCurrentSale = "VM";
+                                lblGlobalGoal = "METAÑO";
+                                lblGlobalSale = "VENAÑO";
+                                // lblCurrentGoal = "MA";
+                                // lblCurrentSale = "VA";
 
-                                lblNumVisits = "VIAH";
-                                lblNumTx = "TAH";
-                                //lblConversionRate = "RCAH";
-                                lblAvgTicket = "TPAH";
-                                lblUnitPerTx = "UTAH";
+                                // lblNumVisits = "VIAH";
+                                // lblNumTx = "TAH";
+                                // lblConversionRate = "RCAH";
+                                // lblAvgTicket = "TPAH";
+                                // lblUnitPerTx = "UTAH";
                             } else if (option == 5) {
-                                lblCurrentGoal = "MAH";
-                                lblCurrentSale = "VAH";
-                                lblGlobalGoal = "MAC";
-                                lblGlobalSale = "VAC";
+                                // lblCurrentGoal = "MAH";
+                                // lblCurrentSale = "VAH";
+                                lblGlobalGoal = "METACOM";
+                                lblGlobalSale = "VENACOM";
+                                // lblGlobalGoal = "MAC";
+                                // lblGlobalSale = "VAC";
 
-                                lblNumVisits = "VIAH";
-                                lblNumTx = "TAP";
-                                //lblConversionRate = "RCAP";
-                                lblAvgTicket = "TPAP";
-                                lblUnitPerTx = "UTAP";
+                                // lblNumVisits = "VIAH";
+                                // lblNumTx = "TAP";
+                                // lblConversionRate = "RCAP";
+                                // lblAvgTicket = "TPAP";
+                                // lblUnitPerTx = "UTAP";
                             }else if (option == 6) {
-                                lblCurrentGoal = "MAP";
-                                lblCurrentSale = "VAP";
+                                lblCurrentGoal = "METAPAS";
+                                lblCurrentSale = "VENAPAS";
+                                // lblCurrentGoal = "MAP";
+                                // lblCurrentSale = "VAP";
 
-                                lblNumVisits = "VIAP";
-                                lblNumTx = "TAP";
-                                //lblConversionRate = "RCP";
-                                lblAvgTicket = "ATP";
-                                lblUnitPerTx = "UTP";
+                                // lblNumVisits = "VIAP";
+                                // lblNumTx = "TAP";
+                                // lblConversionRate = "RCP";
+                                // lblAvgTicket = "ATP";
+                                // lblUnitPerTx = "UTP";
                             }
+
+                            lblNumVisits = "VISIT";
+                            lblNumTx = "TRAN";
+                            lblAvgTicket = "TPROM";
+                            lblUnitPerTx = "UTRA";
+
                         } else {
+
+                            lblCurrentGoal = "GOA";
+                            lblCurrentSale = "SAL";
+
                             if (option == 1) {
-                                lblCurrentGoal = "TG";
-                                lblCurrentSale = "TS";
-                                lblGlobalGoal = "WG";
-                                lblGlobalSale = "WS";
+                                // lblCurrentGoal = "TG";
+                                // lblCurrentSale = "TS";
+                                lblGlobalGoal = "WKGOA";
+                                lblGlobalSale = "WKSAL";
+                                // lblGlobalGoal = "WG";
+                                // lblGlobalSale = "WS";
 
-                                lblNumVisits = "TV";
-                                lblNumTx = "TT";
-                                //lblConversionRate = "TCR";
-                                lblAvgTicket = "TAT";
-                                lblUnitPerTx = "TUT";
+                                // lblNumVisits = "TV";
+                                // lblNumTx = "TT";
+                                // lblConversionRate = "TCR";
+                                // lblAvgTicket = "TAT";
+                                // lblUnitPerTx = "TUT";
                             } else if (option == 2) {
-                                lblCurrentGoal = "YG";
-                                lblCurrentSale = "YS";
-                                lblGlobalGoal = "WG";
-                                lblGlobalSale = "WS";
+                                // lblCurrentGoal = "YG";
+                                // lblCurrentSale = "YS";
+                                lblGlobalGoal = "WKGOA";
+                                lblGlobalSale = "WKSAL";
+                                // lblGlobalGoal = "WG";
+                                // lblGlobalSale = "WS";
 
-                                lblNumVisits = "YV";
-                                lblNumTx = "YT";
-                                //lblConversionRate = "YCR";
-                                lblAvgTicket = "YAT";
-                                lblUnitPerTx = "YUT";
+                                // lblNumVisits = "YV";
+                                // lblNumTx = "YT";
+                                // lblConversionRate = "YCR";
+                                // lblAvgTicket = "YAT";
+                                // lblUnitPerTx = "YUT";
                             } else if (option == 3) {
-                                lblCurrentGoal = "WG";
-                                lblCurrentSale = "WS";
-                                lblGlobalGoal = "MG";
-                                lblGlobalSale = "MS";
+                                // lblCurrentGoal = "WG";
+                                // lblCurrentSale = "WS";
+                                lblGlobalGoal = "MONGOA";
+                                lblGlobalSale = "MONSAL";
+                                // lblGlobalGoal = "MG";
+                                // lblGlobalSale = "MS";
 
-                                lblNumVisits = "WV";
-                                lblNumTx = "WT";
-                                //lblConversionRate = "WCR";
-                                lblAvgTicket = "WAT";
-                                lblUnitPerTx = "WUT";
+                                // lblNumVisits = "WV";
+                                // lblNumTx = "WT";
+                                // lblConversionRate = "WCR";
+                                // lblAvgTicket = "WAT";
+                                // lblUnitPerTx = "WUT";
                             } else if (option == 4) {
-                                lblCurrentGoal = "MG";
-                                lblCurrentSale = "MS";
-                                lblGlobalGoal = "TYG";
-                                lblGlobalSale = "TYS";
+                                // lblCurrentGoal = "MG";
+                                // lblCurrentSale = "MS";
+                                lblGlobalGoal = "TYGOA";
+                                lblGlobalSale = "TYSAL";
+                                // lblGlobalGoal = "TYG";
+                                // lblGlobalSale = "TYS";
 
-                                lblNumVisits = "MV";
-                                lblNumTx = "MT";
-                                //lblConversionRate = "MCR";
-                                lblAvgTicket = "MAT";
-                                lblUnitPerTx = "MUT";
+                                // lblNumVisits = "MV";
+                                // lblNumTx = "MT";
+                                // lblConversionRate = "MCR";
+                                // lblAvgTicket = "MAT";
+                                // lblUnitPerTx = "MUT";
                             } else if (option == 5) {
-                                lblCurrentGoal = "TYG";
-                                lblCurrentSale = "TYS";
-                                lblGlobalGoal = "CYG";
-                                lblGlobalSale = "CYS";
+                                // lblCurrentGoal = "TYG";
+                                // lblCurrentSale = "TYS";
+                                lblGlobalGoal = "CYGOA";
+                                lblGlobalSale = "CYSAL";
+                                // lblGlobalGoal = "CYG";
+                                // lblGlobalSale = "CYS";
 
-                                lblNumVisits = "TYV";
-                                lblNumTx = "TYT";
-                                //lblConversionRate = "TYCR";
-                                lblAvgTicket = "TYAT";
-                                lblUnitPerTx = "TYUT";
+                                // lblNumVisits = "TYV";
+                                // lblNumTx = "TYT";
+                                // lblConversionRate = "TYCR";
+                                // lblAvgTicket = "TYAT";
+                                // lblUnitPerTx = "TYUT";
                             }else if (option == 6) {
-                                lblCurrentGoal = "LYG";
-                                lblCurrentSale = "LYS";
+                                lblCurrentGoal = "LYGOA";
+                                lblCurrentSale = "LYSAL";
+                                // lblCurrentGoal = "LYG";
+                                // lblCurrentSale = "LYS";
 
-                                lblNumVisits = "LYV";
-                                lblNumTx = "LYT";
-                                //lblConversionRate = "LYCR";
-                                lblAvgTicket = "LYAT";
-                                lblUnitPerTx = "LYUT";
+                                // lblNumVisits = "LYV";
+                                // lblNumTx = "LYT";
+                                // lblConversionRate = "LYCR";
+                                // lblAvgTicket = "LYAT";
+                                // lblUnitPerTx = "LYUT";
                             }
+
+                            lblNumVisits = "VISIT";
+                            lblNumTx = "TRAN";
+                            lblAvgTicket = "AVTK";
+                            lblUnitPerTx = "UTRA";
                         }
 
                         $(data.report).each(function (index, value) {
@@ -1517,137 +1628,174 @@ function storeWitdhGraphic2(indice,regionCode) {
                         if (data.quantity > 0) {
 
                             if (current_lang == 'es') {
-                            if (option == 1) {
-                                lblCurrentGoal = "MH";
-                                lblCurrentSale = "VH";
-                                lblGlobalGoal = "MS";
-                                lblGlobalSale = "VS";
 
-                                lblNumVisits = "VIH";
-                                lblNumTx = "TH";
+                            lblCurrentGoal = "MET";
+                            lblCurrentSale = "VEN";
+
+                            if (option == 1) {
+                                // lblCurrentGoal = "MH";
+                                // lblCurrentSale = "VH";
+                                lblGlobalGoal = "METSEM";
+                                lblGlobalSale = "VENSEM";
+
+                                //lblNumVisits = "VIH";
+                                //lblNumTx = "TH";
                                 //lblConversionRate = "RCH";
-                                lblAvgTicket = "TPH";
-                                lblUnitPerTx = "UTH";
+                                //lblAvgTicket = "TPH";
+                                //lblUnitPerTx = "UTH";
                             } else if (option == 2) {
-                                lblCurrentGoal = "MA";
-                                lblCurrentSale = "VA";
-                                lblGlobalGoal = "MS";
-                                lblGlobalSale = "VS";
+                                // lblCurrentGoal = "MA";
+                                // lblCurrentSale = "VA";
+                                lblGlobalGoal = "METSEM";
+                                lblGlobalSale = "VENSEM";
 
-                                lblNumVisits = "VIA";
-                                lblNumTx = "TA";
-                                //lblConversionRate = "RCA";
-                                lblAvgTicket = "TPA";
-                                lblUnitPerTx = "UTA";
+                                // lblNumVisits = "VIA";
+                                // lblNumTx = "TA";
+                                // lblConversionRate = "RCA";
+                                // lblAvgTicket = "TPA";
+                                // lblUnitPerTx = "UTA";
                             } else if (option == 3) {
-                                lblCurrentGoal = "MS";
-                                lblCurrentSale = "VS";
-                                lblGlobalGoal = "MM";
-                                lblGlobalSale = "VM";
+                                // lblCurrentGoal = "MS";
+                                // lblCurrentSale = "VS";
+                                lblGlobalGoal = "METMEN";
+                                lblGlobalSale = "VENMEN";
 
-                                lblNumVisits = "VIS";
-                                lblNumTx = "TS";
-                                //lblConversionRate = "RCS";
-                                lblAvgTicket = "TPS";
-                                lblUnitPerTx = "UTS";
+                                // lblNumVisits = "VIS";
+                                // lblNumTx = "TS";
+                                // lblConversionRate = "RCS";
+                                // lblAvgTicket = "TPS";
+                                // lblUnitPerTx = "UTS";
                             } else if (option == 4) {
-                                lblCurrentGoal = "MM";
-                                lblCurrentSale = "VM";
-                                lblGlobalGoal = "MAH";
-                                lblGlobalSale = "VAH";
+                                // lblCurrentGoal = "MM";
+                                // lblCurrentSale = "VM";
+                                lblGlobalGoal = "METAÑO";
+                                lblGlobalSale = "VENAÑO";
+                                // lblCurrentGoal = "MA";
+                                // lblCurrentSale = "VA";
 
-                                lblNumVisits = "VIAH";
-                                lblNumTx = "TAH";
-                                //lblConversionRate = "RCAH";
-                                lblAvgTicket = "TPAH";
-                                lblUnitPerTx = "UTAH";
+                                // lblNumVisits = "VIAH";
+                                // lblNumTx = "TAH";
+                                // lblConversionRate = "RCAH";
+                                // lblAvgTicket = "TPAH";
+                                // lblUnitPerTx = "UTAH";
                             } else if (option == 5) {
-                                lblCurrentGoal = "MAH";
-                                lblCurrentSale = "VAH";
-                                lblGlobalGoal = "MAC";
-                                lblGlobalSale = "VAC";
+                                // lblCurrentGoal = "MAH";
+                                // lblCurrentSale = "VAH";
+                                lblGlobalGoal = "METACOM";
+                                lblGlobalSale = "VENACOM";
+                                // lblGlobalGoal = "MAC";
+                                // lblGlobalSale = "VAC";
 
-                                lblNumVisits = "VIAH";
-                                lblNumTx = "TAP";
-                                //lblConversionRate = "RCAP";
-                                lblAvgTicket = "TPAP";
-                                lblUnitPerTx = "UTAP";
+                                // lblNumVisits = "VIAH";
+                                // lblNumTx = "TAP";
+                                // lblConversionRate = "RCAP";
+                                // lblAvgTicket = "TPAP";
+                                // lblUnitPerTx = "UTAP";
                             }else if (option == 6) {
-                                lblCurrentGoal = "MAP";
-                                lblCurrentSale = "VAP";
+                                lblCurrentGoal = "METAPAS";
+                                lblCurrentSale = "VENAPAS";
+                                // lblCurrentGoal = "MAP";
+                                // lblCurrentSale = "VAP";
 
-                                lblNumVisits = "VIAP";
-                                lblNumTx = "TAP";
-                                //lblConversionRate = "RCP";
-                                lblAvgTicket = "ATP";
-                                lblUnitPerTx = "UTP";
+                                // lblNumVisits = "VIAP";
+                                // lblNumTx = "TAP";
+                                // lblConversionRate = "RCP";
+                                // lblAvgTicket = "ATP";
+                                // lblUnitPerTx = "UTP";
                             }
+
+                            lblNumVisits = "VISIT";
+                            lblNumTx = "TRAN";
+                            lblAvgTicket = "TPROM";
+                            lblUnitPerTx = "UTRA";
+
                         } else {
+
+                            lblCurrentGoal = "GOA";
+                            lblCurrentSale = "SAL";
+
                             if (option == 1) {
-                                lblCurrentGoal = "TG";
-                                lblCurrentSale = "TS";
-                                lblGlobalGoal = "WG";
-                                lblGlobalSale = "WS";
+                                // lblCurrentGoal = "TG";
+                                // lblCurrentSale = "TS";
+                                lblGlobalGoal = "WKGOA";
+                                lblGlobalSale = "WKSAL";
+                                // lblGlobalGoal = "WG";
+                                // lblGlobalSale = "WS";
 
-                                lblNumVisits = "TV";
-                                lblNumTx = "TT";
-                                //lblConversionRate = "TCR";
-                                lblAvgTicket = "TAT";
-                                lblUnitPerTx = "TUT";
+                                // lblNumVisits = "TV";
+                                // lblNumTx = "TT";
+                                // lblConversionRate = "TCR";
+                                // lblAvgTicket = "TAT";
+                                // lblUnitPerTx = "TUT";
                             } else if (option == 2) {
-                                lblCurrentGoal = "YG";
-                                lblCurrentSale = "YS";
-                                lblGlobalGoal = "WG";
-                                lblGlobalSale = "WS";
+                                // lblCurrentGoal = "YG";
+                                // lblCurrentSale = "YS";
+                                lblGlobalGoal = "WKGOA";
+                                lblGlobalSale = "WKSAL";
+                                // lblGlobalGoal = "WG";
+                                // lblGlobalSale = "WS";
 
-                                lblNumVisits = "YV";
-                                lblNumTx = "YT";
-                                //lblConversionRate = "YCR";
-                                lblAvgTicket = "YAT";
-                                lblUnitPerTx = "YUT";
+                                // lblNumVisits = "YV";
+                                // lblNumTx = "YT";
+                                // lblConversionRate = "YCR";
+                                // lblAvgTicket = "YAT";
+                                // lblUnitPerTx = "YUT";
                             } else if (option == 3) {
-                                lblCurrentGoal = "WG";
-                                lblCurrentSale = "WS";
-                                lblGlobalGoal = "MG";
-                                lblGlobalSale = "MS";
+                                // lblCurrentGoal = "WG";
+                                // lblCurrentSale = "WS";
+                                lblGlobalGoal = "MONGOA";
+                                lblGlobalSale = "MONSAL";
+                                // lblGlobalGoal = "MG";
+                                // lblGlobalSale = "MS";
 
-                                lblNumVisits = "WV";
-                                lblNumTx = "WT";
-                                //lblConversionRate = "WCR";
-                                lblAvgTicket = "WAT";
-                                lblUnitPerTx = "WUT";
+                                // lblNumVisits = "WV";
+                                // lblNumTx = "WT";
+                                // lblConversionRate = "WCR";
+                                // lblAvgTicket = "WAT";
+                                // lblUnitPerTx = "WUT";
                             } else if (option == 4) {
-                                lblCurrentGoal = "MG";
-                                lblCurrentSale = "MS";
-                                lblGlobalGoal = "TYG";
-                                lblGlobalSale = "TYS";
+                                // lblCurrentGoal = "MG";
+                                // lblCurrentSale = "MS";
+                                lblGlobalGoal = "TYGOA";
+                                lblGlobalSale = "TYSAL";
+                                // lblGlobalGoal = "TYG";
+                                // lblGlobalSale = "TYS";
 
-                                lblNumVisits = "MV";
-                                lblNumTx = "MT";
-                                //lblConversionRate = "MCR";
-                                lblAvgTicket = "MAT";
-                                lblUnitPerTx = "MUT";
+                                // lblNumVisits = "MV";
+                                // lblNumTx = "MT";
+                                // lblConversionRate = "MCR";
+                                // lblAvgTicket = "MAT";
+                                // lblUnitPerTx = "MUT";
                             } else if (option == 5) {
-                                lblCurrentGoal = "TYG";
-                                lblCurrentSale = "TYS";
-                                lblGlobalGoal = "CYG";
-                                lblGlobalSale = "CYS";
+                                // lblCurrentGoal = "TYG";
+                                // lblCurrentSale = "TYS";
+                                lblGlobalGoal = "CYGOA";
+                                lblGlobalSale = "CYSAL";
+                                // lblGlobalGoal = "CYG";
+                                // lblGlobalSale = "CYS";
 
-                                lblNumVisits = "TYV";
-                                lblNumTx = "TYT";
-                                //lblConversionRate = "TYCR";
-                                lblAvgTicket = "TYAT";
-                                lblUnitPerTx = "TYUT";
+                                // lblNumVisits = "TYV";
+                                // lblNumTx = "TYT";
+                                // lblConversionRate = "TYCR";
+                                // lblAvgTicket = "TYAT";
+                                // lblUnitPerTx = "TYUT";
                             }else if (option == 6) {
-                                lblCurrentGoal = "LYG";
-                                lblCurrentSale = "LYS";
+                                lblCurrentGoal = "LYGOA";
+                                lblCurrentSale = "LYSAL";
+                                // lblCurrentGoal = "LYG";
+                                // lblCurrentSale = "LYS";
 
-                                lblNumVisits = "LYV";
-                                lblNumTx = "LYT";
-                                //lblConversionRate = "LYCR";
-                                lblAvgTicket = "LYAT";
-                                lblUnitPerTx = "LYUT";
+                                // lblNumVisits = "LYV";
+                                // lblNumTx = "LYT";
+                                // lblConversionRate = "LYCR";
+                                // lblAvgTicket = "LYAT";
+                                // lblUnitPerTx = "LYUT";
                             }
+
+                            lblNumVisits = "VISIT";
+                            lblNumTx = "TRAN";
+                            lblAvgTicket = "AVTK";
+                            lblUnitPerTx = "UTRA";
                         }
 
                             $(data.report).each(function (index, value) {
@@ -1809,6 +1957,7 @@ function storeWitdhGraphic2(indice,regionCode) {
                                 $("#graph_region"+indice).append(mostrar);
                                 
                             });
+
                         }
                     },
                     error: function (xhr, ajaxOptions, thrownError) {
