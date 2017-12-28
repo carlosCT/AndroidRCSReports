@@ -166,7 +166,7 @@ header button:active{
     vertical-align: middle;
 }
 #btn_left{
-    position: absolute;
+    /*position: absolute;
     z-index: 10;
     bottom: 0;
     left: 0;
@@ -174,16 +174,35 @@ header button:active{
     padding-left: 9px;
     opacity: 0;
     -webkit-animation: fadeLeftToRight .4s forwards;
-        animation: fadeLeftToRight .4s forwards;
+    animation: fadeLeftToRight .4s forwards;
     -webkit-animation-delay: 0.2s;
-        animation-delay: 0.2s;
+    animation-delay: 0.2s;*/
+    position: absolute;
+    z-index: 10;
+    bottom: 5px;
+    left: 5px;
+    height: 28px;
+    padding-left: 9px;
+    opacity: 0;
+    -webkit-animation: fadeLeftToRight .4s forwards;
+    animation: fadeLeftToRight .4s forwards;
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;        
 }
 #btn_left.arrow {
-    padding-left: 24px;
+    /*padding-left: 24px;
     background-image: url(../img/backBtn.svg);
     background-position: -25px 0px;
     background-size: 65px 44px;
+    background-repeat: no-repeat;*/
+    padding-left: 25px;
+    background-image: url(../img/backBtn.svg);
+    background-position: -25px 2px;
+    background-size: 70px 25px;
     background-repeat: no-repeat;
+    border-radius: 15px;
+    border: 1px solid #0000CD;
+    padding-right: 10px;    
 }
 #btn_left.arrow.white{
     background-image: url(../img/backBtnWhite.svg);
@@ -207,16 +226,26 @@ header button:active{
 }
 
 #btn_right{
-    position: absolute;
+    /*position: absolute;
     bottom: 0;
     right: 0;
     height: 34px;
     padding-right: 0px;
     opacity: 0;
     -webkit-animation: fadeRightToLeft .4s forwards;
-        animation: fadeRightToLeft .4s forwards;
+    animation: fadeRightToLeft .4s forwards;
     -webkit-animation-delay: 0.2s;
-        animation-delay: 0.2s;
+    animation-delay: 0.2s;*/
+    position: absolute;
+    bottom: 0;
+    right: 4px;
+    height: 34px;
+    padding-right: 0px;
+    opacity: 0;
+    -webkit-animation: fadeRightToLeft .4s forwards;
+    animation: fadeRightToLeft .4s forwards;
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;        
 }
 #btn_right.calendar,
 .calendar{
@@ -226,9 +255,13 @@ header button:active{
     background-repeat: no-repeat;
 }
 #btn_right.config{
-    background-image: url(../img/iconItems.svg);
+    /*background-image: url(../img/iconItems.svg);
     background-position: center;
     background-size: 36px;
+    background-repeat: no-repeat;*/
+    background-image: url(../img/iconItems.svg);
+    background-position: center;
+    background-size: 33px;
     background-repeat: no-repeat;
 }
 #btn_right.configuration{
@@ -248,10 +281,13 @@ header button:active{
     right: 44px;
 }
 #btn_left button, #btn_right button{
-    height: 44px;
+    /*height: 44px;
     line-height: 44px;
+    background: transparent;*/
+    height: 28px;
+    line-height: 28px;
     background: transparent;
-    
+    margin-left: -5px;    
 }
 .img_logotitle {
     background-image: url(../img/iconReport.png) !important;
