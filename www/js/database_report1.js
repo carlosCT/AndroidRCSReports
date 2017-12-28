@@ -287,11 +287,6 @@ function downloadByCompany() {
                                 // lblUnitPerTx = "UTP";
                             }
 
-                            lblNumVisits = "VISIT";
-                            lblNumTx = "TRAN";
-                            lblAvgTicket = "TPROM";
-                            lblUnitPerTx = "UTRA";
-
                         } else {
 
                             // lblCurrentGoal = "GOA";
@@ -374,13 +369,13 @@ function downloadByCompany() {
                                 // lblAvgTicket = "LYAT";
                                 // lblUnitPerTx = "LYUT";
                             }
-
-                            lblNumVisits = "VISIT";
-                            lblNumTx = "TRAN";
-                            lblAvgTicket = "AVTK";
-                            lblUnitPerTx = "UTRA";
                         
                         }
+
+                        lblNumVisits = "Visit";
+                        lblNumTx = "Trans";
+                        lblAvgTicket = "ADS";
+                        lblUnitPerTx = "UPT";
 
                         mostrar += "<div id='divByCompany'>";
                         mostrar += "<div class='store waves-effect waves-light' onclick='grapihcCompanyDetails()'>";
@@ -748,11 +743,6 @@ function downloadByRegion() {
                                 // lblUnitPerTx = "UTP";
                             }
 
-                            lblNumVisits = "VISIT";
-                            lblNumTx = "TRAN";
-                            lblAvgTicket = "TPROM";
-                            lblUnitPerTx = "UTRA";
-
                         } else {
 
                             // lblCurrentGoal = "GOA";
@@ -835,14 +825,13 @@ function downloadByRegion() {
                                 // lblAvgTicket = "LYAT";
                                 // lblUnitPerTx = "LYUT";
                             }
-
-                            lblNumVisits = "VISIT";
-                            lblNumTx = "TRAN";
-                            lblAvgTicket = "AVTK";
-                            lblUnitPerTx = "UTRA";
                         
                         }
 
+                        lblNumVisits = "Visit";
+                        lblNumTx = "Trans";
+                        lblAvgTicket = "ADS";
+                        lblUnitPerTx = "UPT";
 
                         $(data.report).each(function (index, value) {
 
@@ -1232,11 +1221,6 @@ function downloadByStore(regionCode) {
                                 // lblUnitPerTx = "UTP";
                             }
 
-                            lblNumVisits = "VISIT";
-                            lblNumTx = "TRAN";
-                            lblAvgTicket = "TPROM";
-                            lblUnitPerTx = "UTRA";
-
                         } else {
 
                             // lblCurrentGoal = "GOA";
@@ -1319,13 +1303,13 @@ function downloadByStore(regionCode) {
                                 // lblAvgTicket = "LYAT";
                                 // lblUnitPerTx = "LYUT";
                             }
-
-                            lblNumVisits = "VISIT";
-                            lblNumTx = "TRAN";
-                            lblAvgTicket = "AVTK";
-                            lblUnitPerTx = "UTRA";
                         
                         }
+
+                        lblNumVisits = "Visit";
+                        lblNumTx = "Trans";
+                        lblAvgTicket = "ADS";
+                        lblUnitPerTx = "UPT";
 
                         $(data.report).each(function (index, value) {
 
@@ -1729,11 +1713,6 @@ function storeWitdhGraphic2(indice,regionCode) {
                                     // lblUnitPerTx = "UTP";
                                 }
 
-                                lblNumVisits = "VISIT";
-                                lblNumTx = "TRAN";
-                                lblAvgTicket = "TPROM";
-                                lblUnitPerTx = "UTRA";
-
                             } else {
 
                                 // lblCurrentGoal = "GOA";
@@ -1817,12 +1796,12 @@ function storeWitdhGraphic2(indice,regionCode) {
                                     // lblUnitPerTx = "LYUT";
                                 }
 
-                                lblNumVisits = "VISIT";
-                                lblNumTx = "TRAN";
-                                lblAvgTicket = "AVTK";
-                                lblUnitPerTx = "UTRA";
-                            
                             }
+
+                            lblNumVisits = "Visit";
+                            lblNumTx = "Trans";
+                            lblAvgTicket = "ADS";
+                            lblUnitPerTx = "UPT";
 
                             $(data.report).each(function (index, value) {
                                 var mostrar = "";

@@ -314,10 +314,11 @@ function MSG_LBL_DET_DIC_1(){
     $('#LastYearGoal').text("MAP");
     $('#LastYearSale').text("VAP");
 
-    $('#Visitors').text("VISIT");
-    $('#Trans').text("TRAN");
-    $('#AvgTicket').text("TPROM");
-    $('#UnitPerTrans').text("UTRA");
+    // $('#Visitors').text("Visit");
+    // $('#Trans').text("Trans");
+    // $('#AvgTicket').text("ADS");
+    // $('#UnitPerTrans').text("UPT");
+
 
     $('#report1TG').text("Meta de hoy");
     $('#report1TS').text("Ventas de hoy");
@@ -340,10 +341,10 @@ function MSG_LBL_DET_DIC_1(){
     $('#report1LYG').text("Meta del año pasado");
     $('#report1LYS').text("Ventas del año pasado");
 
-    $('#report1VISIT').text("Visitantes del periodo");
-    $('#report1TRAN').text("Transacciones del periodo");
-    $('#report1AVTK').text("Ticket promedio del periodo");
-    $('#report1UTRA').text("Unidad por transacción del periodo");
+    $('#report1VIS').text("Número de visitantes");
+    $('#report1TRAN').text("Número de transacciones");
+    $('#report1ADS').text("Ticket promedio");
+    $('#report1UPT').text("Unidad por transacción");
 
 
     // $('#report1TG').text("Meta de Hoy");
