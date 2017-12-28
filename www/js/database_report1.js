@@ -475,15 +475,16 @@ function downloadByCompany() {
                                 mostrar += "<span class='" + color + "'>" + percent + " %</span>";
                                 mostrar += "</div>";
                             }
-                            if (global == 1 && option!=6) {
-                                mostrar += "<div class='global'>";
-                                mostrar += "<i>" + lblGlobalGoal + "</i>";
-                                mostrar += "<p>" + parseFloat(goalAmountGlobal).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
-                                mostrar += "<i>" + lblGlobalSale + "</i>";
-                                mostrar += "<p>" + parseFloat(payTotalGlobal).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
-                                mostrar += "<span class='" + colorGlobal + "'>" + percentGlobal + " %</span>";
-                                mostrar += "</div>";
-
+                            if (option!=6) {
+                                if (global == 1) {
+                                    mostrar += "<div class='global'>";
+                                    mostrar += "<i>" + lblGlobalGoal + "</i>";
+                                    mostrar += "<p>" + parseFloat(goalAmountGlobal).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
+                                    mostrar += "<i>" + lblGlobalSale + "</i>";
+                                    mostrar += "<p>" + parseFloat(payTotalGlobal).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
+                                    mostrar += "<span class='" + colorGlobal + "'>" + percentGlobal + " %</span>";
+                                    mostrar += "</div>";
+                                }
                                 //Additional information (conversion rate)
                                 mostrar += "<div class='aditional'>";
                                 mostrar += "<i>" + lblNumVisits + "</i>";
@@ -927,25 +928,23 @@ function downloadByRegion() {
                             mostrar += "<h1>" + regionName + "</h1>";
                             if (actual == 1) {
                                 mostrar += "<div class='actual'>";
-
                                 mostrar += "<i>" + lblCurrentGoal + "</i>";
                                 mostrar += "<p>" + parseFloat(goalAmount).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
                                 mostrar += "<i>" + lblCurrentSale + "</i>";
                                 mostrar += "<p>" + parseFloat(payTotal).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
                                 mostrar += "<span class='" + color + "'>" + percent + " %</span>";
-
                                 mostrar += "</div>";
                             }
-                            if (global == 1 && option!=6) {
-                                mostrar += "<div class='global'>";
-
-                                mostrar += "<i class='type'>" + lblGlobalGoal + "</i>";
-                                mostrar += "<p class='gol-number'>" + parseFloat(goalAmountGlobal).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
-                                mostrar += "<i class='type'>" + lblGlobalSale + "</i>";
-                                mostrar += "<p class='sale-number'>" + parseFloat(payTotalGlobal).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
-                                mostrar += "<span class='" + colorGlobal + "'>" + percentGlobal + " %</span>";
-                                mostrar += "</div>";
-
+                            if (option!=6) {
+                                if (global == 1) {
+                                    mostrar += "<div class='global'>";
+                                    mostrar += "<i class='type'>" + lblGlobalGoal + "</i>";
+                                    mostrar += "<p class='gol-number'>" + parseFloat(goalAmountGlobal).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
+                                    mostrar += "<i class='type'>" + lblGlobalSale + "</i>";
+                                    mostrar += "<p class='sale-number'>" + parseFloat(payTotalGlobal).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
+                                    mostrar += "<span class='" + colorGlobal + "'>" + percentGlobal + " %</span>";
+                                    mostrar += "</div>";
+                                }
                                 //Additional information (conversion rate)
                                 mostrar += "<div class='aditional'>";
                                 mostrar += "<i>" + lblNumVisits + "</i>";
@@ -1440,20 +1439,19 @@ function downloadByStore(regionCode) {
                                 mostrar += "<i>" + lblCurrentSale + "</i>";
                                 mostrar += "<p>" + parseFloat(payTotal).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
                                 mostrar += "<span class='" + color + "'>" + percent + " %</span>";
-
                                 mostrar += "</div>";
                             }
 
-                            if (global == 1 && option!=6) {
-                                mostrar += "<div class='global'>";
-                                mostrar += "<i>" + lblGlobalGoal + "</i>";
-                                mostrar += "<p>" + parseFloat(goalAmountGlobal).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
-                                mostrar += "<i>" + lblGlobalSale + "</i>";
-                                mostrar += "<p>" + parseFloat(payTotalGlobal).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
-                                mostrar += "<span class='" + colorGlobal + "'>" + percentGlobal + " %</span>";
-
-                                mostrar += "</div>";
-
+                            if (option!=6) {
+                                if (global == 1) {
+                                    mostrar += "<div class='global'>";
+                                    mostrar += "<i>" + lblGlobalGoal + "</i>";
+                                    mostrar += "<p>" + parseFloat(goalAmountGlobal).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
+                                    mostrar += "<i>" + lblGlobalSale + "</i>";
+                                    mostrar += "<p>" + parseFloat(payTotalGlobal).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
+                                    mostrar += "<span class='" + colorGlobal + "'>" + percentGlobal + " %</span>";
+                                    mostrar += "</div>";
+                                }
                                 //Additional information (conversion rate)
                                 mostrar += "<div class='aditional'>";
                                 mostrar += "<i>" + lblNumVisits + "</i>";
@@ -1920,20 +1918,19 @@ function storeWitdhGraphic2(indice,regionCode) {
                                     mostrar += "<i>" + lblCurrentSale + "</i>";
                                     mostrar += "<p>" + parseFloat(payTotal).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
                                     mostrar += "<span class='" + color + "'>" + percent + " %</span>";
-
                                     mostrar += "</div>";
                                 }
 
-                                if (global == 1 && option!=6) {
-                                    mostrar += "<div class='global'>";
-                                    mostrar += "<i>" + lblGlobalGoal + "</i>";
-                                    mostrar += "<p>" + parseFloat(goalAmountGlobal).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
-                                    mostrar += "<i>" + lblGlobalSale + "</i>";
-                                    mostrar += "<p>" + parseFloat(payTotalGlobal).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
-                                    mostrar += "<span class='" + colorGlobal + "'>" + percentGlobal + " %</span>";
-
-                                    mostrar += "</div>";
-
+                                if (option!=6) {
+                                    if (global == 1) {
+                                        mostrar += "<div class='global'>";
+                                        mostrar += "<i>" + lblGlobalGoal + "</i>";
+                                        mostrar += "<p>" + parseFloat(goalAmountGlobal).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
+                                        mostrar += "<i>" + lblGlobalSale + "</i>";
+                                        mostrar += "<p>" + parseFloat(payTotalGlobal).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
+                                        mostrar += "<span class='" + colorGlobal + "'>" + percentGlobal + " %</span>";
+                                        mostrar += "</div>";
+                                    }
                                     //Additional information (conversion rate)
                                     mostrar += "<div class='aditional'>";
                                     mostrar += "<i>" + lblNumVisits + "</i>";
@@ -1955,7 +1952,7 @@ function storeWitdhGraphic2(indice,regionCode) {
                                 mostrar += "</div>";
                                 mostrar += "</div>"
                                 $("#graph_region"+indice).append(mostrar);
-                                
+                 
                             });
 
                         }
