@@ -188,6 +188,7 @@ header button:active{
 #btn_left.arrow.white{
     background-image: url(../img/backBtnWhite.svg);
 }
+
 #txt_login,#txt_maintitle,#txt_title, #top_txt_title,#txt_Options,#txt_title2{
     text-align: center;
     width: 160px;
@@ -199,10 +200,12 @@ header button:active{
     font-weight: bold;
     opacity: 0;
     -webkit-animation: fadeIn .4s forwards;
-        animation: fadeIn .4s forwards;
+    animation: fadeIn .4s forwards;
     -webkit-animation-delay: 0.2s;
-        animation-delay: 0.2s;
+    animation-delay: 0.2s;
+    font-size: 15px;
 }
+
 #btn_right{
     position: absolute;
     bottom: 0;
@@ -887,13 +890,15 @@ hr {
 }
 .actual i,.global i,.aditional i{
     width: 12%;
-    font-size: 16px;
+    /*font-size: 16px;*/
+    font-size: 11px;
     font-style: normal;
     color: #0000CD;
 }
 .actual p,.global p,.aditional p{
     width: 26.5%;
-    font-size: 16px;
+    /*font-size: 16px;*/
+    font-size: 13px;
     text-align: left;
 }
 .actual span,.global span,.aditional span{
@@ -902,7 +907,8 @@ hr {
     padding-top: 4pt;
     padding-bottom: 4pt;
     text-align: right;
-    font-size: 16px;
+    /*font-size: 16px;*/
+    font-size: 13px;
     text-align: center;
     color: white !important;
 }
@@ -2027,7 +2033,8 @@ text{
         width: 31%;
     }
     .store{
-        padding: 4pt 6%;
+        /*padding: 4pt 6%;*/
+        padding: 0pt 5% 3pt;
     }
     .actual i, .global i, .aditional i {
         width: 11%;
@@ -2181,11 +2188,12 @@ text{
     }
 
     .store {
-        padding: 2pt 4% 6pt;
+        /*padding: 2pt 4% 6pt;*/
+        padding: 0pt 5% 3pt;
     }
 
     .store h1 {
-        font-size: 13px;
+        font-size: 12px;
     }
 
     .actual i, .global i, .aditional i {
@@ -2193,11 +2201,13 @@ text{
     }
 
     .actual p, .global p, .aditional p {
-        width: 24.5%;
+        width: 26.5%;
     }
 
     .actual span, .global span, .aditional span {
-        width: 21%;
+        width: 17%;
+        padding-top: 4px;
+        padding-bottom: 4px;
     }
 
     .infoReport1 i {
