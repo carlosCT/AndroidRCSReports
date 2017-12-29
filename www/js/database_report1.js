@@ -61,6 +61,7 @@ $(window).resize(function () {
 });
 
 function responsiveReport1() {
+    var windoww = $(window).width();
     var windowh = $(window).height();
     var headerh = $('header').height();
     var regionh = $('#divRegion').height();
@@ -78,7 +79,11 @@ function responsiveReport1() {
     $('.graphic').empty();
 
     //altura responsive del modal "show_info" - FJ
-    let altModal = Number(windowh - 70) + 'px';
+    let altRest = 70;
+    if (windoww >= 768 && windoww <= 1024) {
+        altRest = 100;
+    }
+    let altModal = Number(windowh - altRest) + 'px';
     $('.css__modal--dictionary').css('height', altModal);
 }
 
