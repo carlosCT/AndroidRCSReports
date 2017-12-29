@@ -251,48 +251,6 @@ function MSG_COMBO_FILTER_STORE(){
 
 function MSG_LBL_DET_DIC_1(){
 
-    // $('#GoalPeriod').text("MET");
-    // $('#SalesPeriod').text("VEN");
-
-    // $('#WeekGoal').text("METSEM");
-    // $('#WeekSale').text("VENSEM");
-
-    // $('#MonthGoal').text("METMEN");
-    // $('#MonthSale').text("VENMEN");
-
-    // $('#ThisYearGoal').text("METAÑO");
-    // $('#ThisYearSale').text("VENAÑO");
-
-    // $('#CompleteYearGoal').text("METACOM");
-    // $('#CompleteYearSale').text("VENACOM");
-
-    // $('#LastYearGoal').text("METAPAS");
-    // $('#LastYearSale').text("VENAPAS");
-
-    // $('#report1GP').text("Meta del periodo");
-    // $('#report1SP').text("Ventas del periodo");
-
-    // $('#report1WG').text("Meta de la semana a la fecha");
-    // $('#report1WS').text("Ventas de la semana a la fecha");
-
-    // $('#report1MG').text("Meta del mes a la fecha");
-    // $('#report1MS').text("Ventas del mes a la fecha");
-
-    // $('#report1TYG').text("Meta del año a la fecha");
-    // $('#report1TYS').text("Ventas del año a la fecha");
-
-    // $('#report1CYG').text("Meta del año completo");
-    // $('#report1CYS').text("Ventas del año completo");
-
-    // $('#report1LYG').text("Meta del año pasado");
-    // $('#report1LYS').text("Ventas del año pasado");
-
-    // $('#report1VISIT').text("Visitantes del periodo");
-    // $('#report1TRAN').text("Transacciones del periodo");
-    // $('#report1AVTK').text("Ticket promedio del periodo");
-    // $('#report1UTRA').text("Unidad por transacción del periodo");
-
-
     $('#TodayGoal').text("MH");
     $('#TodaySale').text("VH");
 
@@ -313,11 +271,6 @@ function MSG_LBL_DET_DIC_1(){
 
     $('#LastYearGoal').text("MAP");
     $('#LastYearSale').text("VAP");
-
-    // $('#Visitors').text("Visit");
-    // $('#Trans').text("Trans");
-    // $('#AvgTicket').text("ADS");
-    // $('#UnitPerTrans').text("UPT");
 
 
     $('#report1TG').text("Meta de hoy");
@@ -345,28 +298,6 @@ function MSG_LBL_DET_DIC_1(){
     $('#report1TRAN').text("Número de transacciones");
     $('#report1ADS').text("Ticket promedio");
     $('#report1UPT').text("Unidad por transacción");
-
-
-    // $('#report1TG').text("Meta de Hoy");
-    // $('#report1TS').text("Venta de Hoy");
-
-    // $('#report1YG').text("Meta de Ayer");
-    // $('#report1YS').text("Venta de Ayer");
-
-    // $('#report1WG').text("Meta de Semana a Hoy");
-    // $('#report1WS').text("Venta de Semana a Hoy");
-
-    // $('#report1MG').text("Meta de Mes a Hoy");
-    // $('#report1MS').text("Venta de Mes a Hoy");
-
-    // $('#report1TYG').text("Meta de Año a Hoy");
-    // $('#report1TYS').text("Venta de Año a Hoy");
-
-    // $('#report1CYG').text("Meta del Año Completo");
-    // $('#report1CYS').text("Venta del Año Completo");
-
-    // $('#report1LYG').text("Meta del Año Pasado");
-    // $('#report1LYS').text("Venta del Año Pasado");
 
     $('#lblChooseRegion').text('Elegir Región');
 }
