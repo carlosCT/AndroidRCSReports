@@ -1908,19 +1908,27 @@ text{
         background-color: rgb(253, 253, 253);
     }
     .store{
-        padding: 6pt 6%;
+        padding: 0pt 3% 0pt;
         line-height: 1.75em;
     }
     .store h1 {
         height: 40px;
-        font-size: 21pt;
+        /*font-size: 21pt;*/
+        font-size: 14px;
     }
     .actual i, .global i,
     .actual p, .global p,
     .actual span, .global span,
     .aditional i,.aditional p,.aditional span {
-        font-size: 18pt;
+        /*font-size: 18pt;*/
+        font-size: 14px;
     }
+
+    .actual span, .global span, .aditional span {
+        padding-top: 0pt;
+        padding-bottom: 0pt;
+    }
+
     .actual p, .global p, .aditional p{
         width: 31.5%;
     }
@@ -1931,36 +1939,46 @@ text{
         width: 19%;
     }
     .actual span, .global span{
-        padding-top: 5px;
-        padding-bottom: 5px;
+        /*padding-top: 5px;
+        padding-bottom: 5px;*/
+        padding-top: 0px;
+        padding-bottom: 0px;
     }
     .year, .quantity,div[class^="detalle-"] i, div[class^="detalle-"] span{
         font-size: 16px;
     }
     input[type="checkbox"]+ label{
-        font-size: 15pt;
+        /*font-size: 15pt;*/
+        font-size: 15px;
     }
     .item,.innerLi>span{
-        font-size: 15pt;
+        /*font-size: 15pt;*/
+        font-size: 15px;
     }
     .item.innerLi>div, .item>.date{
-        font-size: 14pt;
-        line-height: 2.3em;
+        /*font-size: 14pt;
+        line-height: 2.3em;*/
+        font-size: 15px;
+        line-height: 40px;
     }
     #txt_maintitle, #txt_title, #top_txt_title, #txt_Options,
     header button,.btn-modal, .btn-modal:hover{
-        font-size: 16pt;
+        /*font-size: 16pt;*/
+        font-size: 17px;
     }
 
     .modal-dialog{
-        width: 525px;
+        width: 100%;
+        max-width: 600px;
     }
     .dictionary-modal{
-        width: 640px;
+        /*width: 640px;*/
     }
     .infoReport1 i, .infoReport1 span,
     .modal-title{
-        font-size: 15pt;
+        /*font-size: 15pt;*/
+        font-size: 15px;
+        line-height: 20px;
     }
     .infoReport1 span{
         width: 38%;
@@ -1970,7 +1988,8 @@ text{
         width: 11%;
     }
     .infoReport1 {
-        margin-bottom: 14pt;
+        /*margin-bottom: 14pt;*/
+        margin-bottom: 10px;
     }
     
     .list_store h1 {
@@ -2040,11 +2059,20 @@ text{
         font-size: 16px;
     }
     div[class^="chartdiv"]{
-    height: 180px;
+        height: 180px;
     }
     .dropdown-toggle .lblFilter {
-        padding: 0 48px;
+        /*padding: 0 48px;*/
+        padding: 0 1.5%;
     }
+
+    .item {
+        padding: 0 3%;
+    }
+
+    .store h1 {
+        line-height: 3.2em;
+    }    
 }
 
 /*iPhone 6 in portrait & landscape*/
