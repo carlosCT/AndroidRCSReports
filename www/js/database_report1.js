@@ -1619,7 +1619,7 @@ function updateGlobal() {
         localStorage.setItem("check_global_report1",0);
     } else {
         $('.check_global').addClass('checked');
-        localStorage.setItem("check_global_report1",1);;
+        localStorage.setItem("check_global_report1",1);
     }
 }
 

@@ -73,7 +73,6 @@ function showModalSetDate(){
     $('#ModalSetDate').modal('show');
 }
 
-
 function showOptions(){
     $('#show_options').modal('show');
     getDataInUse();
@@ -172,7 +171,8 @@ function updateHideReports() {
                                             var arrReport = data.report;
                                             $("#txtUser").text(data.employeeName);
                                             localStorage.RCSReportsEmployeeCode=data.employeeCode;
-                                            
+                                            localStorage.RCSReportsVersion=data.version;
+
                                             var igual = 0;
                                             //copmprueba que son iguales los reportes
                                             if (arrReport.length == results.rows.length) {
