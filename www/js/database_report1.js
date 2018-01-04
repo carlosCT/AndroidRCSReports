@@ -240,6 +240,11 @@ function downloadByCompany() {
                                 lblCurrentSale = "VAP";
                             }
 
+                            lblNumVisits = "VIS";
+                            lblNumTx = "TRAN";
+                            lblAvgTicket = "TPR";
+                            lblUnitPerTx = "UPR";
+
                         } else {
 
                             if (option == 1) {
@@ -271,13 +276,13 @@ function downloadByCompany() {
                                 lblCurrentGoal = "LYG";
                                 lblCurrentSale = "LYS";
                             }
+
+                            lblNumVisits = "Visit";
+                            lblNumTx = "Trans";
+                            lblAvgTicket = "ADS";
+                            lblUnitPerTx = "UPT";
                         
                         }
-
-                        lblNumVisits = "Visit";
-                        lblNumTx = "Trans";
-                        lblAvgTicket = "ADS";
-                        lblUnitPerTx = "UPT";
 
                         mostrar += "<div id='divByCompany'>";
                         mostrar += "<div class='store waves-effect waves-light' onclick='grapihcCompanyDetails()'>";
@@ -593,6 +598,11 @@ function downloadByRegion() {
                                 lblCurrentSale = "VAP";
                             }
 
+                            lblNumVisits = "VIS";
+                            lblNumTx = "TRAN";
+                            lblAvgTicket = "TPR";
+                            lblUnitPerTx = "UPR";
+
                         } else {
 
                             if (option == 1) {
@@ -624,13 +634,13 @@ function downloadByRegion() {
                                 lblCurrentGoal = "LYG";
                                 lblCurrentSale = "LYS";
                             }
-                        
-                        }
 
-                        lblNumVisits = "Visit";
-                        lblNumTx = "Trans";
-                        lblAvgTicket = "ADS";
-                        lblUnitPerTx = "UPT";
+                            lblNumVisits = "Visit";
+                            lblNumTx = "Trans";
+                            lblAvgTicket = "ADS";
+                            lblUnitPerTx = "UPT";
+
+                        }
 
                         $(data.report).each(function (index, value) {
 
@@ -968,6 +978,11 @@ function downloadByStore(regionCode) {
                                 lblCurrentSale = "VAP";
                             }
 
+                            lblNumVisits = "VIS";
+                            lblNumTx = "TRAN";
+                            lblAvgTicket = "TPR";
+                            lblUnitPerTx = "UPR";
+
                         } else {
 
                             if (option == 1) {
@@ -999,13 +1014,13 @@ function downloadByStore(regionCode) {
                                 lblCurrentGoal = "LYG";
                                 lblCurrentSale = "LYS";
                             }
+
+                            lblNumVisits = "Visit";
+                            lblNumTx = "Trans";
+                            lblAvgTicket = "ADS";
+                            lblUnitPerTx = "UPT";
                         
                         }
-
-                        lblNumVisits = "Visit";
-                        lblNumTx = "Trans";
-                        lblAvgTicket = "ADS";
-                        lblUnitPerTx = "UPT";
 
                         $(data.report).each(function (index, value) {
 
@@ -1357,6 +1372,11 @@ function storeWitdhGraphic2(indice,regionCode) {
                                     lblCurrentSale = "VAP";
                                 }
 
+                                lblNumVisits = "VIS";
+                                lblNumTx = "TRAN";
+                                lblAvgTicket = "TPR";
+                                lblUnitPerTx = "UPR";
+
                             } else {
 
                                 if (option == 1) {
@@ -1389,12 +1409,12 @@ function storeWitdhGraphic2(indice,regionCode) {
                                     lblCurrentSale = "LYS";
                                 }
 
-                            }
+                                lblNumVisits = "Visit";
+                                lblNumTx = "Trans";
+                                lblAvgTicket = "ADS";
+                                lblUnitPerTx = "UPT";
 
-                            lblNumVisits = "Visit";
-                            lblNumTx = "Trans";
-                            lblAvgTicket = "ADS";
-                            lblUnitPerTx = "UPT";
+                            }
 
                             $(data.report).each(function (index, value) {
                                 var mostrar = "";

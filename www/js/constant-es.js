@@ -273,6 +273,12 @@ function MSG_LBL_DET_DIC_1(){
     $('#LastYearSale').text("VAP");
 
 
+    $('#Visitors').text("VIS");
+    $('#Trans').text("TRAN");
+    $('#AvgTicket').text("TPR");
+    $('#UnitPerTrans').text("UPR");
+
+
     $('#report1TG').text("Meta de hoy");
     $('#report1TS').text("Ventas de hoy");
 
@@ -297,7 +303,7 @@ function MSG_LBL_DET_DIC_1(){
     $('#report1VIS').text("Número de visitantes");
     $('#report1TRAN').text("Número de transacciones");
     $('#report1ADS').text("Ticket promedio");
-    $('#report1UPT').text("Unidad por transacción");
+    $('#report1UPT').text("Unidades promedio");
 
     $('#lblChooseRegion').text('Elegir Región');
 }
