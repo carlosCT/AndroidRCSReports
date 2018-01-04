@@ -1,5 +1,6 @@
 
 $(document).ready(function () {
+    //alert(localStorage.RCSReportsAppVersion);
     document.addEventListener("deviceready", onDeviceReady, false);
 
     function onDeviceReady() {
@@ -35,10 +36,6 @@ $(window).load(function(){
     //     updateHideReports();
     //     checktaxDefault();
     //     verificateSetDate();
-
-    //     //FJ
-    //     modalWhiteAbsolute();
-    //     showModalUpdateVersion();
     // }else{
     //     $('#no_connection').modal('show');
     //     if (current_lang=='es'){
@@ -320,6 +317,14 @@ function updateHideReports() {
                                                 mostrarModalGeneral("Invalid PIN");
                                             }
                                             window.location.href = "login.html";
+                                        }
+
+                                        // Validación de Versiones - FJ
+                                        if (localStorage.RCSReportsWSVersion==localStorage.RCSReportsAppVersion && localStorage.RCSReportsWSVersion!=undefined && localStorage.RCSReportsAppVersion!=undefined) {
+                                            //alert('Versión actualizada');
+                                        } else {
+                                            modalWhiteAbsolute();
+                                            showModalUpdateVersion();
                                         }
                                     },
                                     error: function (xhr, ajaxOptions, thrownError) {
@@ -1602,5 +1607,5 @@ function closeModalUpdateVersion(){
 }
 
 function modalWhiteAbsolute(){
-    $('.content').prepend('<div class="modal-white"></div>');
+    $('.content').prepend('<div class="modal-white"><div class="css__circle-lock"><img src="../../img/iconLock.svg" class="titleLock" /></div></div>');
 }

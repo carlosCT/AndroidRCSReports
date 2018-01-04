@@ -155,6 +155,12 @@ function MSG_LBL_CHANGE_ALIAS_SETTINGS(){
     $('#txtUserT').text('Usuario: ');
 }
 
+/* MSG LBL UPDATE VERSION - FJ */
+function MSG_LBL_UPDATE_VERSION() {
+    $('.lblSetMessage').html('Mensaje');
+    $('.lblSetMsgUpdateVers1').html('Se requiere actualizar el servidor para poder utilizar esta versión.');
+    $('.lblSetMsgUpdateVers2').html('Póngase en contacto con el proveedor.');
+}
 
 /******************************/
 
