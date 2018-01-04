@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
     document.addEventListener("deviceready", onDeviceReady, false);
 
@@ -28,22 +29,22 @@ $(document).ready(function () {
 
 
 $(window).load(function(){
-    deteclenguage();
-    onInit();
-    if(checkNetConnection()==true){
-        updateHideReports();
-        checktaxDefault();
-        verificateSetDate();
-    }else{
-        $('#no_connection').modal('show');
-        if (current_lang=='es'){
-            $('.titleMessage').text('Mensaje');
-            $('.textNoConnection').text('No hay conexión de red');
-            $('.btnok').text('Aceptar');
-        }else{
-           //modal para no conexión
-        }
-    }
+    // deteclenguage();
+    // onInit();
+    // if(checkNetConnection()==true){
+    //     updateHideReports();
+    //     checktaxDefault();
+    //     verificateSetDate();
+    // }else{
+    //     $('#no_connection').modal('show');
+    //     if (current_lang=='es'){
+    //         $('.titleMessage').text('Mensaje');
+    //         $('.textNoConnection').text('No hay conexión de red');
+    //         $('.btnok').text('Aceptar');
+    //     }else{
+    //        //modal para no conexión
+    //     }
+    // }
 
     $('.radio_wrapper').click(function(){
         $('.radio_wrapper').removeClass('checked');
@@ -171,7 +172,7 @@ function updateHideReports() {
                                             var arrReport = data.report;
                                             $("#txtUser").text(data.employeeName);
                                             localStorage.RCSReportsEmployeeCode=data.employeeCode;
-                                            localStorage.RCSReportsVersion=data.version;
+                                            localStorage.RCSReportsWSVersion=data.version;
 
                                             var igual = 0;
                                             //copmprueba que son iguales los reportes
