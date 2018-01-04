@@ -323,6 +323,7 @@ function updateHideReports() {
                                         if (localStorage.RCSReportsWSVersion==localStorage.RCSReportsAppVersion && localStorage.RCSReportsWSVersion!=undefined && localStorage.RCSReportsAppVersion!=undefined) {
                                             //alert('Versión actualizada');
                                         } else {
+                                            //Se muestra el modal con el mensaje
                                             modalWhiteAbsolute();
                                             showModalUpdateVersion();
                                         }
