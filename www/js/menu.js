@@ -35,6 +35,10 @@ $(window).load(function(){
     //     updateHideReports();
     //     checktaxDefault();
     //     verificateSetDate();
+
+    //     //FJ
+    //     modalWhiteAbsolute();
+    //     showModalUpdateVersion();
     // }else{
     //     $('#no_connection').modal('show');
     //     if (current_lang=='es'){
@@ -1583,4 +1587,20 @@ function checkTax(){
         $('.check_tax').addClass('checked');
         localStorage.setItem("check_tax","1");
     }
+}
+
+
+// Visualiza modal de actualización - FJ
+function showModalUpdateVersion() {
+    setTimeout(function(){ $('#ModalUpdateVersion').modal('show'); $('.modal-white').remove(); }, 1000);
+}
+
+//funcion cloce modal update verison - FJ
+function closeModalUpdateVersion(){
+    modalWhiteAbsolute();
+    $('#ModalUpdateVersion').modal('hide');
+}
+
+function modalWhiteAbsolute(){
+    $('.content').prepend('<div class="modal-white"></div>');
 }
