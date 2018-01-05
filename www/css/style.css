@@ -550,7 +550,8 @@ input[type="checkbox"]:checked + label:before {
     width: 100%;
     font-size: 0;
     overflow-y: auto;
-    padding-top: 11px;
+    /*padding-top: 11px;*/
+    padding-top: 3px;
     background-image: url('../img/Bottom-Waves-1024.png');
     background-repeat: no-repeat;
     background-position: center center;
@@ -638,8 +639,10 @@ input[type="checkbox"]:checked + label:before {
 
 .item .box .item_title,.menu .box{
     display: table-cell;
-    height: 42px;
-    vertical-align: bottom;
+    /*height: 42px;*/
+    height: 25px;
+    /*vertical-align: bottom;*/
+    vertical-align: top;
     font-size: 20px;
     font-weight: bold;
     text-align: left;
@@ -648,15 +651,20 @@ input[type="checkbox"]:checked + label:before {
     display: table;
     font-size: 11px;
     text-align: left;
-    line-height: 18px;
+    /*line-height: 18px;*/
     color: #676767;
+    line-height: 15px;
+    vertical-align: top;    
 }
 
 .iconReport {
     position: absolute;
-    width: 60px;
+    /*width: 60px;
     height: 60px;
-    left: 12px;
+    left: 12px;*/
+    width: 40px;
+    height: 40px;
+    left: 15px;    
     top: 0;
     right: 0;
     bottom: 0;
@@ -828,7 +836,8 @@ hr {
     padding: 0 8px;
     height: 40px;
     width: 100%;
-    line-height: 30pt;
+    /*line-height: 30pt;*/
+    line-height: 20px;
 }
 .item.selected{    
     color: #fff;
@@ -2152,10 +2161,12 @@ text{
         /*height: 20pt;*/
     }
     .list .item, .menu .item{
-        height: 90px;
+        /*height: 90px;*/
+        height: 70px;
     }
     .item .box, .menu .box{
-        padding-left: 80px;
+        /*padding-left: 80px;*/
+        padding-left: 70px;
     }
     .actual i, .global i, .aditional i {
         width: 12%;
