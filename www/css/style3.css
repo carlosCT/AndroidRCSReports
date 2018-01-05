@@ -24,7 +24,8 @@ p.clasification:first-of-type{
 	width: 17%;
     padding: 0;
     text-align: right;
-    font-size: 16px;
+    /*font-size: 16px;*/
+    font-size: 11px;
 }
 
 #lbldateStart ,#lbldateEnd,#lbldateToCompare{
@@ -76,8 +77,10 @@ nav .navBtn3{ width: 28%; text-align: right;}
 	color: #fff;
     background-color: #0073FF;
     border-radius: 8pt;
-    padding: 5px 4pt;
+    /*padding: 5px 4pt;*/
+    padding: 3px 4pt;
     text-align: center;
+    font-size: 11px;
 }
 .colorAcumulateGoal{
 	height: 15px;
@@ -161,31 +164,39 @@ nav .navBtn3{ width: 28%; text-align: right;}
 }
 @media only screen and (min-width : 280px) and (max-device-width : 568px) { 
     .progressByStore i.T {
-        width: 7%;
+        /*width: 7%;*/
+        width: 9%;
     }
     .progressByStore i {
-        width: 10%;
-        font-size: 11pt;
+        /*width: 10%;
+        font-size: 11pt;*/
+        width: 11%;
+        font-size: 11px;
     }
     .progressByStore span{
-        width: 26%;
+        /*width: 26%;*/
+        width: 24%;
     }
     p.clasification:first-of-type {
         width: 21%;
     }
     .progressByStore p {
-        width: 26%;
-        font-size: 11pt;
+        /*width: 26%;
+        font-size: 11pt;*/
+        width: 24%;
+        font-size: 13px;
     }
     #PercentGoal, #totalGoalPercentage,
     #PercentSale, #totalSalePercentage {
         border-radius: 4pt;
-        padding: 5pt 4pt;
+        /*padding: 5pt 4pt;*/
+        padding: 3pt 9pt;
     }
     #lblTotalAll,
     #totalpromedio,
     #totalGoalPercentage ,
     #totalSalePercentage{
-        font-size: 13pt;
+        /*font-size: 13pt;*/
+        font-size: 13px;
     }
 }
