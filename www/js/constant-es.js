@@ -757,7 +757,7 @@ function changeLanguage6(){
     $('.date-4').text('Inicio de Mes');
     $('.date-5').text('Inicio de Año');
     $('.nameDate').text('Inicio de Semana');
-    $('.close').text('Cerrar');
+    $('.close').text('X');
     $('.btnok').text('Aceptar');
     $('.titleMessage').text('Mensaje');
     $('.titleTopBarOpt').text('Opciones');

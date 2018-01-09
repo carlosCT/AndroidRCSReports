@@ -71,8 +71,10 @@ label{
     display: block;
     margin: 0 auto;
     z-index: 10;
-    width: 88%;
-    font-size: 15px;
+    /*width: 88%;
+    font-size: 15px;*/
+    width: 95%;
+    font-size: 14px;
 }
 /*preparando el entorno para la app hybrid*/
 .hybrid_container, #floatWindow{
@@ -142,7 +144,7 @@ header{
 header button,
 .item button{
     -webkit-tap-highlight-color: rgba(0,0,0,0);
-    font-size: 17px;
+    /*font-size: 17px;*/
     color: #0000CD;
     padding-left: 4px;
     font-weight: 300;
@@ -150,6 +152,7 @@ header button,
     max-width: 64px;
     min-width: 34px;
     height: 34px;
+    font-size: 13px;
 }
 header button:active{
     opacity: 0.3;
@@ -381,8 +384,8 @@ header button:active{
 }
 .btn-modal,.btn-modal:hover{
     color: #0000CD;
-    
-    font-size: 18px;
+    /*font-size: 18px;*/
+    font-size: 15px;
 }
 .btn-modal:active{
     outline: 0 none;
@@ -395,7 +398,8 @@ header button:active{
     position: relative;
     height: 34px;
     line-height: 34px;
-    width: 88%;
+    /*width: 88%;*/
+    width: 95%;
     margin: auto;
 }
 .text-checkbox{
@@ -594,7 +598,8 @@ input[type="checkbox"]:checked + label:before {
 }*/
 .list .item,.menu .item{
     width: 100%;
-    height: 100px;
+    /*height: 100px;*/
+    height: 70px;
     margin-bottom: 11px;
     /*background-color: rgba(253, 253, 253, 0.92);*/
     border-top: 1px solid rgb(200, 199, 204);
@@ -616,6 +621,11 @@ input[type="checkbox"]:checked + label:before {
     margin-bottom: 0px;
     border-bottom: none;
 }
+
+.menu button.item {
+    line-height: 20px;
+}
+
 .item .box,.menu .box{
     display: block;
     position: relative;
@@ -643,7 +653,8 @@ input[type="checkbox"]:checked + label:before {
     height: 25px;
     /*vertical-align: bottom;*/
     vertical-align: top;
-    font-size: 20px;
+    /*font-size: 20px;*/
+    font-size: 15px;
     font-weight: bold;
     text-align: left;
 }
@@ -792,6 +803,7 @@ input[type="checkbox"]:checked + label:before {
 .list_store h1{ 
     padding: 10px 6%;
     text-align: center;
+    font-size: 13px;
 }
 
 /*report1*/
@@ -836,8 +848,9 @@ hr {
     padding: 0 8px;
     height: 40px;
     width: 100%;
-    /*line-height: 30pt;*/
-    line-height: 20px;
+    line-height: 30pt;
+    font-size: 13px;
+    /*line-height: 20px;*/
 }
 .item.selected{    
     color: #fff;
@@ -868,8 +881,14 @@ hr {
     background-position: right center;
     /*padding-left: 6%;*/
     font-weight: bold;
-    font-size: 14pt;
+    /*font-size: 14pt;*/
+    font-size: 13px;
 }
+
+.item.innerLi {
+    font-size: 14px;
+}
+
 .store{
     /*padding: 4pt 6%;*/
     padding: 0pt 5% 3pt;
@@ -880,12 +899,15 @@ hr {
 }
 .store h1{
     width: 100%;
-    height: 32px;
-    font-size: 16px;
+    /*height: 32px;*/
+    height: 26px;
+    /*font-size: 16px;*/
+    font-size: 12px;
     font-weight: bold;    
     line-height: 2.2em;
     white-space: pre-line;
     color: #111;
+    font-style: italic;
 }
 .store h1.storeNameR1{
     width: 77%;
@@ -937,16 +959,21 @@ hr {
     color: #0000CD;
 }
 .actual p,.global p,.aditional p{
-    width: 26.5%;
+    /*width: 26.5%;*/
+    width: 28%;
     /*font-size: 16px;*/
     font-size: 13px;
     text-align: left;
 }
 .actual span,.global span,.aditional span{
-    width: 23%;
+    /*width: 23%;*/
+    width: 20%;
     padding-right: 0;
-    padding-top: 4pt;
-    padding-bottom: 4pt;
+    /*padding-top: 4pt;
+    padding-bottom: 4pt;*/
+
+    padding-top: 3pt;
+    padding-bottom: 3pt;
     text-align: right;
     /*font-size: 16px;*/
     font-size: 13px;
@@ -961,19 +988,23 @@ hr {
 }
 .actual span.red, .global span.red{
     background-color: #CE291E;
-    border-radius: 8pt;
+    /*border-radius: 8pt;*/
+    border-radius: 4pt;
 } 
 .actual span.green, .global span.green {
     background-color: #55982E;
-    border-radius: 8pt;
+    /*border-radius: 8pt;*/
+    border-radius: 4pt;
 }
 .actual span.ambar, .global span.ambar {
     background-color: #FF8C00;
-    border-radius: 8pt;
+    /*border-radius: 8pt;*/
+    border-radius: 4pt;
 }
 .aditional span.blue{
     background-color: #0000CD;
-    border-radius: 8pt;
+    /*border-radius: 8pt;*/
+    border-radius: 4pt;
 }
 
 
@@ -1085,6 +1116,7 @@ div[class^="detalle-"] span{
 
 #lblToday,#lblYesterday,#lblWeek,#lblMonth,#lblYear,#lblLastYear{
     display: inline-block;
+    line-height: 30pt;
 }
 
 .innerLi #lblToday, .innerLi #lblYesterday, .innerLi #lblWeek, .innerLi #lblMonth, .innerLi #lblYear, .innerLi #lblLastYear{
@@ -1557,31 +1589,6 @@ button.delete{
     color: white;
 }
 
-@media only screen and (min-width : 320px) and (max-width : 568px) { 
-    .list_store{
-        height: 180px;
-    }
-
-    .select-dateP .innerLi {
-        line-height: initial;
-        padding-top: 3px;
-        padding-bottom: 3px;
-        box-sizing: border-box;
-    }
-
-   .select-dateP .innerLi #lblTodayP {
-        line-height: 10px;
-    }
-
-   .select-dateP .innerLi #time {
-        float: initial;
-        line-height: 8px;
-        font-size: 11px;
-        height: initial;
-        padding-right: initial;
-    }
-}
-
 @media (-webkit-max-device-pixel-ratio: 1) {
     li, input, textarea {
         background-image: none;
@@ -1723,6 +1730,10 @@ table th, table td{
 }
 
 
+.item div {
+    line-height: 30pt;
+    font-size: 13px;
+}
 
 /*animation*/
 @-webkit-keyframes fadeLeftToRight {
@@ -1800,7 +1811,8 @@ text{
 }
 .textRotateScreen{
     text-align: center;
-    font-size: 18px;
+    /*font-size: 18px;*/
+    font-size: 15px;
     line-height: 24px;
 }
 .iconRotate{
@@ -1887,26 +1899,33 @@ text{
       padding: 8px 0;
     }
     .item .box .item_subtitle, .menu .box .item_subtitle{
-        font-size: 13pt;
+        /*font-size: 13pt;*/
+        /*font-size: 13px;
         line-height: 14px;
         color: #555;
-        display: block;
+        display: block;*/
     }
     .list .item, .menu .item{
-        height: 120px;
-        background-size: 28px;
+        /*height: 120px;*/
+        /*height: 80px;
+        background-size: 28px;*/
     }
     .item .box .item_title, .menu .box{
-        height: 44px;
+        /*height: 44px;
         font-size: 20pt;
-        vertical-align: middle;
+        vertical-align: middle;*/
+        /*height: 30px;
+        font-size: 15px;
+        vertical-align: top;*/
     }
     .iconReport{
-        width: 72px;
-        height: 72px;
+        /*width: 72px;
+        height: 72px;*/
+        /*width: 50px;
+        height: 50px;*/     
     }
     .item .box, .menu .box{
-        padding-left: 82px;
+        /*padding-left: 82px;*/
     }
     .add_server {
         padding-right: 44px;
@@ -1924,19 +1943,20 @@ text{
     }
     .store{
         padding: 0pt 3% 0pt;
-        line-height: 1.75em;
+        /*line-height: 1.75em;*/
+        line-height: 25px;
     }
     .store h1 {
         height: 40px;
         /*font-size: 21pt;*/
-        font-size: 14px;
+        font-size: 12px;
     }
     .actual i, .global i,
     .actual p, .global p,
     .actual span, .global span,
     .aditional i,.aditional p,.aditional span {
         /*font-size: 18pt;*/
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .actual span, .global span, .aditional span {
@@ -1960,7 +1980,8 @@ text{
         padding-bottom: 0px;
     }
     .year, .quantity,div[class^="detalle-"] i, div[class^="detalle-"] span{
-        font-size: 16px;
+        /*font-size: 16px;*/
+        font-size: 13px;
     }
     input[type="checkbox"]+ label{
         /*font-size: 15pt;*/
@@ -1968,18 +1989,24 @@ text{
     }
     .item,.innerLi>span{
         /*font-size: 15pt;*/
-        font-size: 15px;
+        font-size: 13px;
     }
     .item.innerLi>div, .item>.date{
         /*font-size: 14pt;
         line-height: 2.3em;*/
-        font-size: 15px;
+        /*font-size: 15px;*/
+        font-size: 13px;
         line-height: 40px;
     }
     #txt_maintitle, #txt_title, #top_txt_title, #txt_Options,
     header button,.btn-modal, .btn-modal:hover{
         /*font-size: 16pt;*/
-        font-size: 17px;
+        /*font-size: 17px;*/
+        font-size: 15px;
+    }
+
+    header button {
+        font-size: 13px;   
     }
 
     .modal-dialog{
@@ -2009,10 +2036,12 @@ text{
     
     .list_store h1 {
         padding: 12pt 6%;
-        font-size: 15pt;
+        /*font-size: 15pt;*/
+        font-size: 13px;
     }
     .modal-header {
-        font-size: 14pt;
+        /*font-size: 14pt;*/
+        font-size: 15px;
     }
     .list_store{        
         height: 280px;    
@@ -2048,15 +2077,19 @@ text{
         height: 240px;
     }
     label,#ip_1, #ip_2, #ip_3, #ip_4{
-        font-size: 16pt;
+        /*font-size: 16pt;*/
+        font-size: 14px;
     }
     .titleLogo {
         /*height: 31pt;*/
+        height: 20pt;
         vertical-align: middle;
     }
     .img_logotitle {
-        background-position: 2px 4px !important;
-        background-size: 36px !important;
+        /*background-position: 2px 4px !important;
+        background-size: 36px !important;*/
+        background-position: 2px 1px !important;
+        background-size: 28px !important;
     }
     .store h1.storeNameR1 {
         width: 80%;
@@ -2082,7 +2115,8 @@ text{
     }
 
     .item {
-        padding: 0 3%;
+        /*padding: 0 3%;*/
+        padding: 0 10px;
     }
 
     .store h1 {
@@ -2093,7 +2127,8 @@ text{
 /*iPhone 6 in portrait & landscape*/
 @media only screen and (min-width : 375px) and (max-width : 667px) { 
     .item .box .item_title,.menu .box{
-        font-size: 15pt;
+        /*font-size: 15pt;*/
+        font-size: 15px;
     }
     .menu{
         background-image: url('../img/Bottom-Waves-667.png');
@@ -2119,6 +2154,7 @@ text{
     }
     .innerLi {
         font-size: 12pt;
+        line-height: 30pt;
     }
     .innerLi>span{
         font-size: 12pt;
@@ -2143,7 +2179,7 @@ text{
     }
 }
 
-@media only screen and (min-width : 320px) and (max-width : 568px) { 
+@media only screen and (min-width : 320px) and (max-width : 568px) {
     .item .box .item_title, .menu .box{
         /*font-size: 13pt;*/
         font-size: 15px;
@@ -2185,7 +2221,7 @@ text{
         font-size: 11pt;*/        
         padding-top: 2pt;
         padding-bottom: 2pt;
-        font-size: 11px;
+        font-size: 12px;
         text-align: center;
         border-radius: 4pt !important;
     }
@@ -2206,8 +2242,17 @@ text{
     #txt_maintitle .isotipo,
     .store h1{
         /*font-size: 13pt;*/
+        font-size: 13px;
+    }
+
+    .item.innerLi {
         font-size: 14px;
     }
+
+    .select-general div {
+        line-height: 30pt;
+    }
+
     #txt_login, #txt_maintitle, #txt_title, #top_txt_title, #txt_Options{
         width: 145px;
         font-size: 15px;
@@ -2258,10 +2303,33 @@ text{
     .close,.close.back {
         font-size: 12px;
     }
+
+    .list_store{
+        height: 180px;
+    }
+
+    .select-dateP .innerLi {
+        line-height: initial;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        box-sizing: border-box;
+    }
+
+   .select-dateP .innerLi #lblTodayP {
+        line-height: 10px;
+    }
+
+   .select-dateP .innerLi #time {
+        float: initial;
+        line-height: 8px;
+        font-size: 11px;
+        height: initial;
+        padding-right: initial;
+    }    
 }
 
 /* Landscape */
-@media only screen and (min-width: 569px) and (max-width: 667px) {
+@media only screen and (min-width : 569px) and (max-width : 667px) {
     .innerLi {
         font-size: 12pt;
         font-size: 14px;
@@ -2286,8 +2354,10 @@ text{
 
     .actual span, .global span, .aditional span {
         width: 17%;
-        padding-top: 4px;
-        padding-bottom: 4px;
+        /*padding-top: 4px;
+        padding-bottom: 4px;*/
+        padding-top: 3px;
+        padding-bottom: 3px;
     }
 
     .infoReport1 i {
@@ -2307,7 +2377,7 @@ text{
 
 
 /* Landscape */
-@media only screen and (min-width: 320px) and (max-width: 667px) and (orientation: landscape) {
+@media only screen and (min-width : 320px) and (max-width : 667px) and (orientation: landscape) {
     .landBtnLeft{
         float: left;
         width: 50%;
@@ -2468,4 +2538,146 @@ text{
     background: rgba(255, 255, 255, 0.8);
     position: absolute;
     z-index: 500;
+}
+
+
+/*
+(min-width : 320px) and (max-width : 568px)
+(min-width : 320px) and (max-width : 667px)
+//No Existe
+(min-width : 375px) and (max-width : 667px)
+(min-width : 569px) and (max-width : 667px)
+//No Existe
+(min-width : 768px) and (max-width : 1024px)
+*/
+
+
+/* PHONES AND HANDHELDS */
+
+/* ----------- iPhone 4 and 4S ----------- */ /*OK*/
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+    .item {
+        line-height: 30pt;
+    }
+
+    .item .box .item_title, .menu .box {
+        line-height: 20px;
+    }
+}
+
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */ /*OK*/
+@media only screen and (min-width : 320px) and (max-width : 568px) {
+
+}
+/*Existe*/
+
+
+/* ----------- Galaxy S3, Galaxy S4, S5 and Note 3 ----------- */ /*OK*/
+@media only screen and (min-width : 320px) and (max-width : 640px) {
+
+}
+
+
+/* ----------- Galaxy S6, Google Pixel, Google Pixel XL, HTC One ----------- */ /*OK*/
+@media only screen and (min-width : 360px) and (max-width : 640px) {
+
+}
+
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */ /*OK*/
+@media only screen and (min-width : 375px) and (max-width : 667px) {
+
+}
+/*Existe*/
+
+
+/* ----------- iPhone X ----------- */
+@media only screen and (min-width : 375px) and (max-width : 812px) {
+
+}
+
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */ /*OK*/
+@media only screen and (min-width : 414px) and (max-width : 736px) {
+
+}
+
+
+/* ----------- Windows Phone ----------- */
+@media only screen and (min-width : 480px) and (max-width : 800px) {
+
+}
+
+
+
+/* TABLETS */
+
+/* ----------- Nexus 7 ----------- */
+@media only screen and (min-width : 600px) and (max-width : 960px) {
+    /*
+    .item {
+        line-height: 30pt;
+    }
+
+    .item div {
+        font-size: 13px;
+    }
+
+    .item .box .item_title, .menu .box {
+        font-size: 15px;
+    }
+
+    .innerLi {
+        line-height: 30pt;
+    }
+
+    #lblToday, #lblYesterday, #lblWeek, #lblMonth, #lblYear, #lblLastYear {
+        font-size: 13px;
+    }
+
+    .select-general div {
+        line-height: 30pt;
+        font-size: 13px;
+    }
+
+    .store h1 {
+        font-style: italic;
+    }*/
+}
+
+
+/* ----------- iPad 1, 2, Mini and Air, iPad 3, 4 and Pro 9.7" ----------- */
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
+
+}
+/*Existe*/
+
+
+/* ----------- Galaxy Tab 2, Galaxy Tab S, Kindle Fire HD 7" ----------- */
+@media only screen and (min-width : 800px) and (max-width : 1280px) {
+
+}
+
+
+/* ----------- iPad Pro 10.5" ----------- */
+@media only screen and (min-width : 834px) and (max-width : 1112px) {
+
+}
+
+
+/* ----------- iPad Pro 12.9" ----------- */
+@media only screen and (min-width : 1024px) and (max-width : 1366px) {
+
+}
+
+
+/* ----------- Kindle Fire HD 8.9" ----------- */
+@media only screen and (min-width : 1200px) and (max-width : 1600px) {
+
+}
+
+
+/* ----------- Nexus 9 ----------- */
+@media only screen and (min-width : 1536px) and (max-width : 2048px) {
+
 }

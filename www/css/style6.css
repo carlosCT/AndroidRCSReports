@@ -8,6 +8,11 @@
     width: inherit;
 }
 
+.buttonItem {
+  line-height: 30pt;
+  font-size: 13px;
+}
+
 @media only screen and (orientation: portrait) { 
 
   #miModal6{
