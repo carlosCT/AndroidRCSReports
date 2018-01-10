@@ -11,6 +11,9 @@ $(document).ready(function () {
             updateHideReports();
             checktaxDefault();
             verificateSetDate();
+            /*FJ*/
+            sliderAutomaticNotice();
+            sliderResizeNotice();
         }else{
             $('#no_connection').modal('show');
             if (current_lang=='es'){
@@ -30,22 +33,25 @@ $(document).ready(function () {
 
 
 $(window).load(function(){
-    // deteclenguage();
-    // onInit();
-    // if(checkNetConnection()==true){
-    //     updateHideReports();
-    //     checktaxDefault();
-    //     verificateSetDate();
-    // }else{
-    //     $('#no_connection').modal('show');
-    //     if (current_lang=='es'){
-    //         $('.titleMessage').text('Mensaje');
-    //         $('.textNoConnection').text('No hay conexión de red');
-    //         $('.btnok').text('Aceptar');
-    //     }else{
-    //        //modal para no conexión
-    //     }
-    // }
+    deteclenguage();
+    onInit();
+    if(checkNetConnection()==true){
+        updateHideReports();
+        checktaxDefault();
+        verificateSetDate();
+        /*FJ*/
+        sliderAutomaticNotice();
+        sliderResizeNotice();
+    }else{
+        $('#no_connection').modal('show');
+        if (current_lang=='es'){
+            $('.titleMessage').text('Mensaje');
+            $('.textNoConnection').text('No hay conexión de red');
+            $('.btnok').text('Aceptar');
+        }else{
+           //modal para no conexión
+        }
+    }
 
     $('.radio_wrapper').click(function(){
         $('.radio_wrapper').removeClass('checked');
@@ -55,6 +61,127 @@ $(window).load(function(){
     });
 
 });
+
+//rotation screem
+$(window).resize(function () {
+    sliderAutomaticNotice();
+    sliderResizeNotice();
+});
+
+
+function openToolsPage(){
+
+    alert('Hola');
+}
+
+function openToolsAdvertNew(){
+
+    $('.slider_anuncios').addClass('ok');
+}
+
+function btncloseSlider(){
+
+    $('.slider_anuncios').removeClass('ok');
+}
+
+function arrowLeft(){
+
+    arrowSlider('left');
+}
+
+function arrowRight(){
+
+    arrowSlider('right');
+}
+
+function arrowSlider(arrow){
+
+    let ul_notice = $('.ul_notice'),
+        li_notice = $('.li_notice'),
+        widthUlNotice = Number(ul_notice.css('width').replace('px','')),
+        leftUlNotice = Number(ul_notice.css('left').replace('px','')),
+        widthLiNotice = Number(li_notice.css('width').replace('px','')),
+        leftTemp = 0;
+
+    switch(arrow){
+        case 'left':
+            if (leftUlNotice == 0) {
+                leftTemp = leftUlNotice;
+            } else {
+                leftTemp = Number(leftUlNotice + widthLiNotice);
+            }
+            break;
+
+        case 'right':
+            if ((widthUlNotice - widthLiNotice) + leftUlNotice == 0) {
+                leftTemp = leftUlNotice;
+            } else {
+                leftTemp = Number(leftUlNotice - widthLiNotice);
+            }
+            break;
+    }
+
+    ul_notice.animate({left: leftTemp+'px'});
+}
+
+function sliderResizeNotice(){
+
+    let ul_notice = $('.ul_notice'),
+        li_notice = $('.li_notice'),
+        windoww = $(window).width(),
+        heightw = $(window).height(),
+        heightTemp = Number(heightw - 20),
+        widthNotice = 0,
+        cont = 0;
+
+    li_notice.css('height', heightTemp+'px');
+
+    ul_notice.find('.li_notice').each(function(index, value){
+        cont++;
+    });
+
+    widthNotice = Number(windoww*cont);
+    ul_notice.css('width', widthNotice+'px');
+    li_notice.css('width', windoww+'px');
+}
+
+function sliderAutomaticNotice(){
+
+    let anuncios = $('.anuncios'),
+        li_anuncios = $('.li_anuncios'),
+        windoww = $(window).width(),
+        cont = 0,
+        widthAnuncios = 0;
+
+    anuncios.find('.li_anuncios').each(function(index, value){
+        cont++;
+    });
+
+    widthAnuncios = Number(windoww*cont);
+    anuncios.css('width', widthAnuncios+'px');
+    li_anuncios.css('width', windoww+'px');
+
+    setTimeout(function(){ timeoutSliderNotice(); }, 5000);
+}
+
+
+function timeoutSliderNotice(){
+
+    let anuncios = $('.anuncios'),
+        widthAnuncios = Number(anuncios.css('width').replace('px','')),
+        leftAnuncios = Number(anuncios.css('left').replace('px','')),
+        widthLiAnuncios = Number(anuncios.find('.li_anuncios').css('width').replace('px','')),
+        leftTemp = 0;
+
+    if ((widthAnuncios - widthLiAnuncios) + leftAnuncios == 0) {
+        leftTemp = 0;
+    } else {
+        leftTemp = Number(leftAnuncios - widthLiAnuncios);
+    }
+
+    anuncios.animate({left: leftTemp+'px'});
+    setTimeout(function(){ timeoutSliderNotice(); }, 5000);    
+}
 
 function verificateSetDate(){
     $('.radio_wrapper').removeClass('checked');
