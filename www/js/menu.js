@@ -68,22 +68,93 @@ $(window).load(function(){
 $(window).resize(function () {
     sliderAutomaticNotice();
     sliderResizeNotice();
+    reloadSlider();
 });
+
+
+function isMobileType(){
+
+    var isMobile = {
+        Android: function() {
+            return navigator.userAgent.match(/Android/i);
+        },
+        BlackBerry: function() {
+            return navigator.userAgent.match(/BlackBerry/i);
+        },
+        iOS: function() {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        },
+        Opera: function() {
+            return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function() {
+            return navigator.userAgent.match(/IEMobile/i);
+        },
+        any: function() {
+            return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+        }
+    },
+    ruta = '#';
+
+    if(isMobile.any()) {
+        //console.log('Esto es un dispositivo móvil, si especificar cuál');
+    }
+
+    if(isMobile.Android()) {
+        ruta = 'https://play.google.com/store/apps/details?id=com.realcs.report&hl=en';
+        //console.log('Esto es un dispositivo Android');
+    }
+    
+    if(isMobile.BlackBerry()) {
+        //console.log('Esto es un dispositivo BlackBerry');
+    }
+    
+    if(isMobile.iOS()) {
+        ruta = 'https://itunes.apple.com/pe/app/rcs-reports/id1008217437?mt=8';
+        //console.log('Esto es un dispositivo iOS');
+    }
+    
+    if(isMobile.Opera()) {
+        //console.log('Esto es un dispositivo Opera');
+    }
+
+    if(isMobile.Windows()) {
+        //console.log('Esto es un dispositivo Windows');
+    }
+
+    //console.log(ruta);
+    $(location).attr('href', ruta);
+}
 
 
 function openToolsPage(){
 
-    alert('Hola');
+    isMobileType();
 }
 
 function openToolsAdvertNew(){
 
-    $('.slider_anuncios').addClass('ok');
+    let slider_anuncios = $('.slider_anuncios');
+
+    slider_anuncios.addClass('ok');
 }
 
 function btncloseSlider(){
 
-    $('.slider_anuncios').removeClass('ok');
+    let slider_anuncios = $('.slider_anuncios');
+
+    slider_anuncios.removeClass('ok');
+    reloadSlider();
+}
+
+function reloadSlider(){
+    let ul_notice = $('.ul_notice'),
+        button_arrow_left = $('.button_arrow_left'),
+        button_arrow_right = $('.button_arrow_right');
+
+    ul_notice.css('left', '0px');
+    button_arrow_left.addClass('nook');
+    button_arrow_right.removeClass('nook');    
 }
 
 function arrowLeft(){

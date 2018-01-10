@@ -1730,7 +1730,7 @@ button.delete{
 }
 
 .div_notice .notice_container {
-    max-width: 280px;
+    max-width: 220px;
     margin: auto;
     display: block;
 }
@@ -1740,7 +1740,7 @@ button.delete{
 }
 
 .div_notice h2 {
-    font-size: 17px;
+    font-size: 16px;
     line-height: 25px;
     margin-bottom: 10px;
     font-weight: bold;
