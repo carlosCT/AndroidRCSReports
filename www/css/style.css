@@ -1761,6 +1761,16 @@ button.delete{
     height: 40px;
 }
 
+.button_arrow_right,
+.button_arrow_left {
+    display: block;
+}
+
+.button_arrow_right.nook,
+.button_arrow_left.nook {
+    display: none;
+}
+
 .flechas {
     position: absolute;
     width: 30px;

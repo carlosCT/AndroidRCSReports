@@ -14,6 +14,7 @@ $(document).ready(function () {
             /*FJ*/
             sliderAutomaticNotice();
             sliderResizeNotice();
+            setTimeout(function(){ timeoutSliderNotice(); }, 5000);
         }else{
             $('#no_connection').modal('show');
             if (current_lang=='es'){
@@ -42,6 +43,7 @@ $(window).load(function(){
     //     /*FJ*/
     //     sliderAutomaticNotice();
     //     sliderResizeNotice();
+    //     setTimeout(function(){ timeoutSliderNotice(); }, 5000);
     // }else{
     //     $('#no_connection').modal('show');
     //     if (current_lang=='es'){
@@ -98,11 +100,15 @@ function arrowSlider(arrow){
 
     let ul_notice = $('.ul_notice'),
         li_notice = $('.li_notice'),
+        button_arrow_left = $('.button_arrow_left'),
+        button_arrow_right = $('.button_arrow_right'),
         widthUlNotice = Number(ul_notice.css('width').replace('px','')),
         leftUlNotice = Number(ul_notice.css('left').replace('px','')),
         widthLiNotice = Number(li_notice.css('width').replace('px','')),
         leftTemp = 0;
 
+    button_arrow_right.removeClass('nook');
+    button_arrow_left.removeClass('nook');
     switch(arrow){
         case 'left':
             if (leftUlNotice == 0) {
@@ -121,13 +127,23 @@ function arrowSlider(arrow){
             break;
     }
 
+    if (leftTemp == 0) {
+        button_arrow_left.addClass('nook');
+    }
+
+    if ((widthUlNotice - widthLiNotice) + leftTemp == 0) {
+        button_arrow_right.addClass('nook');
+    }
+
     ul_notice.animate({left: leftTemp+'px'});
+    console.log(widthUlNotice, leftUlNotice, widthLiNotice, leftTemp);
 }
 
 function sliderResizeNotice(){
 
     let ul_notice = $('.ul_notice'),
         li_notice = $('.li_notice'),
+        button_arrow_left = $('.button_arrow_left'),
         windoww = $(window).width(),
         heightw = $(window).height(),
         widthNotice = 0,
@@ -141,6 +157,8 @@ function sliderResizeNotice(){
 
     widthNotice = Number(windoww*cont);
     ul_notice.css('width', widthNotice+'px');
+    ul_notice.css('left','0px');
+    button_arrow_left.addClass('nook');
     li_notice.css('width', windoww+'px');
 }
 
@@ -158,9 +176,8 @@ function sliderAutomaticNotice(){
 
     widthAnuncios = Number(windoww*cont);
     anuncios.css('width', widthAnuncios+'px');
+    anuncios.css('left','0px');
     li_anuncios.css('width', windoww+'px');
-
-    setTimeout(function(){ timeoutSliderNotice(); }, 5000);
 }
 
 
