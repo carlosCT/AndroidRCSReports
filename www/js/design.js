@@ -132,9 +132,9 @@ $(document).ready(function () {
 
 
     //Responsive menu
-    $('.menu').height($(window).height() - $('header').height());
+    $('.menu').height($(window).height() - $('header').height() - 40);
     $(window).resize(function () {
-        $('.menu').height($(window).height() - $('header').height());
+        $('.menu').height($(window).height() - $('header').height() - 40);
     });
     //Responsive  Report 4
     $('#chartdiv').height($(window).height() - $('header').height());

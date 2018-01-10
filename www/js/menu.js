@@ -101,7 +101,7 @@ function isMobileType(){
     }
 
     if(isMobile.Android()) {
-        ruta = 'https://play.google.com/store/apps/details?id=com.realcs.report&hl=en';
+        ruta = 'https://play.google.com/store/apps/details?id=com.retailcs.rcstools&hl=en';
         //console.log('Esto es un dispositivo Android');
     }
     
@@ -110,7 +110,7 @@ function isMobileType(){
     }
     
     if(isMobile.iOS()) {
-        ruta = 'https://itunes.apple.com/pe/app/rcs-reports/id1008217437?mt=8';
+        ruta = '#';
         //console.log('Esto es un dispositivo iOS');
     }
     
