@@ -130,7 +130,7 @@ function sliderResizeNotice(){
         li_notice = $('.li_notice'),
         windoww = $(window).width(),
         heightw = $(window).height(),
-        heightTemp = Number(heightw - 20),
+        heightTemp = Number(heightw - 5),
         widthNotice = 0,
         cont = 0;
 
