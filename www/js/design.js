@@ -134,8 +134,16 @@ $(document).ready(function () {
     //Responsive menu
     $('.menu').height($(window).height() - $('header').height() - 40);
     $(window).resize(function () {
-        $('.menu').height($(window).height() - $('header').height() - 40);
+        //$('.menu').height($(window).height() - $('header').height() - 40);
+        let footer_anuncios = $('.footer_anuncios');
+
+        if (footer_anuncios.css('display')=='none') {
+            $('.menu').height($(window).height() - $('header').height());
+        } else {
+            $('.menu').height($(window).height() - $('header').height() - 40);
+        }        
     });
+
     //Responsive  Report 4
     $('#chartdiv').height($(window).height() - $('header').height());
     $(window).resize(function () {

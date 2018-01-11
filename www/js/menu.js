@@ -69,6 +69,7 @@ $(window).resize(function () {
     sliderAutomaticNotice();
     sliderResizeNotice();
     reloadSlider();
+    validateModalWhite();
 });
 
 
@@ -207,7 +208,7 @@ function arrowSlider(arrow){
     }
 
     ul_notice.animate({left: leftTemp+'px'});
-    console.log(widthUlNotice, leftUlNotice, widthLiNotice, leftTemp);
+    //console.log(widthUlNotice, leftUlNotice, widthLiNotice, leftTemp);
 }
 
 function sliderResizeNotice(){
@@ -534,12 +535,17 @@ function updateHideReports() {
                                         }
 
                                         // Validación de Versiones - FJ
+                                        let footer_anuncios = $('.footer_anuncios');
                                         if (localStorage.RCSReportsWSVersion==localStorage.RCSReportsAppVersion && localStorage.RCSReportsWSVersion!=undefined && localStorage.RCSReportsAppVersion!=undefined) {
                                             //alert('Versión actualizada');
+                                            footer_anuncios.css('display', 'block');
+                                            validateModalWhite();
                                         } else {
                                             //Se muestra el modal con el mensaje
                                             modalWhiteAbsolute();
                                             showModalUpdateVersion();
+                                            footer_anuncios.css('display', 'none');
+                                            validateModalWhite();
                                         }
                                     },
                                     error: function (xhr, ajaxOptions, thrownError) {
@@ -1811,7 +1817,7 @@ function checkTax(){
 
 
 // Visualiza modal de actualización - FJ
-function showModalUpdateVersion() {
+function showModalUpdateVersion(){
     setTimeout(function(){ $('#ModalUpdateVersion').modal('show'); $('.modal-white').remove(); }, 1000);
 }
 
@@ -1822,5 +1828,17 @@ function closeModalUpdateVersion(){
 }
 
 function modalWhiteAbsolute(){
-    $('.content').prepend('<div class="modal-white"><div class="css__circle-lock"><img src="../../img/iconLock.svg" class="titleLock" /></div></div>');
+    $('.content').prepend('<div class="modal-white"><div class="css__circle-lock"><img src="../../img/iconLock.svg" class="titleLock"/></div></div>');
+}
+
+function validateModalWhite(){
+
+    let footer_anuncios = $('.footer_anuncios'),
+        menu = $('.menu');
+
+    if (footer_anuncios.css('display')=='none') {
+        menu.height($(window).height() - $('header').height());
+    } else {
+        menu.height($(window).height() - $('header').height() - 40);
+    }
 }
