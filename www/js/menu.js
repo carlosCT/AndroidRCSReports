@@ -34,26 +34,26 @@ $(document).ready(function () {
 
 
 $(window).load(function(){
-    // deteclenguage();
-    // onInit();
-    // if(checkNetConnection()==true){
-    //     updateHideReports();
-    //     checktaxDefault();
-    //     verificateSetDate();
-    //     /*FJ*/
-    //     sliderAutomaticNotice();
-    //     sliderResizeNotice();
-    //     setTimeout(function(){ timeoutSliderNotice(); }, 5000);
-    // }else{
-    //     $('#no_connection').modal('show');
-    //     if (current_lang=='es'){
-    //         $('.titleMessage').text('Mensaje');
-    //         $('.textNoConnection').text('No hay conexión de red');
-    //         $('.btnok').text('Aceptar');
-    //     }else{
-    //        //modal para no conexión
-    //     }
-    // }
+    deteclenguage();
+    onInit();
+    if(checkNetConnection()==true){
+        updateHideReports();
+        checktaxDefault();
+        verificateSetDate();
+        /*FJ*/
+        sliderAutomaticNotice();
+        sliderResizeNotice();
+        setTimeout(function(){ timeoutSliderNotice(); }, 5000);
+    }else{
+        $('#no_connection').modal('show');
+        if (current_lang=='es'){
+            $('.titleMessage').text('Mensaje');
+            $('.textNoConnection').text('No hay conexión de red');
+            $('.btnok').text('Aceptar');
+        }else{
+           //modal para no conexión
+        }
+    }
 
     $('.radio_wrapper').click(function(){
         $('.radio_wrapper').removeClass('checked');
@@ -155,7 +155,14 @@ function reloadSlider(){
 
     ul_notice.css('left', '0px');
     button_arrow_left.addClass('nook');
-    button_arrow_right.removeClass('nook');    
+    button_arrow_right.removeClass('nook');
+
+    ul_notice.find('.li_notice').removeClass('ok');
+    ul_notice.find('.li_notice').each(function(index, value){
+        if (index==0) {
+            $(this).addClass('ok');
+        }
+    });
 }
 
 function arrowLeft(){
@@ -174,15 +181,26 @@ function arrowSlider(arrow){
         li_notice = $('.li_notice'),
         button_arrow_left = $('.button_arrow_left'),
         button_arrow_right = $('.button_arrow_right'),
+        slider_points = $('.slider_points'),
         widthUlNotice = Number(ul_notice.css('width').replace('px','')),
         leftUlNotice = Number(ul_notice.css('left').replace('px','')),
         widthLiNotice = Number(li_notice.css('width').replace('px','')),
-        leftTemp = 0;
+        leftTemp = 0,
+        numIndex = 0;
+
+    ul_notice.find('.li_notice').each(function(index, value){
+        if ($(this).hasClass('ok')) {
+            numIndex = index;
+        }
+    });
+
+    console.log('NumIndex: ', numIndex);
 
     button_arrow_right.removeClass('nook');
     button_arrow_left.removeClass('nook');
     switch(arrow){
         case 'left':
+            numIndex--;
             if (leftUlNotice == 0) {
                 leftTemp = leftUlNotice;
             } else {
@@ -191,6 +209,7 @@ function arrowSlider(arrow){
             break;
 
         case 'right':
+            numIndex++;
             if ((widthUlNotice - widthLiNotice) + leftUlNotice == 0) {
                 leftTemp = leftUlNotice;
             } else {
@@ -198,6 +217,20 @@ function arrowSlider(arrow){
             }
             break;
     }
+
+    slider_points.find('.li_points').removeClass('ok');
+    slider_points.find('.li_points').each(function(index, value){
+        if (index==numIndex) {
+            $(this).addClass('ok');
+        }
+    });
+
+    ul_notice.find('.li_notice').removeClass('ok');
+    ul_notice.find('.li_notice').each(function(index, value){
+        if (index==numIndex) {
+            $(this).addClass('ok');
+        }
+    });    
 
     if (leftTemp == 0) {
         button_arrow_left.addClass('nook');
@@ -216,14 +249,22 @@ function sliderResizeNotice(){
     let ul_notice = $('.ul_notice'),
         li_notice = $('.li_notice'),
         button_arrow_left = $('.button_arrow_left'),
+        slider_points = $('.slider_points'),
         windoww = $(window).width(),
         heightw = $(window).height(),
         widthNotice = 0,
-        cont = 0;
+        cont = 0,
+        li_point = '';
 
     li_notice.css('height', heightw+'px');
 
     ul_notice.find('.li_notice').each(function(index, value){
+
+        if (index == 0) {
+            li_point = '<li class="li_points ok"></li>';
+        } else {
+            li_point+='<li class="li_points"></li>';    
+        }        
         cont++;
     });
 
@@ -232,6 +273,7 @@ function sliderResizeNotice(){
     ul_notice.css('left','0px');
     button_arrow_left.addClass('nook');
     li_notice.css('width', windoww+'px');
+    slider_points.html('').append(li_point);
 }
 
 function sliderAutomaticNotice(){
