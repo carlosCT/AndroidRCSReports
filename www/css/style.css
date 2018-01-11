@@ -1615,6 +1615,7 @@ button.delete{
 .anuncios li {
     display: block;
     float: left;    
+    overflow: hidden;
 }
 
 .anuncios .item_anuncio {
@@ -1814,6 +1815,99 @@ button.delete{
 .li_points.ok {
     background: white;
 }
+
+
+
+
+/* "shine" element */
+
+.shine {
+    position: absolute;
+    top: -110%;
+    left: -210%;
+    width: 200%;
+    height: 200%;
+    z-index: 0;
+
+    opacity: 0;
+
+    background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.45) 50%, rgba(255,255,255,0) 99%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,0.45) 50%,rgba(255,255,255,0) 99%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0.45) 50%,rgba(255,255,255,0) 99%,rgba(255,255,255,0) 100%); /* IE10+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+
+    -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+                -o-transform: rotate(45deg);
+                    transform: rotate(45deg);
+
+
+    -webkit-animation: shine 2.5s infinite ease-out; /* Safari 4+ */
+        -moz-animation: shine 2.5s infinite ease-out; /* Fx 5+ */
+            -o-animation: shine 2.5s infinite ease-out; /* Opera 12+ */
+                animation: shine 2.5s infinite ease-out; /* IE 10+, Fx 29+ */
+}
+
+/* Trigger effect */
+
+.li_anuncios:hover .shine {
+  opacity: 1;
+  top: 30%;
+  left: 30%;
+}
+@-webkit-keyframes shine {
+  0% {
+    opacity: 0;
+    top: -110%;
+    left: -210%;
+  }
+  100% {
+    opacity: 1;
+    top: 30%;
+    left: 30%;
+  }
+}
+@-moz-keyframes shine {
+  0% {
+    opacity: 0;
+    top: -110%;
+    left: -210%;
+  }
+  100% {
+    opacity: 1;
+    top: 30%;
+    left: 30%;
+  }
+}
+@-o-keyframes shine {
+  0% {
+    opacity: 0;
+    top: -110%;
+    left: -210%;
+  }
+  100% {
+    opacity: 1;
+    top: 30%;
+    left: 30%;
+  }
+}
+@keyframes shine {
+  0% {
+    opacity: 0;
+    top: -110%;
+    left: -210%;
+  }
+  100% {
+    opacity: 1;
+    top: 30%;
+    left: 30%;
+  }
+}
+
+
+
+
 
 @media (-webkit-max-device-pixel-ratio: 1) {
     li, input, textarea {
