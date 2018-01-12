@@ -160,6 +160,8 @@ function MSG_LBL_UPDATE_VERSION() {
     $('.lblSetMessage').html('Mensaje');
     $('.lblSetMsgUpdateVers1').html('Se requiere actualizar el servidor para poder utilizar esta versión.');
     $('.lblSetMsgUpdateVers2').html('Póngase en contacto con el proveedor.');
+    $('.lblEmailSupport').html('soporte@retailcs.com');
+    $('.lblEmailSupport').attr('href','mailto:soporte@retailcs.com');
 }
 
 
@@ -180,6 +182,9 @@ function MSG_LBL_BANNER_SLIDER(){
     $('#lblSlide3_h2').text("Mejora de interfaz");
     $('#lblSlide3_p').text("RCS Reports ofrece una renovada interfaz que facilita su uso");
 
+    $('#image1').attr('src','../../img/img_slider1.png');
+    $('#image2').attr('src','../../img/img_slider2.png');
+    $('#image3').attr('src','../../img/img_slider3.png');
 }
 
 /******************************/
