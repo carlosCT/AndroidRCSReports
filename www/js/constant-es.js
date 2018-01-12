@@ -162,6 +162,26 @@ function MSG_LBL_UPDATE_VERSION() {
     $('.lblSetMsgUpdateVers2').html('Póngase en contacto con el proveedor.');
 }
 
+
+// BANNER
+function MSG_LBL_BANNER_SLIDER(){
+    $('#lblTitleTools').text("Pruebe RCS Tools");
+    $('#lblSubTitleTools').text("Con RCS Tools controle su inventario");
+    
+    $('#lblTitleToolsUpdate').text("Revise lo nuevo en RCS Reports");
+    $('#lblSubTitleToolsUpdate').text("Nueva información útil para su negocio");
+
+    $('#lblSlide1_h2').text("Mayor información");
+    $('#lblSlide1_p').text("Visualice nuevos datos sobre la tienda en el Reporte de Metas vs Ventas");
+
+    $('#lblSlide2_h2').text("Diccionario actualizado");
+    $('#lblSlide2_p').text("Conozca acerca de la nueva información añadida al Reporte de Metas vs Ventas");
+
+    $('#lblSlide3_h2').text("Mejora de interfaz");
+    $('#lblSlide3_p').text("RCS Reports ofrece una renovada interfaz que facilita su uso");
+
+}
+
 /******************************/
 
 

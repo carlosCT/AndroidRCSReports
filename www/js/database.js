@@ -993,6 +993,8 @@ function deteclenguage() {
 
 		MSGS_SIGNOUT();
 
+		MSG_LBL_BANNER_SLIDER();
+
 
 		//Modal Menu
 		MSG_LBL_CHANGE_ALIAS_T();
