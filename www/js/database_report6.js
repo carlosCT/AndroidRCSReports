@@ -3,7 +3,6 @@ $(document).ready(function () {
     function onDeviceReady() {
         document.addEventListener("backbutton", onBackKeyDown, true);
     }
-
 });
 
 $(window).load(function () {

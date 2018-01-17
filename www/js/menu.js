@@ -1,9 +1,13 @@
 
 $(document).ready(function () {
     //alert(localStorage.RCSReportsAppVersion);
-    document.addEventListener("deviceready", onDeviceReady, false);
+    
 
+    document.addEventListener("deviceready", onDeviceReady, false);
     function onDeviceReady() {
+        //Google Analytics Tracking
+        window.ga.startTrackerWithId('UA-112490324-1', 1);
+
         document.addEventListener("backbutton", onBackKeyDown, true);
         deteclenguage();
         onInit();
@@ -1087,19 +1091,27 @@ function buttonOkReports() {
 
 
 function openReport1(){
-  window.location.href = "report1.html";
-  return false;        
+    window.ga.trackEvent('Menu','Metas Vs Ventas');
+
+    window.location.href = "report1.html";
+    return false;        
 }
 
 function openReport2(){
+    window.ga.trackEvent('Menu','Clasificacion de Tienda');
+    
     window.location.href = "report2.html";
     return false;
 }
 function openReport3(){
+    window.ga.trackEvent('Menu','Progreso en % por Tienda');
+    
     window.location.href = "report3.html";
     return false;
 }
 function openReport4(){
+    window.ga.trackEvent('Menu','Grafico Avanzado por Tienda');
+    
     showDialogStore4();
     return false;
 }
@@ -1108,6 +1120,8 @@ function passReport4(){
     return false;
 }
 function openReport5(){
+    window.ga.trackEvent('Menu','Alcance de Meta por Empleado');
+    
     showDialogStore5();
     return false;
 }
@@ -1116,6 +1130,8 @@ function passReport5(){
     return false;
 }
 function openReport6(){
+    window.ga.trackEvent('Menu','Ventas Graficas por Tienda');
+    
     showDialogStore6();
     return false;
 }
