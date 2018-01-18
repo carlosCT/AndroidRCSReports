@@ -39,26 +39,26 @@ $(document).ready(function () {
 
 $(window).load(function(){
     
-    // deteclenguage();
-    // onInit();
-    // if(checkNetConnection()==true){
-    //     updateHideReports();
-    //     checktaxDefault();
-    //     verificateSetDate();
-    //     /*FJ*/
-    //     sliderAutomaticNotice();
-    //     sliderResizeNotice();
-    //     setTimeout(function(){ timeoutSliderNotice(); }, 5000);
-    // }else{
-    //     $('#no_connection').modal('show');
-    //     if (current_lang=='es'){
-    //         $('.titleMessage').text('Mensaje');
-    //         $('.textNoConnection').text('No hay conexión de red');
-    //         $('.btnok').text('Aceptar');
-    //     }else{
-    //        //modal para no conexión
-    //     }
-    // }
+    deteclenguage();
+    onInit();
+    if(checkNetConnection()==true){
+        updateHideReports();
+        checktaxDefault();
+        verificateSetDate();
+        /*FJ*/
+        sliderAutomaticNotice();
+        sliderResizeNotice();
+        setTimeout(function(){ timeoutSliderNotice(); }, 5000);
+    }else{
+        $('#no_connection').modal('show');
+        if (current_lang=='es'){
+            $('.titleMessage').text('Mensaje');
+            $('.textNoConnection').text('No hay conexión de red');
+            $('.btnok').text('Aceptar');
+        }else{
+           //modal para no conexión
+        }
+    }
 
     $('.radio_wrapper').click(function(){
         $('.radio_wrapper').removeClass('checked');
@@ -140,21 +140,21 @@ function openToolsPage(){
 
 function openToolsAdvertNew(){
 
-    let slider_anuncios = $('.slider_anuncios');
+    var slider_anuncios = $('.slider_anuncios');
 
     slider_anuncios.addClass('ok');
 }
 
 function btncloseSlider(){
 
-    let slider_anuncios = $('.slider_anuncios');
+    var slider_anuncios = $('.slider_anuncios');
 
     slider_anuncios.removeClass('ok');
     reloadSlider();
 }
 
 function reloadSlider(){
-    let ul_notice = $('.ul_notice'),
+    var ul_notice = $('.ul_notice'),
         button_arrow_left = $('.button_arrow_left'),
         button_arrow_right = $('.button_arrow_right');
 
@@ -182,7 +182,7 @@ function arrowRight(){
 
 function arrowSlider(arrow){
 
-    let ul_notice = $('.ul_notice'),
+    var ul_notice = $('.ul_notice'),
         li_notice = $('.li_notice'),
         button_arrow_left = $('.button_arrow_left'),
         button_arrow_right = $('.button_arrow_right'),
@@ -251,7 +251,7 @@ function arrowSlider(arrow){
 
 function sliderResizeNotice(){
 
-    let ul_notice = $('.ul_notice'),
+    var ul_notice = $('.ul_notice'),
         li_notice = $('.li_notice'),
         button_arrow_left = $('.button_arrow_left'),
         slider_points = $('.slider_points'),
@@ -283,7 +283,7 @@ function sliderResizeNotice(){
 
 function sliderAutomaticNotice(){
 
-    let anuncios = $('.anuncios'),
+    var anuncios = $('.anuncios'),
         li_anuncios = $('.li_anuncios'),
         windoww = $(window).width(),
         cont = 0,
@@ -302,7 +302,7 @@ function sliderAutomaticNotice(){
 
 function timeoutSliderNotice(){
 
-    let anuncios = $('.anuncios'),
+    var anuncios = $('.anuncios'),
         widthAnuncios = Number(anuncios.css('width').replace('px','')),
         leftAnuncios = Number(anuncios.css('left').replace('px','')),
         widthLiAnuncios = Number(anuncios.find('.li_anuncios').css('width').replace('px','')),
@@ -582,7 +582,7 @@ function updateHideReports() {
                                         }
 
                                         // Validación de Versiones - FJ
-                                        let footer_anuncios = $('.footer_anuncios');
+                                        var footer_anuncios = $('.footer_anuncios');
                                         if (localStorage.RCSReportsWSVersion==localStorage.RCSReportsAppVersion && localStorage.RCSReportsWSVersion!=undefined && localStorage.RCSReportsAppVersion!=undefined) {
                                             //alert('Versión actualizada');
                                             footer_anuncios.css('display', 'block');
@@ -1892,7 +1892,7 @@ function modalWhiteAbsolute(){
 
 function validateModalWhite(){
 
-    let footer_anuncios = $('.footer_anuncios'),
+    var footer_anuncios = $('.footer_anuncios'),
         menu = $('.menu');
 
     if (footer_anuncios.css('display')=='none') {
