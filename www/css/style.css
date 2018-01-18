@@ -2980,4 +2980,11 @@ text{
         line-height: 15px;
         text-align: left;
     }
+    #btn_left.white{
+        bottom: 15px;
+    }
+    .logo-name {
+        height: 34px;
+        margin: 15px auto 5px;
+    }
 }
