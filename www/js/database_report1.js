@@ -79,11 +79,11 @@ function responsiveReport1() {
     $('.graphic').empty();
 
     //altura responsive del modal "show_info" - FJ
-    let altRest = 70;
+    var altRest = 70;
     if (windoww >= 768 && windoww <= 1024) {
         altRest = 100;
     }
-    let altModal = Number(windowh - altRest) + 'px';
+    var altModal = Number(windowh - altRest) + 'px';
     $('.css__modal--dictionary').css('height', altModal);
 }
 
