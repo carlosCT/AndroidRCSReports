@@ -38,7 +38,6 @@ $(document).ready(function () {
 
 
 $(window).load(function(){
-    
     // deteclenguage();
     // onInit();
     // if(checkNetConnection()==true){
@@ -116,8 +115,7 @@ function isMobileType(){
     }
     
     if(isMobile.iOS()) {
-        ruta = '#';
-        //console.log('Esto es un dispositivo iOS');
+        ruta = 'https://itunes.apple.com/us/app/rcs-tools/id1332735926';
     }
     
     if(isMobile.Opera()) {
