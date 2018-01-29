@@ -2,7 +2,6 @@
 $(document).ready(function () {
     //alert(localStorage.RCSReportsAppVersion);
     
-
     document.addEventListener("deviceready", onDeviceReady, false);
     function onDeviceReady() {
         //Google Analytics Tracking
@@ -12,6 +11,8 @@ $(document).ready(function () {
         deteclenguage();
         onInit();
         if(checkNetConnection()==true){
+            //Updated App Version
+            localStorage.RCSReportsAppVersion = 2;
             updateHideReports();
             checktaxDefault();
             verificateSetDate();
@@ -41,6 +42,7 @@ $(window).load(function(){
     // deteclenguage();
     // onInit();
     // if(checkNetConnection()==true){
+    //     localStorage.RCSReportsAppVersion = 2;
     //     updateHideReports();
     //     checktaxDefault();
     //     verificateSetDate();
@@ -58,6 +60,8 @@ $(window).load(function(){
     //        //modal para no conexión
     //     }
     // }
+
+    
 
     $('.radio_wrapper').click(function(){
         $('.radio_wrapper').removeClass('checked');
@@ -350,7 +354,6 @@ function mostrarModal() {
     getAllData();
 
 }
-
 
 function addID(abc){
     $('#ServersList').css('z-index','1030');
@@ -887,11 +890,11 @@ function selectReports() {
                 }
                 highlightButtons();
             });
-});
+    });
 
-} catch (e) {
-    console.log(e);
-}
+    } catch (e) {
+        console.log(e);
+    }
 }
 
 
@@ -1020,7 +1023,7 @@ function writeHideShowModal(){
             });
         });
     } catch (e) {
-    console.log("error: " + e);
+        console.log("error: " + e);
     }
 }
 
@@ -1145,20 +1148,20 @@ function openReport7(){
 }
 
 function openReport8(){
-  window.location.href = "report8.html";
-  return false;        
+    window.location.href = "report8.html";
+    return false;        
 }
 function openReport9(){
-  window.location.href = "report9.html";
-  return false;        
+    window.location.href = "report9.html";
+    return false;        
 }
 function openReport10(){
-  window.location.href = "report10.html";
-  return false;        
+    window.location.href = "report10.html";
+    return false;        
 }
 function openReport11(){
-  window.location.href = "report11.html";
-  return false;        
+    window.location.href = "report11.html";
+    return false;        
 }
 
 
@@ -1679,6 +1682,7 @@ function downloadAllStore6() {
 }
 
 
+
 //pinta la tienda que se selecciona
 function setStoreNo(storeNo) {
     $('.list_store h1').removeClass('active');
@@ -1687,8 +1691,6 @@ function setStoreNo(storeNo) {
     updateStore(storeNo, StoreName);
     //$('#show_modalStore #btnStore').show();
 }
-
-
 
 
 
