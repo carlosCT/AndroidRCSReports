@@ -59,9 +59,7 @@ $(window).load(function(){
     //     }else{
     //        //modal para no conexión
     //     }
-    // }
-
-    
+    // }  
 
     $('.radio_wrapper').click(function(){
         $('.radio_wrapper').removeClass('checked');
@@ -69,7 +67,6 @@ $(window).load(function(){
         var a=$(this).attr('data-value');
         localStorage.RCSReports_SetDate=a;
     });
-
 });
 
 //rotation screem
@@ -79,7 +76,6 @@ $(window).resize(function () {
     reloadSlider();
     validateModalWhite();
 });
-
 
 function isMobileType(){
 

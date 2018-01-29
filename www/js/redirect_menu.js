@@ -1,4 +1,16 @@
+$(document).ready(function(){
 
+    var RCSReportsAppVersion = localStorage.RCSReportsAppVersion;
+    alert(RCSReportsAppVersion);
+
+    /*document.addEventListener("deviceready", onDeviceReady, false);
+    function onDeviceReady() {
+        
+        var RCSReportsAppVersion = localStorage.RCSReportsAppVersion;
+        alert(RCSReportsAppVersion);
+        //goToVerificateAppVersion();
+    }*/
+});
 
 
 function goToVerificateAppVersion() {
