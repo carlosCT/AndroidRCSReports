@@ -1092,7 +1092,7 @@ function openReport1(){
     window.ga.trackEvent('Menu','Metas Vs Ventas');
 
     window.location.href = "report1.html";
-    return false;        
+    return false;      
 }
 
 function openReport2(){

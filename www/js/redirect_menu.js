@@ -1,17 +1,7 @@
+
 $(document).ready(function(){
-
-    var RCSReportsAppVersion = localStorage.RCSReportsAppVersion;
-    alert(RCSReportsAppVersion);
-
-    /*document.addEventListener("deviceready", onDeviceReady, false);
-    function onDeviceReady() {
-        
-        var RCSReportsAppVersion = localStorage.RCSReportsAppVersion;
-        alert(RCSReportsAppVersion);
-        //goToVerificateAppVersion();
-    }*/
+    goToVerificateAppVersion();
 });
-
 
 function goToVerificateAppVersion() {
     //If not WS updated or AppVersion updated then redirect menu.html
