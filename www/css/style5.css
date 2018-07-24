@@ -43,6 +43,12 @@
   display: inline-block;
 }
 
+.item div {
+  line-height: 30pt;
+  font-size: 13px;
+}
+
+
 #btn_right.storeIcon,
 .storeIcon{
   background-image: url(../img/iconStore.svg);
@@ -53,12 +59,14 @@
 
 .table thead th{
   text-align: center;
-  font-size: 16px;
+  /*font-size: 16px;*/
+  font-size: 13px;
   color: white;
   background-color: #43B580;
 }
 #list-empleados tr td{
-	font-size: 14px;
+  /*font-size: 14px;*/
+	font-size: 13px;
 }
 #list-empleados tr td:first-child{
 	text-align: left;
@@ -185,10 +193,12 @@
 
 @media only screen and (min-width : 320px) and (max-width : 568px) { 
   .table thead th{
-    font-size: 10pt;
+    /*font-size: 10pt;*/
+    font-size: 13px;
   }
   #list-empleados tr td {
-    font-size: 10pt;
+    /*font-size: 10pt;*/
+    font-size: 13px;
   }
   .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td{
     padding:8px;

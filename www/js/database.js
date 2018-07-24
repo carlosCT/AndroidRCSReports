@@ -993,6 +993,8 @@ function deteclenguage() {
 
 		MSGS_SIGNOUT();
 
+		MSG_LBL_BANNER_SLIDER();
+
 
 		//Modal Menu
 		MSG_LBL_CHANGE_ALIAS_T();
@@ -1006,6 +1008,8 @@ function deteclenguage() {
 		MSG_LBL_CHANGE_ALIAS_HIDE_SHOW_REPORTS();
 		MSG_LBL_CHANGE_ALIAS_CLOSE();
 		MSG_LBL_CHANGE_CURRENT_SERVER();
+		// FJ
+		MSG_LBL_UPDATE_VERSION();
 
 		//Stores
 		BTN_PREFERENCES_TXT();

@@ -1,14 +1,25 @@
-$(document).ready(function () {
-    document.addEventListener("deviceready", onDeviceReady, false);
 
+$(document).ready(function () {
+    //alert(localStorage.RCSReportsAppVersion);
+    
+    document.addEventListener("deviceready", onDeviceReady, false);
     function onDeviceReady() {
+        //Google Analytics Tracking
+        window.ga.startTrackerWithId('UA-112490324-1', 1);
+
         document.addEventListener("backbutton", onBackKeyDown, true);
         deteclenguage();
         onInit();
         if(checkNetConnection()==true){
+            //Updated App Version
+            localStorage.RCSReportsAppVersion = 2;
             updateHideReports();
             checktaxDefault();
             verificateSetDate();
+            /*FJ*/
+            sliderAutomaticNotice();
+            sliderResizeNotice();
+            setTimeout(function(){ timeoutSliderNotice(); }, 5000);
         }else{
             $('#no_connection').modal('show');
             if (current_lang=='es'){
@@ -31,9 +42,14 @@ $(window).load(function(){
     // deteclenguage();
     // onInit();
     // if(checkNetConnection()==true){
+    //     localStorage.RCSReportsAppVersion = 2;
     //     updateHideReports();
     //     checktaxDefault();
     //     verificateSetDate();
+    //     /*FJ*/
+    //     sliderAutomaticNotice();
+    //     sliderResizeNotice();
+    //     setTimeout(function(){ timeoutSliderNotice(); }, 5000);
     // }else{
     //     $('#no_connection').modal('show');
     //     if (current_lang=='es'){
@@ -43,7 +59,7 @@ $(window).load(function(){
     //     }else{
     //        //modal para no conexión
     //     }
-    // }
+    // }  
 
     $('.radio_wrapper').click(function(){
         $('.radio_wrapper').removeClass('checked');
@@ -51,8 +67,254 @@ $(window).load(function(){
         var a=$(this).attr('data-value');
         localStorage.RCSReports_SetDate=a;
     });
-
 });
+
+//rotation screem
+$(window).resize(function () {
+    sliderAutomaticNotice();
+    sliderResizeNotice();
+    reloadSlider();
+    validateModalWhite();
+});
+
+function isMobileType(){
+
+    var isMobile = {
+        Android: function() {
+            return navigator.userAgent.match(/Android/i);
+        },
+        BlackBerry: function() {
+            return navigator.userAgent.match(/BlackBerry/i);
+        },
+        iOS: function() {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        },
+        Opera: function() {
+            return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function() {
+            return navigator.userAgent.match(/IEMobile/i);
+        },
+        any: function() {
+            return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+        }
+    },
+    ruta = '#';
+
+    if(isMobile.any()) {
+        //console.log('Esto es un dispositivo móvil, si especificar cuál');
+    }
+
+    if(isMobile.Android()) {
+        ruta = 'https://play.google.com/store/apps/details?id=com.retailcs.rcstools';
+        //console.log('Esto es un dispositivo Android');
+    }
+    
+    if(isMobile.BlackBerry()) {
+        //console.log('Esto es un dispositivo BlackBerry');
+    }
+    
+    if(isMobile.iOS()) {
+        ruta = 'https://itunes.apple.com/us/app/rcs-tools/id1332735926';
+    }
+    
+    if(isMobile.Opera()) {
+        //console.log('Esto es un dispositivo Opera');
+    }
+
+    if(isMobile.Windows()) {
+        //console.log('Esto es un dispositivo Windows');
+    }
+
+    //console.log(ruta);
+    $(location).attr('href', ruta);
+}
+
+
+function openToolsPage(){
+
+    isMobileType();
+}
+
+function openToolsAdvertNew(){
+
+    var slider_anuncios = $('.slider_anuncios');
+
+    slider_anuncios.addClass('ok');
+}
+
+function btncloseSlider(){
+
+    var slider_anuncios = $('.slider_anuncios');
+
+    slider_anuncios.removeClass('ok');
+    reloadSlider();
+}
+
+function reloadSlider(){
+    var ul_notice = $('.ul_notice'),
+        button_arrow_left = $('.button_arrow_left'),
+        button_arrow_right = $('.button_arrow_right');
+
+    ul_notice.css('left', '0px');
+    button_arrow_left.addClass('nook');
+    button_arrow_right.removeClass('nook');
+
+    ul_notice.find('.li_notice').removeClass('ok');
+    ul_notice.find('.li_notice').each(function(index, value){
+        if (index==0) {
+            $(this).addClass('ok');
+        }
+    });
+}
+
+function arrowLeft(){
+
+    arrowSlider('left');
+}
+
+function arrowRight(){
+
+    arrowSlider('right');
+}
+
+function arrowSlider(arrow){
+
+    var ul_notice = $('.ul_notice'),
+        li_notice = $('.li_notice'),
+        button_arrow_left = $('.button_arrow_left'),
+        button_arrow_right = $('.button_arrow_right'),
+        slider_points = $('.slider_points'),
+        widthUlNotice = Number(ul_notice.css('width').replace('px','')),
+        leftUlNotice = Number(ul_notice.css('left').replace('px','')),
+        widthLiNotice = Number(li_notice.css('width').replace('px','')),
+        leftTemp = 0,
+        numIndex = 0;
+
+    ul_notice.find('.li_notice').each(function(index, value){
+        if ($(this).hasClass('ok')) {
+            numIndex = index;
+        }
+    });
+
+    console.log('NumIndex: ', numIndex);
+
+    button_arrow_right.removeClass('nook');
+    button_arrow_left.removeClass('nook');
+    switch(arrow){
+        case 'left':
+            numIndex--;
+            if (leftUlNotice == 0) {
+                leftTemp = leftUlNotice;
+            } else {
+                leftTemp = Number(leftUlNotice + widthLiNotice);
+            }
+            break;
+
+        case 'right':
+            numIndex++;
+            if ((widthUlNotice - widthLiNotice) + leftUlNotice == 0) {
+                leftTemp = leftUlNotice;
+            } else {
+                leftTemp = Number(leftUlNotice - widthLiNotice);
+            }
+            break;
+    }
+
+    slider_points.find('.li_points').removeClass('ok');
+    slider_points.find('.li_points').each(function(index, value){
+        if (index==numIndex) {
+            $(this).addClass('ok');
+        }
+    });
+
+    ul_notice.find('.li_notice').removeClass('ok');
+    ul_notice.find('.li_notice').each(function(index, value){
+        if (index==numIndex) {
+            $(this).addClass('ok');
+        }
+    });    
+
+    if (leftTemp == 0) {
+        button_arrow_left.addClass('nook');
+    }
+
+    if ((widthUlNotice - widthLiNotice) + leftTemp == 0) {
+        button_arrow_right.addClass('nook');
+    }
+
+    ul_notice.animate({left: leftTemp+'px'});
+    //console.log(widthUlNotice, leftUlNotice, widthLiNotice, leftTemp);
+}
+
+function sliderResizeNotice(){
+
+    var ul_notice = $('.ul_notice'),
+        li_notice = $('.li_notice'),
+        button_arrow_left = $('.button_arrow_left'),
+        slider_points = $('.slider_points'),
+        windoww = $(window).width(),
+        heightw = $(window).height(),
+        widthNotice = 0,
+        cont = 0,
+        li_point = '';
+
+    li_notice.css('height', heightw+'px');
+
+    ul_notice.find('.li_notice').each(function(index, value){
+
+        if (index == 0) {
+            li_point = '<li class="li_points ok"></li>';
+        } else {
+            li_point+='<li class="li_points"></li>';    
+        }        
+        cont++;
+    });
+
+    widthNotice = Number(windoww*cont);
+    ul_notice.css('width', widthNotice+'px');
+    ul_notice.css('left','0px');
+    button_arrow_left.addClass('nook');
+    li_notice.css('width', windoww+'px');
+    slider_points.html('').append(li_point);
+}
+
+function sliderAutomaticNotice(){
+
+    var anuncios = $('.anuncios'),
+        li_anuncios = $('.li_anuncios'),
+        windoww = $(window).width(),
+        cont = 0,
+        widthAnuncios = 0;
+
+    anuncios.find('.li_anuncios').each(function(index, value){
+        cont++;
+    });
+
+    widthAnuncios = Number(windoww*cont);
+    anuncios.css('width', widthAnuncios+'px');
+    anuncios.css('left','0px');
+    li_anuncios.css('width', windoww+'px');
+}
+
+
+function timeoutSliderNotice(){
+
+    var anuncios = $('.anuncios'),
+        widthAnuncios = Number(anuncios.css('width').replace('px','')),
+        leftAnuncios = Number(anuncios.css('left').replace('px','')),
+        widthLiAnuncios = Number(anuncios.find('.li_anuncios').css('width').replace('px','')),
+        leftTemp = 0;
+
+    if ((widthAnuncios - widthLiAnuncios) + leftAnuncios == 0) {
+        leftTemp = 0;
+    } else {
+        leftTemp = Number(leftAnuncios - widthLiAnuncios);
+    }
+
+    anuncios.animate({left: leftTemp+'px'});
+    setTimeout(function(){ timeoutSliderNotice(); }, 5000);    
+}
 
 function verificateSetDate(){
     $('.radio_wrapper').removeClass('checked');
@@ -73,7 +335,6 @@ function showModalSetDate(){
     $('#ModalSetDate').modal('show');
 }
 
-
 function showOptions(){
     $('#show_options').modal('show');
     getDataInUse();
@@ -89,7 +350,6 @@ function mostrarModal() {
     getAllData();
 
 }
-
 
 function addID(abc){
     $('#ServersList').css('z-index','1030');
@@ -172,7 +432,8 @@ function updateHideReports() {
                                             var arrReport = data.report;
                                             $("#txtUser").text(data.employeeName);
                                             localStorage.RCSReportsEmployeeCode=data.employeeCode;
-                                            
+                                            localStorage.RCSReportsWSVersion=data.version;
+
                                             var igual = 0;
                                             //copmprueba que son iguales los reportes
                                             if (arrReport.length == results.rows.length) {
@@ -315,6 +576,20 @@ function updateHideReports() {
                                                 mostrarModalGeneral("Invalid PIN");
                                             }
                                             window.location.href = "login.html";
+                                        }
+
+                                        // Validación de Versiones - FJ
+                                        var footer_anuncios = $('.footer_anuncios');
+                                        if (localStorage.RCSReportsWSVersion==localStorage.RCSReportsAppVersion && localStorage.RCSReportsWSVersion!=undefined && localStorage.RCSReportsAppVersion!=undefined) {
+                                            //alert('Versión actualizada');
+                                            footer_anuncios.css('display', 'block');
+                                            validateModalWhite();
+                                        } else {
+                                            //Se muestra el modal con el mensaje
+                                            modalWhiteAbsolute();
+                                            showModalUpdateVersion();
+                                            footer_anuncios.css('display', 'none');
+                                            validateModalWhite();
                                         }
                                     },
                                     error: function (xhr, ajaxOptions, thrownError) {
@@ -611,11 +886,11 @@ function selectReports() {
                 }
                 highlightButtons();
             });
-});
+    });
 
-} catch (e) {
-    console.log(e);
-}
+    } catch (e) {
+        console.log(e);
+    }
 }
 
 
@@ -744,7 +1019,7 @@ function writeHideShowModal(){
             });
         });
     } catch (e) {
-    console.log("error: " + e);
+        console.log("error: " + e);
     }
 }
 
@@ -814,19 +1089,27 @@ function buttonOkReports() {
 
 
 function openReport1(){
-  window.location.href = "report1.html";
-  return false;        
+    window.ga.trackEvent('Menu','Metas Vs Ventas');
+
+    window.location.href = "report1.html";
+    return false;      
 }
 
 function openReport2(){
+    window.ga.trackEvent('Menu','Clasificacion de Tienda');
+    
     window.location.href = "report2.html";
     return false;
 }
 function openReport3(){
+    window.ga.trackEvent('Menu','Progreso en % por Tienda');
+    
     window.location.href = "report3.html";
     return false;
 }
 function openReport4(){
+    window.ga.trackEvent('Menu','Grafico Avanzado por Tienda');
+    
     showDialogStore4();
     return false;
 }
@@ -835,6 +1118,8 @@ function passReport4(){
     return false;
 }
 function openReport5(){
+    window.ga.trackEvent('Menu','Alcance de Meta por Empleado');
+    
     showDialogStore5();
     return false;
 }
@@ -843,6 +1128,8 @@ function passReport5(){
     return false;
 }
 function openReport6(){
+    window.ga.trackEvent('Menu','Ventas Graficas por Tienda');
+    
     showDialogStore6();
     return false;
 }
@@ -857,20 +1144,20 @@ function openReport7(){
 }
 
 function openReport8(){
-  window.location.href = "report8.html";
-  return false;        
+    window.location.href = "report8.html";
+    return false;        
 }
 function openReport9(){
-  window.location.href = "report9.html";
-  return false;        
+    window.location.href = "report9.html";
+    return false;        
 }
 function openReport10(){
-  window.location.href = "report10.html";
-  return false;        
+    window.location.href = "report10.html";
+    return false;        
 }
 function openReport11(){
-  window.location.href = "report11.html";
-  return false;        
+    window.location.href = "report11.html";
+    return false;        
 }
 
 
@@ -1391,6 +1678,7 @@ function downloadAllStore6() {
 }
 
 
+
 //pinta la tienda que se selecciona
 function setStoreNo(storeNo) {
     $('.list_store h1').removeClass('active');
@@ -1399,8 +1687,6 @@ function setStoreNo(storeNo) {
     updateStore(storeNo, StoreName);
     //$('#show_modalStore #btnStore').show();
 }
-
-
 
 
 
@@ -1581,5 +1867,33 @@ function checkTax(){
     }else{
         $('.check_tax').addClass('checked');
         localStorage.setItem("check_tax","1");
+    }
+}
+
+
+// Visualiza modal de actualización - FJ
+function showModalUpdateVersion(){
+    setTimeout(function(){ $('#ModalUpdateVersion').modal('show'); $('.modal-white').remove(); }, 1000);
+}
+
+//funcion cloce modal update verison - FJ
+function closeModalUpdateVersion(){
+    modalWhiteAbsolute();
+    $('#ModalUpdateVersion').modal('hide');
+}
+
+function modalWhiteAbsolute(){
+    $('.content').prepend('<div class="modal-white"><div class="css__circle-lock"><img src="../../img/iconLock.svg" class="titleLock"/></div></div>');
+}
+
+function validateModalWhite(){
+
+    var footer_anuncios = $('.footer_anuncios'),
+        menu = $('.menu');
+
+    if (footer_anuncios.css('display')=='none') {
+        menu.height($(window).height() - $('header').height());
+    } else {
+        menu.height($(window).height() - $('header').height() - 40);
     }
 }

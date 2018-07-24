@@ -1,9 +1,8 @@
-$(document).ready(function () {/*** caraga elemento de la estructura html y estilos ***/
+$(document).ready(function () {
     document.addEventListener("deviceready", onDeviceReady, false);
     function onDeviceReady() {
         document.addEventListener("backbutton", onBackKeyDown, true);
     }
-
 });
 
 $(window).load(function () {/***asegura que la pagina ya esta cargada**/

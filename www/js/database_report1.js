@@ -61,6 +61,7 @@ $(window).resize(function () {
 });
 
 function responsiveReport1() {
+    var windoww = $(window).width();
     var windowh = $(window).height();
     var headerh = $('header').height();
     var regionh = $('#divRegion').height();
@@ -68,14 +69,22 @@ function responsiveReport1() {
     var selectGeneral = $('.select-general').height();
     if ($('#divRegion').css('display') == 'none') {//no hay region
         if($('#divFilter').css('display') == 'none'){
-            $('.list').height(windowh - headerh - selectdateP - selectGeneral -20);
+            $('.list').height(windowh - headerh - selectdateP - 20);
         }else{
-            $('.list').height(windowh - headerh - selectdateP - selectGeneral -60);
+            $('.list').height(windowh - headerh - selectdateP  - 40);
         } 
     } else {
-        $('.list').height(windowh - headerh - selectdateP - selectGeneral - 70);
+        $('.list').height(windowh - headerh - selectdateP  - 50);
     }
     $('.graphic').empty();
+
+    //altura responsive del modal "show_info" - FJ
+    var altRest = 70;
+    if (windoww >= 768 && windoww <= 1024) {
+        altRest = 100;
+    }
+    var altModal = Number(windowh - altRest) + 'px';
+    $('.css__modal--dictionary').css('height', altModal);
 }
 
 
@@ -155,6 +164,12 @@ function downloadByCompany() {
     var lblCurrentGoal = "";
     var lblGlobalSale = "";
     var lblGlobalGoal = "";
+
+    var lblNumVisits = "";
+    var lblNumTx = "";
+    var lblAvgTicket = "";
+    var lblUnitPerTx = "";
+
     localStorage.RCSReports_valuesGroupStore=1;
     //verifica si esta con impuestos
     var impuesto=localStorage.getItem("check_tax");
@@ -170,7 +185,7 @@ function downloadByCompany() {
             var option = localStorage.RCSReports_valuesRangeDates;
             var day=todayreport();
             var employeeCode=localStorage.RCSReportsEmployeeCode;
-            var array = {Day:day, Option: option, Tax:impuesto,EmployeeCode:employeeCode};
+            var array = {Day:day, Option: option, Tax:impuesto, EmployeeCode:employeeCode};
 
             var actual = localStorage.check_actual_report1;
             var global = localStorage.check_global_report1;
@@ -194,65 +209,79 @@ function downloadByCompany() {
                     if (data.quantity > 0) {
                         var mostrar = "";
                         if (current_lang == 'es') {
+
                             if (option == 1) {
-                                lblCurrentGoal = "MH:";
-                                lblCurrentSale = "VH:";
-                                lblGlobalGoal = "MS:";
-                                lblGlobalSale = "VS:";
+                                lblCurrentGoal = "MH";
+                                lblCurrentSale = "VH";
+                                lblGlobalGoal = "MS";
+                                lblGlobalSale = "VS";
                             } else if (option == 2) {
-                                lblCurrentGoal = "MA:";
-                                lblCurrentSale = "VA:";
-                                lblGlobalGoal = "MS:";
-                                lblGlobalSale = "VS:";
+                                lblCurrentGoal = "MA";
+                                lblCurrentSale = "VA";
+                                lblGlobalGoal = "MS";
+                                lblGlobalSale = "VS";
                             } else if (option == 3) {
-                                lblCurrentGoal = "MS:";
-                                lblCurrentSale = "VS:";
-                                lblGlobalGoal = "MM:";
-                                lblGlobalSale = "VM:";
+                                lblCurrentGoal = "MS";
+                                lblCurrentSale = "VS";
+                                lblGlobalGoal = "MM";
+                                lblGlobalSale = "VM";
                             } else if (option == 4) {
-                                lblCurrentGoal = "MM:";
-                                lblCurrentSale = "VM:";
-                                lblGlobalGoal = "MAH:";
-                                lblGlobalSale = "VAH:";
+                                lblCurrentGoal = "MM";
+                                lblCurrentSale = "VM";
+                                lblGlobalGoal = "MAH";
+                                lblGlobalSale = "VAH";
                             } else if (option == 5) {
-                                lblCurrentGoal = "MAH:";
-                                lblCurrentSale = "VAH:";
-                                lblGlobalGoal = "MAC:";
-                                lblGlobalSale = "VAC:";
-                            }else if (option == 6) {
-                                lblCurrentGoal = "MAP:";
-                                lblCurrentSale = "VAP:";
+                                lblCurrentGoal = "MAH";
+                                lblCurrentSale = "VAH";
+                                lblGlobalGoal = "MAC";
+                                lblGlobalSale = "VAC";
+                            } else if (option == 6) {
+                                lblCurrentGoal = "MAP";
+                                lblCurrentSale = "VAP";
                             }
+
+                            lblNumVisits = "VIS";
+                            lblNumTx = "TRAN";
+                            lblAvgTicket = "TPR";
+                            lblUnitPerTx = "UPR";
+
                         } else {
+
                             if (option == 1) {
-                                lblCurrentGoal = "TG:";
-                                lblCurrentSale = "TS:";
-                                lblGlobalGoal = "WG:";
-                                lblGlobalSale = "WS:";
+                                lblCurrentGoal = "TG";
+                                lblCurrentSale = "TS";
+                                lblGlobalGoal = "WG";
+                                lblGlobalSale = "WS";
                             } else if (option == 2) {
-                                lblCurrentGoal = "YG:";
-                                lblCurrentSale = "YS:";
-                                lblGlobalGoal = "WG:";
-                                lblGlobalSale = "WS:";
+                                lblCurrentGoal = "YG";
+                                lblCurrentSale = "YS";
+                                lblGlobalGoal = "WG";
+                                lblGlobalSale = "WS";
                             } else if (option == 3) {
-                                lblCurrentGoal = "WG:";
-                                lblCurrentSale = "WS:";
-                                lblGlobalGoal = "MG:";
-                                lblGlobalSale = "MS:";
+                                lblCurrentGoal = "WG";
+                                lblCurrentSale = "WS";
+                                lblGlobalGoal = "MG";
+                                lblGlobalSale = "MS";
                             } else if (option == 4) {
-                                lblCurrentGoal = "MG:";
-                                lblCurrentSale = "MS:";
-                                lblGlobalGoal = "AG:";
-                                lblGlobalSale = "AS:";
+                                lblCurrentGoal = "MG";
+                                lblCurrentSale = "MS";
+                                lblGlobalGoal = "TYG";
+                                lblGlobalSale = "TYS";
                             } else if (option == 5) {
-                                lblCurrentGoal = "AG:";
-                                lblCurrentSale = "AS:";
-                                lblGlobalGoal = "CG:";
-                                lblGlobalSale = "CS:";
-                            }else if (option == 6) {
-                                lblCurrentGoal = "LYG:";
-                                lblCurrentSale = "LYS:";
+                                lblCurrentGoal = "TYG";
+                                lblCurrentSale = "TYS";
+                                lblGlobalGoal = "CYG";
+                                lblGlobalSale = "CYS";
+                            } else if (option == 6) {
+                                lblCurrentGoal = "LYG";
+                                lblCurrentSale = "LYS";
                             }
+
+                            lblNumVisits = "Visit";
+                            lblNumTx = "Trans";
+                            lblAvgTicket = "ADS";
+                            lblUnitPerTx = "UPT";
+                        
                         }
 
                         mostrar += "<div id='divByCompany'>";
@@ -265,14 +294,23 @@ function downloadByCompany() {
                             var payTotalGlobal = value.payTotalGlobal;
                             var percent = 0.00;
                             var percentGlobal = 0.00;
+                            var numVisits = value.numVisits;
+                            var numTx = value.numTx;
+                            var conversionRate = value.conversionRate;
+                            var avgTicket = value.avgTicket;
+                            var unitPerTx = value.unitPerTx;
+
                             goalAmount = parseFloat(goalAmount.replace(",", ".")).toFixed(0);
                             goalAmountGlobal = parseFloat(goalAmountGlobal.replace(",", ".")).toFixed(0);
                             payTotal = parseFloat(payTotal.replace(",", ".")).toFixed(0);
                             payTotalGlobal = parseFloat(payTotalGlobal.replace(",", ".")).toFixed(0);
-
+                            conversionRate = parseFloat(conversionRate.replace(",", "."));
+                            avgTicket = parseFloat(avgTicket.replace(",", "."));
+                            unitPerTx = parseFloat(unitPerTx.replace(",", "."));
 
                             var color = "";
                             var colorGlobal = "";
+                            var colorConvRate = "blue";
 
                             //calculo de percent
                             if (payTotal > 0 && goalAmount == 0.00) {
@@ -329,8 +367,13 @@ function downloadByCompany() {
                             if (goalAmountGlobal == 0.00 && payTotalGlobal > 0.00) {
                                 colorGlobal = "green";
                             }
+
+                            //calculo de conversion rate en %
+                            conversionRate = conversionRate * 100;
+
                             percent = parseFloat(percent).toFixed(0);
                             percentGlobal =parseFloat(percentGlobal).toFixed(0);
+                            conversionRate = parseFloat(conversionRate).toFixed(0);
 
                             if (actual == 1) {
                                 mostrar += "<div class='actual'>";
@@ -341,7 +384,8 @@ function downloadByCompany() {
                                 mostrar += "<span class='" + color + "'>" + percent + " %</span>";
                                 mostrar += "</div>";
                             }
-                            if (global == 1 && option!=6) {
+
+                            if (option!=6 && global == 1) {
                                 mostrar += "<div class='global'>";
                                 mostrar += "<i>" + lblGlobalGoal + "</i>";
                                 mostrar += "<p>" + parseFloat(goalAmountGlobal).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
@@ -350,8 +394,23 @@ function downloadByCompany() {
                                 mostrar += "<span class='" + colorGlobal + "'>" + percentGlobal + " %</span>";
                                 mostrar += "</div>";
                             }
-                            
-                            
+
+                            //Additional information (conversion rate)
+                            mostrar += "<div class='aditional'>";
+                            mostrar += "<i>" + lblNumVisits + "</i>";
+                            mostrar += "<p>" + parseFloat(numVisits).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
+                            mostrar += "<i>" + lblNumTx + "</i>";
+                            mostrar += "<p>" + parseFloat(numTx).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
+                            mostrar += "<span class='" + colorConvRate + "'>" + conversionRate + " %</span>";
+                            mostrar += "</div>";
+
+                            mostrar += "<div class='aditional'>";
+                            mostrar += "<i>" + lblAvgTicket + "</i>";
+                            mostrar += "<p>" + parseFloat(avgTicket).toFixed(1).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
+                            mostrar += "<i>" + lblUnitPerTx + "</i>";
+                            mostrar += "<p>" + parseFloat(unitPerTx).toFixed(1).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
+                            mostrar += "</div>";
+
                         });
                             mostrar +="<div id='graphCompanyDetails' class='graphic showGraphic'>";
                             mostrar += "</div>";
@@ -462,6 +521,11 @@ function downloadByRegion() {
     var lblGlobalSale = "";
     var lblGlobalGoal = "";
 
+    var lblNumVisits = "";
+    var lblNumTx = "";
+    var lblAvgTicket = "";
+    var lblUnitPerTx = "";
+
     localStorage.RCSReports_valuesGroupStore=2;
     //verifica si esta con impuestos
     var impuesto=localStorage.getItem("check_tax");
@@ -504,67 +568,80 @@ function downloadByRegion() {
                         //mostrar += "<div id='divByRegion'>";
 
                         if (current_lang == 'es') {
-                            if (option == 1) {
-                                lblCurrentGoal = "MH:";
-                                lblCurrentSale = "VH:";
-                                lblGlobalGoal = "MS:";
-                                lblGlobalSale = "VS:";
-                            } else if (option == 2) {
-                                lblCurrentGoal = "MA:";
-                                lblCurrentSale = "VA:";
-                                lblGlobalGoal = "MS:";
-                                lblGlobalSale = "VS:";
-                            } else if (option == 3) {
-                                lblCurrentGoal = "MS:";
-                                lblCurrentSale = "VS:";
-                                lblGlobalGoal = "MM:";
-                                lblGlobalSale = "VM:";
-                            } else if (option == 4) {
-                                lblCurrentGoal = "MM:";
-                                lblCurrentSale = "VM:";
-                                lblGlobalGoal = "MAH:";
-                                lblGlobalSale = "VAH:";
-                            } else if (option == 5) {
-                                lblCurrentGoal = "MAH:";
-                                lblCurrentSale = "VAH:";
-                                lblGlobalGoal = "MAC:";
-                                lblGlobalSale = "VAC:";
-                            }else if (option == 6) {
-                                lblCurrentGoal = "MAP:";
-                                lblCurrentSale = "VAP:";
-                            }
-                        } else {
-                            if (option == 1) {
-                                lblCurrentGoal = "TG:";
-                                lblCurrentSale = "TS:";
-                                lblGlobalGoal = "WG:";
-                                lblGlobalSale = "WS:";
-                            } else if (option == 2) {
-                                lblCurrentGoal = "YG:";
-                                lblCurrentSale = "YS:";
-                                lblGlobalGoal = "WG:";
-                                lblGlobalSale = "WS:";
-                            } else if (option == 3) {
-                                lblCurrentGoal = "WG:";
-                                lblCurrentSale = "WS:";
-                                lblGlobalGoal = "MG:";
-                                lblGlobalSale = "MS:";
-                            } else if (option == 4) {
-                                lblCurrentGoal = "MG:";
-                                lblCurrentSale = "MS:";
-                                lblGlobalGoal = "AG:";
-                                lblGlobalSale = "AS:";
-                            } else if (option == 5) {
-                                lblCurrentGoal = "AG:";
-                                lblCurrentSale = "AS:";
-                                lblGlobalGoal = "CG:";
-                                lblGlobalSale = "CS:";
-                            }else if (option == 6) {
-                                lblCurrentGoal = "LYG:";
-                                lblCurrentSale = "LYS:";
-                            }
-                        }
 
+                            if (option == 1) {
+                                lblCurrentGoal = "MH";
+                                lblCurrentSale = "VH";
+                                lblGlobalGoal = "MS";
+                                lblGlobalSale = "VS";
+                            } else if (option == 2) {
+                                lblCurrentGoal = "MA";
+                                lblCurrentSale = "VA";
+                                lblGlobalGoal = "MS";
+                                lblGlobalSale = "VS";
+                            } else if (option == 3) {
+                                lblCurrentGoal = "MS";
+                                lblCurrentSale = "VS";
+                                lblGlobalGoal = "MM";
+                                lblGlobalSale = "VM";
+                            } else if (option == 4) {
+                                lblCurrentGoal = "MM";
+                                lblCurrentSale = "VM";
+                                lblCurrentGoal = "MAH";
+                                lblCurrentSale = "VAH";
+                            } else if (option == 5) {
+                                lblCurrentGoal = "MAH";
+                                lblCurrentSale = "VAH";
+                                lblGlobalGoal = "MAC";
+                                lblGlobalSale = "VAC";
+                            } else if (option == 6) {
+                                lblCurrentGoal = "MAP";
+                                lblCurrentSale = "VAP";
+                            }
+
+                            lblNumVisits = "VIS";
+                            lblNumTx = "TRAN";
+                            lblAvgTicket = "TPR";
+                            lblUnitPerTx = "UPR";
+
+                        } else {
+
+                            if (option == 1) {
+                                lblCurrentGoal = "TG";
+                                lblCurrentSale = "TS";
+                                lblGlobalGoal = "WG";
+                                lblGlobalSale = "WS";
+                            } else if (option == 2) {
+                                lblCurrentGoal = "YG";
+                                lblCurrentSale = "YS";
+                                lblGlobalGoal = "WG";
+                                lblGlobalSale = "WS";
+                            } else if (option == 3) {
+                                lblCurrentGoal = "WG";
+                                lblCurrentSale = "WS";
+                                lblGlobalGoal = "MG";
+                                lblGlobalSale = "MS";
+                            } else if (option == 4) {
+                                lblCurrentGoal = "MG";
+                                lblCurrentSale = "MS";
+                                lblGlobalGoal = "TYG";
+                                lblGlobalSale = "TYS";
+                            } else if (option == 5) {
+                                lblCurrentGoal = "TYG";
+                                lblCurrentSale = "TYS";
+                                lblGlobalGoal = "CYG";
+                                lblGlobalSale = "CYS";
+                            } else if (option == 6) {
+                                lblCurrentGoal = "LYG";
+                                lblCurrentSale = "LYS";
+                            }
+
+                            lblNumVisits = "Visit";
+                            lblNumTx = "Trans";
+                            lblAvgTicket = "ADS";
+                            lblUnitPerTx = "UPT";
+
+                        }
 
                         $(data.report).each(function (index, value) {
 
@@ -577,15 +654,23 @@ function downloadByRegion() {
                             var percent = 0.00;
                             var percentGlobal = 0.00;
                             var cont=index;
+                            var numVisits = value.numVisits;
+                            var numTx = value.numTx;
+                            var conversionRate = value.conversionRate;
+                            var avgTicket = value.avgTicket;
+                            var unitPerTx = value.unitPerTx;
 
                             goalAmount = parseFloat(goalAmount.replace(",", ".")).toFixed(0);
                             goalAmountGlobal = parseFloat(goalAmountGlobal.replace(",", ".")).toFixed(0);
                             payTotal = parseFloat(payTotal.replace(",", ".")).toFixed(0);
                             payTotalGlobal = parseFloat(payTotalGlobal.replace(",", ".")).toFixed(0);
-
+                            conversionRate = parseFloat(conversionRate.replace(",", "."));
+                            avgTicket = parseFloat(avgTicket.replace(",", "."));
+                            unitPerTx = parseFloat(unitPerTx.replace(",", "."));
 
                             var color = "";
                             var colorGlobal = "";
+                            var colorConvRate = "blue";
 
                             //calculo de percent
                             if (payTotal > 0 && goalAmount == 0.00) {
@@ -645,45 +730,56 @@ function downloadByRegion() {
                                 colorGlobal = "green";
                             }
 
+                            //calculo de conversion rate en %
+                            conversionRate = conversionRate * 100;
+
                             percent = parseFloat(percent).toFixed(0);
                             percentGlobal =parseFloat(percentGlobal).toFixed(0);
+                            conversionRate = parseFloat(conversionRate).toFixed(0);
 
                             mostrar += "<div class='store waves-effect waves-light' onclick=storeWitdhGraphic2("+cont+",'"+regionCode+"') >";
                             mostrar += "<h1>" + regionName + "</h1>";
+
                             if (actual == 1) {
                                 mostrar += "<div class='actual'>";
-
                                 mostrar += "<i>" + lblCurrentGoal + "</i>";
                                 mostrar += "<p>" + parseFloat(goalAmount).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
                                 mostrar += "<i>" + lblCurrentSale + "</i>";
                                 mostrar += "<p>" + parseFloat(payTotal).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
                                 mostrar += "<span class='" + color + "'>" + percent + " %</span>";
-
                                 mostrar += "</div>";
                             }
-                            if (global == 1 && option!=6) {
+                            
+                            if (option!=6 && global == 1) {
                                 mostrar += "<div class='global'>";
-
                                 mostrar += "<i class='type'>" + lblGlobalGoal + "</i>";
                                 mostrar += "<p class='gol-number'>" + parseFloat(goalAmountGlobal).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
                                 mostrar += "<i class='type'>" + lblGlobalSale + "</i>";
                                 mostrar += "<p class='sale-number'>" + parseFloat(payTotalGlobal).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
                                 mostrar += "<span class='" + colorGlobal + "'>" + percentGlobal + " %</span>";
-
                                 mostrar += "</div>";
                             }
-                            
 
-                            
-                            mostrar += "<div class='region_store regionList' id='graph_region"+cont+"' >"
-                           
+                            //Additional information (conversion rate)
+                            mostrar += "<div class='aditional'>";
+                            mostrar += "<i>" + lblNumVisits + "</i>";
+                            mostrar += "<p>" + parseFloat(numVisits).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
+                            mostrar += "<i>" + lblNumTx + "</i>";
+                            mostrar += "<p>" + parseFloat(numTx).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
+                            mostrar += "<span class='" + colorConvRate + "'>" + conversionRate + " %</span>";
                             mostrar += "</div>";
 
+                            mostrar += "<div class='aditional'>";
+                            mostrar += "<i>" + lblAvgTicket + "</i>";
+                            mostrar += "<p>" + parseFloat(avgTicket).toFixed(1).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
+                            mostrar += "<i>" + lblUnitPerTx + "</i>";
+                            mostrar += "<p>" + parseFloat(unitPerTx).toFixed(1).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
+                            mostrar += "</div>";
                             
+                            mostrar += "<div class='region_store regionList' id='graph_region"+cont+"' >"
+                            mostrar += "</div>";
+
                             mostrar += "</div><hr>";
-
-                           
-
                         });
                         //mostrar += "</div>";
                         $("#items").append(mostrar);
@@ -803,6 +899,11 @@ function downloadByStore(regionCode) {
     var lblGlobalSale = "";
     var lblGlobalGoal = "";
 
+    var lblNumVisits = "";
+    var lblNumTx = "";
+    var lblAvgTicket = "";
+    var lblUnitPerTx = "";
+
     var option = localStorage.RCSReports_valuesRangeDates;
     
     var regioncode=regionCode;
@@ -848,65 +949,79 @@ function downloadByStore(regionCode) {
                         var indice = 0;
 
                         if (current_lang == 'es') {
+
                             if (option == 1) {
-                                lblCurrentGoal = "MH:";
-                                lblCurrentSale = "VH:";
-                                lblGlobalGoal = "MS:";
-                                lblGlobalSale = "VS:";
+                                lblCurrentGoal = "MH";
+                                lblCurrentSale = "VH";
+                                lblGlobalGoal = "MS";
+                                lblGlobalSale = "VS";
                             } else if (option == 2) {
-                                lblCurrentGoal = "MA:";
-                                lblCurrentSale = "VA:";
-                                lblGlobalGoal = "MS:";
-                                lblGlobalSale = "VS:";
+                                lblCurrentGoal = "MA";
+                                lblCurrentSale = "VA";
+                                lblGlobalGoal = "MS";
+                                lblGlobalSale = "VS";
                             } else if (option == 3) {
-                                lblCurrentGoal = "MS:";
-                                lblCurrentSale = "VS:";
-                                lblGlobalGoal = "MM:";
-                                lblGlobalSale = "VM:";
+                                lblCurrentGoal = "MS";
+                                lblCurrentSale = "VS";
+                                lblGlobalGoal = "MM";
+                                lblGlobalSale = "VM";
                             } else if (option == 4) {
-                                lblCurrentGoal = "MM:";
-                                lblCurrentSale = "VM:";
-                                lblGlobalGoal = "MAH:";
-                                lblGlobalSale = "VAH:";
+                                lblCurrentGoal = "MM";
+                                lblCurrentSale = "VM";
+                                lblGlobalGoal = "MAH";
+                                lblGlobalSale = "VAH";
                             } else if (option == 5) {
-                                lblCurrentGoal = "MAH:";
-                                lblCurrentSale = "VAH:";
-                                lblGlobalGoal = "MAC:";
-                                lblGlobalSale = "VAC:";
-                            }else if(option==6){
-                                lblCurrentGoal = "MAP:";
-                                lblCurrentSale = "VAP:";
+                                lblCurrentGoal = "MAH";
+                                lblCurrentSale = "VAH";
+                                lblGlobalGoal = "MAC";
+                                lblGlobalSale = "VAC";
+                            } else if (option == 6) {
+                                lblCurrentGoal = "MAP";
+                                lblCurrentSale = "VAP";
                             }
+
+                            lblNumVisits = "VIS";
+                            lblNumTx = "TRAN";
+                            lblAvgTicket = "TPR";
+                            lblUnitPerTx = "UPR";
+
                         } else {
+
                             if (option == 1) {
-                                lblCurrentGoal = "TG:";
-                                lblCurrentSale = "TS:";
-                                lblGlobalGoal = "WG:";
-                                lblGlobalSale = "WS:";
+                                lblCurrentGoal = "TG";
+                                lblCurrentSale = "TS";
+                                lblGlobalGoal = "WG";
+                                lblGlobalSale = "WS";
                             } else if (option == 2) {
-                                lblCurrentGoal = "YG:";
-                                lblCurrentSale = "YS:";
-                                lblGlobalGoal = "WG:";
-                                lblGlobalSale = "WS:";
+                                lblCurrentGoal = "YG";
+                                lblCurrentSale = "YS";
+                                lblGlobalGoal = "WG";
+                                lblGlobalSale = "WS";
                             } else if (option == 3) {
-                                lblCurrentGoal = "WG:";
-                                lblCurrentSale = "WS:";
-                                lblGlobalGoal = "MG:";
-                                lblGlobalSale = "MS:";
+                                lblCurrentGoal = "WG";
+                                lblCurrentSale = "WS";
+                                lblGlobalGoal = "MG";
+                                lblGlobalSale = "MS";
                             } else if (option == 4) {
-                                lblCurrentGoal = "MG:";
-                                lblCurrentSale = "MS:";
-                                lblGlobalGoal = "AG:";
-                                lblGlobalSale = "AS:";
+                                lblCurrentGoal = "MG";
+                                lblCurrentSale = "MS";
+                                lblGlobalGoal = "TYG";
+                                lblGlobalSale = "TYS";
                             } else if (option == 5) {
-                                lblCurrentGoal = "AG:";
-                                lblCurrentSale = "AS:";
-                                lblGlobalGoal = "CG:";
-                                lblGlobalSale = "CS:";
-                            }else if(option == 6){
-                                lblCurrentGoal = "LYG:";
-                                lblCurrentSale = "LYS:";
+                                lblCurrentGoal = "TYG";
+                                lblCurrentSale = "TYS";
+                                lblGlobalGoal = "CYG";
+                                lblGlobalSale = "CYS";
+                            } else if (option == 6) {
+                                lblCurrentGoal = "LYG";
+                                lblCurrentSale = "LYS";
                             }
+
+                            lblNumVisits = "Visit";
+                            lblNumTx = "Trans";
+                            lblAvgTicket = "ADS";
+                            lblUnitPerTx = "UPT";
+                        
                         }
 
                         $(data.report).each(function (index, value) {
@@ -920,15 +1035,23 @@ function downloadByStore(regionCode) {
                             var lastConexion = value.lastConexion;
                             var percent = 0.00;
                             var percentGlobal = 0.00;
+                            var numVisits = value.numVisits;
+                            var numTx = value.numTx;
+                            var conversionRate = value.conversionRate;
+                            var avgTicket = value.avgTicket;
+                            var unitPerTx = value.unitPerTx;
 
 
                             goalAmount = parseFloat(goalAmount.replace(",", ".")).toFixed(0);
                             goalAmountGlobal = parseFloat(goalAmountGlobal.replace(",", ".")).toFixed(0);
                             payTotal = parseFloat(payTotal.replace(",", ".")).toFixed(0);
                             payTotalGlobal = parseFloat(payTotalGlobal.replace(",", ".")).toFixed(0);
+                            conversionRate = parseFloat(conversionRate.replace(",", "."));
+                            avgTicket = parseFloat(avgTicket.replace(",", "."));
+                            unitPerTx = parseFloat(unitPerTx.replace(",", "."));
                             var color = "";
                             var colorGlobal = "";
-
+                            var colorConvRate = "blue";
 
 
                             //calculo de percent
@@ -989,8 +1112,14 @@ function downloadByStore(regionCode) {
                                 colorGlobal = "green";
                             }
 
+
+                            //calculo de conversion rate en %
+                            conversionRate = conversionRate * 100;
+
+
                             percent = parseFloat(percent).toFixed(0);
                             percentGlobal = parseFloat(percentGlobal).toFixed(0);
+                            conversionRate = parseFloat(conversionRate).toFixed(0);
 
 
                             if(goalAmount-payTotal>0){
@@ -1020,7 +1149,6 @@ function downloadByStore(regionCode) {
                             mostrar += "<div class='lastConexion'><div class='dataLastConexion'>" + lastConexion + "</div></div>";
                             // }
 
-
                             if (actual == 1) {
                                 mostrar += "<div class='actual'>";
                                 mostrar += "<i>" + lblCurrentGoal + "</i>";
@@ -1028,28 +1156,40 @@ function downloadByStore(regionCode) {
                                 mostrar += "<i>" + lblCurrentSale + "</i>";
                                 mostrar += "<p>" + parseFloat(payTotal).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
                                 mostrar += "<span class='" + color + "'>" + percent + " %</span>";
-
                                 mostrar += "</div>";
                             }
 
-                            if (global == 1 && option!=6) {
+                            if (option!=6 && global == 1) {
                                 mostrar += "<div class='global'>";
                                 mostrar += "<i>" + lblGlobalGoal + "</i>";
                                 mostrar += "<p>" + parseFloat(goalAmountGlobal).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
                                 mostrar += "<i>" + lblGlobalSale + "</i>";
                                 mostrar += "<p>" + parseFloat(payTotalGlobal).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
                                 mostrar += "<span class='" + colorGlobal + "'>" + percentGlobal + " %</span>";
-
                                 mostrar += "</div>";
                             }
 
+                            //Additional information (conversion rate)
+                            mostrar += "<div class='aditional'>";
+                            mostrar += "<i>" + lblNumVisits + "</i>";
+                            mostrar += "<p>" + parseFloat(numVisits).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
+                            mostrar += "<i>" + lblNumTx + "</i>";
+                            mostrar += "<p>" + parseFloat(numTx).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
+                            mostrar += "<span class='" + colorConvRate + "'>" + conversionRate + " %</span>";
+                            mostrar += "</div>";
+
+                            mostrar += "<div class='aditional'>";
+                            mostrar += "<i>" + lblAvgTicket + "</i>";
+                            mostrar += "<p>" + parseFloat(avgTicket).toFixed(1).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
+                            mostrar += "<i>" + lblUnitPerTx + "</i>";
+                            mostrar += "<p>" + parseFloat(unitPerTx).toFixed(1).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
+                            mostrar += "</div>";
 
                             mostrar +="<div id='graph" + indice + "' class='graphic showGraphic'>";
                             mostrar += "</div>";
                             // mostrar += "</div><hr>";
                             mostrar += "</div>";
                             $("#items").append(mostrar);
-                            
 
                             mostrar = "";
                             indice++;
@@ -1202,65 +1342,78 @@ function storeWitdhGraphic2(indice,regionCode) {
                         if (data.quantity > 0) {
 
                             if (current_lang == 'es') {
+
                                 if (option == 1) {
-                                    lblCurrentGoal = "MH:";
-                                    lblCurrentSale = "VH:";
-                                    lblGlobalGoal = "MS:";
-                                    lblGlobalSale = "VS:";
+                                    lblCurrentGoal = "MH";
+                                    lblCurrentSale = "VH";
+                                    lblGlobalGoal = "MS";
+                                    lblGlobalSale = "VS";
                                 } else if (option == 2) {
-                                    lblCurrentGoal = "MA:";
-                                    lblCurrentSale = "VA:";
-                                    lblGlobalGoal = "MS:";
-                                    lblGlobalSale = "VS:";
+                                    lblCurrentGoal = "MA";
+                                    lblCurrentSale = "VA";
+                                    lblGlobalGoal = "MS";
+                                    lblGlobalSale = "VS";
                                 } else if (option == 3) {
-                                    lblCurrentGoal = "MS:";
-                                    lblCurrentSale = "VS:";
-                                    lblGlobalGoal = "MM:";
-                                    lblGlobalSale = "VM:";
+                                    lblCurrentGoal = "MS";
+                                    lblCurrentSale = "VS";
+                                    lblGlobalGoal = "MM";
+                                    lblGlobalSale = "VM";
                                 } else if (option == 4) {
-                                    lblCurrentGoal = "MM:";
-                                    lblCurrentSale = "VM:";
-                                    lblGlobalGoal = "MAH:";
-                                    lblGlobalSale = "VAH:";
+                                    lblCurrentGoal = "MM";
+                                    lblCurrentSale = "VM";
+                                    lblGlobalGoal = "MAH";
                                 } else if (option == 5) {
-                                    lblCurrentGoal = "MAH:";
-                                    lblCurrentSale = "VAH:";
-                                    lblGlobalGoal = "MAC:";
-                                    lblGlobalSale = "VAC:";
-                                }else if(option==6){
-                                    lblCurrentGoal = "MAP:";
-                                    lblCurrentSale = "VAP:";
+                                    lblCurrentGoal = "MAH";
+                                    lblCurrentSale = "VAH";
+                                    lblGlobalGoal = "MAC";
+                                    lblGlobalSale = "VAC";
+                                } else if (option == 6) {
+                                    lblCurrentGoal = "MAP";
+                                    lblCurrentSale = "VAP";
                                 }
+
+                                lblNumVisits = "VIS";
+                                lblNumTx = "TRAN";
+                                lblAvgTicket = "TPR";
+                                lblUnitPerTx = "UPR";
+
                             } else {
+
                                 if (option == 1) {
-                                    lblCurrentGoal = "TG:";
-                                    lblCurrentSale = "TS:";
-                                    lblGlobalGoal = "WG:";
-                                    lblGlobalSale = "WS:";
+                                    lblCurrentGoal = "TG";
+                                    lblCurrentSale = "TS";
+                                    lblGlobalGoal = "WG";
+                                    lblGlobalSale = "WS";
                                 } else if (option == 2) {
-                                    lblCurrentGoal = "YG:";
-                                    lblCurrentSale = "YS:";
-                                    lblGlobalGoal = "WG:";
-                                    lblGlobalSale = "WS:";
+                                    lblCurrentGoal = "YG";
+                                    lblCurrentSale = "YS";
+                                    lblGlobalGoal = "WG";
+                                    lblGlobalSale = "WS";
                                 } else if (option == 3) {
-                                    lblCurrentGoal = "WG:";
-                                    lblCurrentSale = "WS:";
-                                    lblGlobalGoal = "MG:";
-                                    lblGlobalSale = "MS:";
+                                    lblCurrentGoal = "WG";
+                                    lblCurrentSale = "WS";
+                                    lblGlobalGoal = "MG";
+                                    lblGlobalSale = "MS";
                                 } else if (option == 4) {
-                                    lblCurrentGoal = "MG:";
-                                    lblCurrentSale = "MS:";
-                                    lblGlobalGoal = "AG:";
-                                    lblGlobalSale = "AS:";
+                                    lblCurrentGoal = "MG";
+                                    lblCurrentSale = "MS";
+                                    lblGlobalGoal = "TYG";
+                                    lblGlobalSale = "TYS";
                                 } else if (option == 5) {
-                                    lblCurrentGoal = "AG:";
-                                    lblCurrentSale = "AS:";
-                                    lblGlobalGoal = "CG:";
-                                    lblGlobalSale = "CS:";
-                                }else if(option == 6){
-                                    lblCurrentGoal = "LYG:";
-                                    lblCurrentSale = "LYS:";
+                                    lblCurrentGoal = "TYG";
+                                    lblCurrentSale = "TYS";
+                                    lblGlobalGoal = "CYG";
+                                    lblGlobalSale = "CYS";
+                                } else if (option == 6) {
+                                    lblCurrentGoal = "LYG";
+                                    lblCurrentSale = "LYS";
                                 }
+
+                                lblNumVisits = "Visit";
+                                lblNumTx = "Trans";
+                                lblAvgTicket = "ADS";
+                                lblUnitPerTx = "UPT";
+
                             }
 
                             $(data.report).each(function (index, value) {
@@ -1273,17 +1426,23 @@ function storeWitdhGraphic2(indice,regionCode) {
                                 var lastConexion = value.lastConexion;
                                 var percent = 0.00;
                                 var percentGlobal = 0.00;
-
+                                var numVisits = value.numVisits;
+                                var numTx = value.numTx;
+                                var conversionRate = value.conversionRate;
+                                var avgTicket = value.avgTicket;
+                                var unitPerTx = value.unitPerTx;
 
                                 goalAmount = parseFloat(goalAmount.replace(",", ".")).toFixed(0);
                                 goalAmountGlobal = parseFloat(goalAmountGlobal.replace(",", ".")).toFixed(0);
                                 payTotal = parseFloat(payTotal.replace(",", ".")).toFixed(0);
                                 payTotalGlobal = parseFloat(payTotalGlobal.replace(",", ".")).toFixed(0);
+                                conversionRate = parseFloat(conversionRate.replace(",", "."));
+                                avgTicket = parseFloat(avgTicket.replace(",", "."));
+                                unitPerTx = parseFloat(unitPerTx.replace(",", "."));
 
                                 var color = "";
                                 var colorGlobal = "";
-
-
+                                var colorConvRate = "blue";
 
                                 //calculo de percent
                                 if (payTotal > 0 && goalAmount == 0.00) {
@@ -1293,7 +1452,6 @@ function storeWitdhGraphic2(indice,regionCode) {
                                 } else {
                                     percent = (payTotal * 100) / goalAmount;
                                 }
-
 
                                 //calculo de percentglobal
                                 if (payTotalGlobal > 0.00 && goalAmountGlobal == 0.00) {
@@ -1343,9 +1501,12 @@ function storeWitdhGraphic2(indice,regionCode) {
                                     colorGlobal = "green";
                                 }
 
+                                //calculo de conversion rate en %
+                                conversionRate = conversionRate * 100
+
                                 percent = parseFloat(percent).toFixed(0);
                                 percentGlobal = parseFloat(percentGlobal).toFixed(0);
-
+                                conversionRate = parseFloat(conversionRate).toFixed(0);
                                 
                                 if(goalAmount-payTotal>0){
                                     if(GlobalFilterStores=="1"){
@@ -1368,8 +1529,6 @@ function storeWitdhGraphic2(indice,regionCode) {
                                 
                                 mostrar += "<div class='lastConexion'><div class='lblLastConexion'></div><div class='dataLastConexion'>" + lastConexion + "</div></div>";
                                 
-                               
-
                                 if (actual == 1) {
                                     mostrar += "<div class='actual'>";
                                     mostrar += "<i>" + lblCurrentGoal + "</i>";
@@ -1377,27 +1536,42 @@ function storeWitdhGraphic2(indice,regionCode) {
                                     mostrar += "<i>" + lblCurrentSale + "</i>";
                                     mostrar += "<p>" + parseFloat(payTotal).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
                                     mostrar += "<span class='" + color + "'>" + percent + " %</span>";
-
                                     mostrar += "</div>";
                                 }
-
-                                if (global == 1 && option!=6) {
+                                
+                                if (option!=6 && global == 1) {
                                     mostrar += "<div class='global'>";
                                     mostrar += "<i>" + lblGlobalGoal + "</i>";
                                     mostrar += "<p>" + parseFloat(goalAmountGlobal).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
                                     mostrar += "<i>" + lblGlobalSale + "</i>";
                                     mostrar += "<p>" + parseFloat(payTotalGlobal).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
                                     mostrar += "<span class='" + colorGlobal + "'>" + percentGlobal + " %</span>";
-
                                     mostrar += "</div>";
                                 }
+
+                                //Additional information (conversion rate)
+                                mostrar += "<div class='aditional'>";
+                                mostrar += "<i>" + lblNumVisits + "</i>";
+                                mostrar += "<p>" + parseFloat(numVisits).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
+                                mostrar += "<i>" + lblNumTx + "</i>";
+                                mostrar += "<p>" + parseFloat(numTx).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
+                                mostrar += "<span class='" + colorConvRate + "'>" + conversionRate + " %</span>";
+                                mostrar += "</div>";
+
+                                mostrar += "<div class='aditional'>";
+                                mostrar += "<i>" + lblAvgTicket + "</i>";
+                                mostrar += "<p>" + parseFloat(avgTicket).toFixed(1).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
+                                mostrar += "<i>" + lblUnitPerTx + "</i>";
+                                mostrar += "<p>" + parseFloat(unitPerTx).toFixed(1).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
+                                mostrar += "</div>";
 
                                 mostrar += "</div>";
                                 mostrar += "</div>";
                                 mostrar += "</div>"
                                 $("#graph_region"+indice).append(mostrar);
-                                
+                 
                             });
+
                         }
                     },
                     error: function (xhr, ajaxOptions, thrownError) {
@@ -1462,7 +1636,7 @@ function updateGlobal() {
         localStorage.setItem("check_global_report1",0);
     } else {
         $('.check_global').addClass('checked');
-        localStorage.setItem("check_global_report1",1);;
+        localStorage.setItem("check_global_report1",1);
     }
 }
 

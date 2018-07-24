@@ -130,7 +130,7 @@ function MSG_LBL_CHANGE_ALIAS_SERVERS() {
     $("#servers_list").html("Servidores");
 }
 function MSG_LBL_CHANGE_ALIAS_CLOSE() {
-    $(".close").html("Cerrar");
+    $(".close").html("X");
     $(".close.back").html("Atrás");
 }
 
@@ -155,6 +155,37 @@ function MSG_LBL_CHANGE_ALIAS_SETTINGS(){
     $('#txtUserT').text('Usuario: ');
 }
 
+/* MSG LBL UPDATE VERSION - FJ */
+function MSG_LBL_UPDATE_VERSION() {
+    $('.lblSetMessage').html('Mensaje');
+    $('.lblSetMsgUpdateVers1').html('Se requiere actualizar el servidor para poder utilizar esta versión.');
+    $('.lblSetMsgUpdateVers2').html('Póngase en contacto con el proveedor.');
+    $('.lblEmailSupport').html('soporte@retailcs.com');
+    $('.lblEmailSupport').attr('href','mailto:soporte@retailcs.com');
+}
+
+
+// BANNER
+function MSG_LBL_BANNER_SLIDER(){
+    $('#lblTitleTools').text("Pruebe RCS Tools");
+    $('#lblSubTitleTools').text("Con RCS Tools controle su inventario");
+    
+    $('#lblTitleToolsUpdate').text("Revise lo nuevo en RCS Reports");
+    $('#lblSubTitleToolsUpdate').text("Nueva información útil para su negocio");
+
+    $('#lblSlide1_h2').text("Mayor información");
+    $('#lblSlide1_p').text("Visualice nuevos datos sobre la tienda en el Reporte de Metas vs Ventas");
+
+    $('#lblSlide2_h2').text("Diccionario actualizado");
+    $('#lblSlide2_p').text("Conozca acerca de la nueva información añadida al Reporte de Metas vs Ventas");
+
+    $('#lblSlide3_h2').text("Mejora de interfaz");
+    $('#lblSlide3_p').text("RCS Reports ofrece una renovada interfaz que facilita su uso");
+
+    $('#image1').attr('src','../../img/img_slider1.png');
+    $('#image2').attr('src','../../img/img_slider2.png');
+    $('#image3').attr('src','../../img/img_slider3.png');
+}
 
 /******************************/
 
@@ -250,34 +281,60 @@ function MSG_COMBO_FILTER_STORE(){
 }
 
 function MSG_LBL_DET_DIC_1(){
-    $('#TodayGoal').text("MH:");
-    $('#TodaySale').text("VH:");
-    $('#YesterdayGoal').text("MA:");
-    $('#YesterdaySale').text("VA:");
-    $('#WeekGoal').text("MS:");
-    $('#WeekSale').text("VS:");
-    $('#MonthGoal').text("MM:");
-    $('#MonthSale').text("VM:");
-    $('#AnnualGoal').text("MAH:");
-    $('#AnnualSale').text("VAH:");
-    $('#CompleteYearGoal').text("MAC:");
-    $('#CompleteYerSale').text("VAC:");
-    $('#LastYearGoal').text("MAP:");
-    $('#LastYearSale').text("VAP:");
-    $('#report1TG').text("Meta de Hoy");
-    $('#report1TS').text("Venta de Hoy");
-    $('#report1YG').text("Meta de Ayer");
-    $('#report1YS').text("Venta de Ayer");
-    $('#report1WG').text("Meta Semana a Hoy");
-    $('#report1WS').text("Venta Semana a Hoy");
-    $('#report1MG').text("Meta Mes a Hoy");
-    $('#report1MS').text("Venta Mes a Hoy");
-    $('#report1AG').text("Meta Año a Hoy");
-    $('#report1AS').text("Venta Año a Hoy");
-    $('#report1CG').text("Meta Año Completo");
-    $('#report1CS').text("Venta Año Completo");
-    $('#report1LYG').text("Meta Año Pasado");
-    $('#report1LYS').text("Venta Año Pasado");
+
+    $('#TodayGoal').text("MH");
+    $('#TodaySale').text("VH");
+
+    $('#YesterdayGoal').text("MA");
+    $('#YesterdaySale').text("VA");
+
+    $('#WeekGoal').text("MS");
+    $('#WeekSale').text("VS");
+
+    $('#MonthGoal').text("MM");
+    $('#MonthSale').text("VM");
+
+    $('#ThisYearGoal').text("MAH");
+    $('#ThisYearSale').text("VAH");
+
+    $('#CompleteYearGoal').text("MAC");
+    $('#CompleteYearSale').text("VAC");
+
+    $('#LastYearGoal').text("MAP");
+    $('#LastYearSale').text("VAP");
+
+
+    $('#Visitors').text("VIS");
+    $('#Trans').text("TRAN");
+    $('#AvgTicket').text("TPR");
+    $('#UnitPerTrans').text("UPR");
+
+
+    $('#report1TG').text("Meta de hoy");
+    $('#report1TS').text("Ventas de hoy");
+
+    $('#report1YG').text("Meta de ayer");
+    $('#report1YS').text("Ventas de ayer");
+
+    $('#report1WG').text("Meta de la semana a la fecha");
+    $('#report1WS').text("Ventas de la semana a la fecha");
+
+    $('#report1MG').text("Meta del mes a la fecha");
+    $('#report1MS').text("Ventas del mes a la fecha");
+
+    $('#report1TYG').text("Meta del año a la fecha");
+    $('#report1TYS').text("Ventas del año a la fecha");
+
+    $('#report1CYG').text("Meta del año completo");
+    $('#report1CYS').text("Ventas del año completo");
+
+    $('#report1LYG').text("Meta del año pasado");
+    $('#report1LYS').text("Ventas del año pasado");
+
+    $('#report1VIS').text("Número de visitantes");
+    $('#report1TRAN').text("Número de transacciones");
+    $('#report1ADS').text("Ticket promedio");
+    $('#report1UPT').text("Unidades promedio");
 
     $('#lblChooseRegion').text('Elegir Región');
 }
@@ -725,7 +782,7 @@ function changeLanguage6(){
     $('.date-4').text('Inicio de Mes');
     $('.date-5').text('Inicio de Año');
     $('.nameDate').text('Inicio de Semana');
-    $('.close').text('Cerrar');
+    $('.close').text('X');
     $('.btnok').text('Aceptar');
     $('.titleMessage').text('Mensaje');
     $('.titleTopBarOpt').text('Opciones');
@@ -736,7 +793,7 @@ function changeLanguage6(){
 //Language7
 function changeLanguage7(){
     $('#txtpreferences').text('Atrás');
-    $(".close").html("Cerrar");
+    $(".close").html("X");
     MSG_COMPANY_1();
     MSG_LBL_COMPANY_1();
     MSG_LBL_REGION_1();
@@ -767,7 +824,7 @@ function changeLanguage7(){
 //Language8
 function changeLanguage8(){
     $('#txtpreferences').text('Atrás');
-    $(".close").html("Cerrar");
+    $(".close").html("X");
     MSG_COMPANY_1();
     MSG_LBL_COMPANY_1();
     MSG_LBL_REGION_1();

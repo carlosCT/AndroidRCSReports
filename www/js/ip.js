@@ -186,14 +186,7 @@ $(window).load(function(){
             }
         }
     });
-
-
 });
-
-
- 
-
- 
 
 
 /************************ funcion valida IP ********************************************/
@@ -242,7 +235,6 @@ function validIP(ip, port, _url, alias, use, site, variable) {
 }
 
 
-
 function newServer(ip, port, urlbase, alias, activo, site, variable) {
     
     try {
@@ -261,9 +253,6 @@ function newServer(ip, port, urlbase, alias, activo, site, variable) {
 }
 
 
-
-
-
 function firstServer(ip, port, urlbase, alias, activo, site, variable) {
     
     window.location.href = "login.html?" +
@@ -275,5 +264,3 @@ function firstServer(ip, port, urlbase, alias, activo, site, variable) {
             "&site=" + site +
             "&variable=" + variable;
 }
-
-

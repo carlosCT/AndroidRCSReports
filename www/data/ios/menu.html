@@ -23,80 +23,134 @@
 </head>
 
 <body>
-    <div class="hybrid_container">
-        <header>
-            <div class="top_bar_space"></div>
-            <div class="options_bar_space">
-              <div id="btn_left"><button class="img_logotitle"></button></div>
-              <div id="txt_maintitle" class="titleTopBar"><img src="../../img/iconLogo.svg" class="titleLogo"/></div>
-              <div id="btn_right" class="config">                
-                <button onclick="showOptions()" ></button>
-            </div>
-        </div>      
+  <div class="hybrid_container">
+    <header>
+      <div class="top_bar_space"></div>
+      <div class="options_bar_space">
+        <div id="btn_left"><button class="img_logotitle"></button></div>
+        <div id="txt_maintitle" class="titleTopBar"><img src="../../img/iconLogo.svg" class="titleLogo"/></div>
+        <div id="btn_right" class="config">                
+          <button onclick="showOptions()" ></button>
+        </div>
+      </div>      
     </header>    
 
     <div class="content">
-        <div class="menu">
-                <!--
-                buttons with the reports
-            -->
-        </div>
+      <div class="menu">
+        <!--buttons with the reports-->
+      </div>
     </div>
 
-</div>
+    <div class="slider_anuncios">
+      <div class="content_main">
+        <button type="button" class="close close_slider css_close_slider" onclick="btncloseSlider();">X</button>
+        <ul class="ul_notice">
+          <li class="li_notice notice_1 ok">
+            <div class="div_notice">
+              <div class="notice_container">
+                <img src="../../img/img_slider1_en.png" id="image1" alt="Mayor información">
+                <h2 id="lblSlide1_h2">More information</h2>
+                <p id="lblSlide1_p">Visualize new information about the store in the Goals vs Sales Report</p>
+              </div>
+            </div>
+          </li>          
+          <li class="li_notice notice_2">
+            <div class="div_notice">
+              <div class="notice_container">
+                <img src="../../img/img_slider2_en.png" id="image2" alt="Mayor información">
+                <h2 id="lblSlide2_h2">Dictionary updated</h2>
+                <p id="lblSlide2_p">Learn about the new information that was added to the Goals vs Sales Report</p>
+              </div>
+            </div>
+          </li>
+          <li class="li_notice notice_3">
+            <div class="div_notice">
+              <div class="notice_container">
+                <img src="../../img/img_slider3_en.png" id="image3" alt="Mayor información">
+                <h2 id="lblSlide3_h2">User interface improvement</h2>
+                <p id="lblSlide3_p">RCS Reports offers a fresh design that makes it easy to use</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="div_arrow">
+          <button type="button" class="button_arrow_left" onclick="arrowLeft();"><span class="flechas arrow_left"> </span></button>
+          <ul class="slider_points"></ul>
+          <button type="button" class="button_arrow_right" onclick="arrowRight();"><span class="flechas arrow_right"> </span></button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer_anuncios">
+      <div class="content_anuncio">
+        <ul class="anuncios">
+          <li class="li_anuncios">
+            <button class="item_anuncio" onclick="openToolsPage();">
+              <span class="box_anuncio">
+                <span class="iconAnuncio iconTools"> </span>
+                <span id="lblTitleTools" class="item_title_anuncio">Download RCS Tools</span>
+                <span id="lblSubTitleTools" class="item_subtitle_anuncio">Maintain control over your inventory with RCS Tools</span>
+                <span class="shine"></span>
+              </span>
+            </button>
+          </li>
+          <li class="li_anuncios">
+            <button class="item_anuncio" onclick="openToolsAdvertNew();">
+              <span class="box_anuncio">
+                <span class="iconAnuncio iconNewReport"> </span>
+                <span id="lblTitleToolsUpdate" class="item_title_anuncio">Check what's new in RCS Reports</span>
+                <span id="lblSubTitleToolsUpdate" class="item_subtitle_anuncio">New useful information for your business</span>
+                <span class="shine"></span>
+              </span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </div>
 
 
-
-<!--Modal OF CONECTION -->
-<div class="modal fade" id="show_alias">
-  <div class="modal-dialog">
+  <!--Modal OF CONECTION -->
+  <div class="modal fade" id="show_alias">
+    <div class="modal-dialog">
       <div class="modal-content">                              
-          <div class="modal-body text-center">     
-              <p class="title-alert titleMessage">Message</p>                 
-              <p  class="text-center textgeneral"></p>              
+        <div class="modal-body text-center">     
+          <p class="title-alert titleMessage">Message</p>                 
+          <p  class="text-center textgeneral"></p>              
+        </div>
+        <div class="modal-footer info">
+          <button type="button" class="btn btn-modal btnok"  name="btngeneral"  data-dismiss="modal" aria-hidden="true">Ok</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Loading -->
+  <div class="modal fade" id="show_loading" >
+      <div class="modal-dialog">
+          <div class="text-center loading">
+              <div></div>
+              <div></div>
           </div>
-          <div class="modal-footer info">
-              <button type="button" class="btn btn-modal btnok"  name="btngeneral"  data-dismiss="modal" aria-hidden="true">Ok</button>
-          </div>
+          <input type="hidden" id="txtocultaloading" name="txtocultaloading" data-dismiss="modal" aria-hidden="true" />
       </div>
   </div>
-</div>
-
-<!-- Loading -->
-<div class="modal fade" id="show_loading" >
-    <div class="modal-dialog">
-        <div class="text-center loading">
-            <div></div>
-            <div></div>
-        </div>
-        <input type="hidden" id="txtocultaloading" name="txtocultaloading" data-dismiss="modal" aria-hidden="true" />
-    </div>
-</div>
 
 <!-- Modal Options-->
 <div class="modal fade zIndex1" id="show_options">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header text-center">                    
-                <h4 class="modal-title" id="lblToolsTitle">
-                    Settings
-                </h4>
-                
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" name="btnclose" id="btnclose">Close</button>
+                <h4 class="modal-title" id="lblToolsTitle">Settings</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" name="btnclose" id="btnclose">X</button>
             </div>                
             <div class="modal-footer add">  
-                <button class="btn btn-modal actual_server" data-dismiss="modal" onclick="showActualServer();">Current Server</button>    
-
-                <button class="btn btn-modal landBtnLeft" data-dismiss="modal" id="servers_list" onclick="mostrarModal();">Servers</button> 
-
-                <button class="btn btn-modal landBtnRight" data-dismiss="modal" id="add_alias" onclick="delTables();newInfoServer();">Add Server</button> 
-
+                <button class="btn btn-modal actual_server" data-dismiss="modal" onclick="showActualServer();">Current Server</button>
+                <button class="btn btn-modal landBtnLeft" data-dismiss="modal" id="servers_list" onclick="mostrarModal();">Servers</button>
+                <button class="btn btn-modal landBtnRight" data-dismiss="modal" id="add_alias" onclick="delTables();newInfoServer();">Add Server</button>
                 <button class="btn btn-modal" data-dismiss="modal" id="hide_reports" onclick="showReports()">Hide/Show Reports</button>
-
                 <button class="btn btn-modal" data-dismiss="modal" id="Set_date" onclick="showModalSetDate()">Set Date</button>
-
                 <div class="btn-modal chkTax">
-
                   <div class="checkbox_wrapper checked small_item check_tax" onclick ="checkTax();">   
                     <span class="switch"></span>
                     <div class="input-checkbox"></div>
@@ -114,10 +168,10 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header text-center">
-                <button type="button" class="close back" data-dismiss="modal" aria-hidden="true" onclick="showOptions()">
+                <!--<button type="button" class="close back" data-dismiss="modal" aria-hidden="true" onclick="showOptions()">
                     Back
-                </button>
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" name="btnclose" id="btnclose">Close</button>
+                </button>-->
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" name="btnclose" id="btnclose">X</button>
                 <h4 class="modal-title" id="lblViewServer">
                     Current Server
                 </h4>
@@ -147,10 +201,10 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header text-center">
-                <button type="button" class="close back" data-dismiss="modal" aria-hidden="true" onclick="showOptions()">
+                <!--<button type="button" class="close back" data-dismiss="modal" aria-hidden="true" onclick="showOptions()">
                     Back
-                </button>
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" name="btnclose" id="btnclose">Close</button>
+                </button>-->
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" name="btnclose" id="btnclose">X</button>
                 <h4 class="modal-title" id="lblchangealit">
                     Servers
                 </h4>
@@ -169,13 +223,13 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header text-center">
-                <button type="button" class="close back" data-dismiss="modal" aria-hidden="true" onclick="showOptions()">
+                <!--<button type="button" class="close back" data-dismiss="modal" aria-hidden="true" onclick="showOptions()">
                     Back
-                </button>
+                </button>-->
                 <h4 class="modal-title" id="lblHideTitle">
                     Hide/Show Reports
                 </h4>
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" name="btnclose" id="btnclose">Close</button>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" name="btnclose" id="btnclose">X</button>
             </div>
             <div class="modal-body">
                 <div class="form-control select-alias divlistadoReports">
@@ -194,11 +248,11 @@
     <div class="modal-dialog">
         <div class="modal-content"> 
             <div class="modal-header text-center">       
-            <button type="button" class="close back" data-dismiss="modal" aria-hidden="true" onclick="showOptions();">Back</button>   
-                <h4 class="modal-title lblSetDate">
-                    Set Date
-                </h4>                
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" name="btnclose" id="btnclose" onclick="">Close</button>
+              <!--<button type="button" class="close back" data-dismiss="modal" aria-hidden="true" onclick="showOptions();">Back</button>-->
+              <h4 class="modal-title lblSetDate">
+                  Set Date
+              </h4>                
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true" name="btnclose" id="btnclose" onclick="">X</button>
             </div>                              
             <div class="modal-body text-center">     
                 <div class="section">
@@ -218,8 +272,6 @@
         </div>
     </div>
 </div>
-
-
 
 <!-- Modal Confirm change Server-->
 <div class="modal fade zIndex3" id="ModalConfirm" >
@@ -261,7 +313,6 @@
     </div>
 </div>
 
-
 <!--Modal Store  report_6-->
 <div class="modal fade zIndex1" id="show_modalStore6">
     <div class="modal-dialog">
@@ -272,8 +323,6 @@
         </div>
     </div>
 </div>
-
-
 
 <!-- Confirm delete server -->
 <div class="modal fade zIndex3" id="ModalConfirmDelete" >
@@ -335,8 +384,25 @@
         <p class="text-center textNoConnection">No network connection</p>              
       </div>
       <div class="modal-footer info">
-          <button type="button" class="btn btn-modal btnok"  name="btngeneral"  data-dismiss="modal" aria-hidden="true"
-          onclick="buttonExitApp();">Ok</button>
+          <button type="button" class="btn btn-modal btnok"  name="btngeneral"  data-dismiss="modal" aria-hidden="true" onclick="buttonExitApp();">Ok</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal Update Version - fj -->
+<div class="modal fade" id="ModalUpdateVersion" data-backdrop="static">
+  <div class="modal-dialog">
+    <div class="modal-content"> 
+      <div class="modal-header text-center">       
+        <h4 class="modal-title lblSetMessage">Message</h4>                
+        <button type="button" class="close" aria-hidden="true" name="btncloseMessageUpdateVersion" id="btncloseMessageUpdateVersion" onclick="closeModalUpdateVersion();">X</button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="../../img/iconSupport.svg" class="titleSupport"/>
+        <p class="css__p--message lblSetMsgUpdateVers1">Your server must be updated in order to be able to use this version.</p>
+        <p class="css__p--message lblSetMsgUpdateVers2">Please, contact your provider.</p>
+        <p class="css__p--message"><a href="mailto:support@retailcs.com" class="lblEmailSupport">support@retailcs.com</a></p>
       </div>
     </div>
   </div>
