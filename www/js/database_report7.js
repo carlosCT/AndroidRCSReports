@@ -278,7 +278,6 @@ function downloadByCompany() {
                             payTotal = parseFloat(payTotal.replace(",", ".")).toFixed(0);
                             payTotalGlobal = parseFloat(payTotalGlobal.replace(",", ".")).toFixed(0);
 
-
                             var color = "";
                             var colorGlobal = "";
                             var colorConvRate = "blue";
@@ -338,8 +337,15 @@ function downloadByCompany() {
                             if (goalAmountGlobal == 0.00 && payTotalGlobal > 0.00) {
                                 colorGlobal = "green";
                             }
+
+                            //calculo de conversion rate en %
+                            conversionRate = conversionRate * 100;
+
                             percent = parseFloat(percent).toFixed(0);
                             percentGlobal = parseFloat(percentGlobal).toFixed(0);
+
+                            conversionRate = parseFloat(conversionRate).toFixed(0);
+
                             
                             mostrar += "<div class='store waves-effect waves-light'>";
                             mostrar +="<div onclick=detailsNewCompStore("+index+",'"+typecode+"','')> ";
@@ -364,36 +370,21 @@ function downloadByCompany() {
                             }
 
                             //Additional information (conversion rate)
-                            // mostrar += "<div class='aditional'>";
-                            // mostrar += "<i>" + lblNumVisits + "</i>";
-                            // mostrar += "<p>" + parseFloat(numVisits).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
-                            // mostrar += "<i>" + lblNumTx + "</i>";
-                            // mostrar += "<p>" + parseFloat(numTx).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
-                            // mostrar += "<span class='" + colorConvRate + "'>" + conversionRate + " %</span>";
-                            // mostrar += "</div>";
-
-                            // mostrar += "<div class='aditional'>";
-                            // mostrar += "<i>" + lblAvgTicket + "</i>";
-                            // mostrar += "<p>" + parseFloat(avgTicket).toFixed(1).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
-                            // mostrar += "<i>" + lblUnitPerTx + "</i>";
-                            // mostrar += "<p>" + parseFloat(unitPerTx).toFixed(1).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
-                            // mostrar += "</div>";
-
-
                             mostrar += "<div class='aditional'>";
                             mostrar += "<i>" + lblNumVisits + "</i>";
-                            mostrar += "<p>" + "0" + "</p>";
+                            mostrar += "<p>" + parseFloat(numVisits).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
                             mostrar += "<i>" + lblNumTx + "</i>";
-                            mostrar += "<p>" + "0"+ "</p>";
-                            mostrar += "<span class='" + colorConvRate + "'>" + "0" + " %</span>";
+                            mostrar += "<p>" + parseFloat(numTx).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
+                            mostrar += "<span class='" + colorConvRate + "'>" + conversionRate + " %</span>";
                             mostrar += "</div>";
 
                             mostrar += "<div class='aditional'>";
                             mostrar += "<i>" + lblAvgTicket + "</i>";
-                            mostrar += "<p>" + "0.0" + "</p>";
+                            mostrar += "<p>" + parseFloat(avgTicket).toFixed(1).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
                             mostrar += "<i>" + lblUnitPerTx + "</i>";
-                            mostrar += "<p>" + "0.0" + "</p>";
+                            mostrar += "<p>" + parseFloat(unitPerTx).toFixed(1).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
                             mostrar += "</div>";
+
 
                             mostrar += "<div class='region_store regionList' id='graph_region"+index+"' >"
                             mostrar +="</div>";
@@ -576,6 +567,7 @@ function detailsNewCompStore(indice,typecode,regionCode){
                                 goalAmountGlobal = parseFloat(goalAmountGlobal.replace(",", ".")).toFixed(0);
                                 payTotal =parseFloat(payTotal.replace(",", ".")).toFixed(0);
                                 payTotalGlobal = parseFloat(payTotalGlobal.replace(",", ".")).toFixed(0);
+                               
 
                                 var color = "";
                                 var colorGlobal = "";
@@ -640,8 +632,12 @@ function detailsNewCompStore(indice,typecode,regionCode){
                                     colorGlobal = "green";
                                 }
 
+                                //calculo de conversion rate en %
+                                conversionRate = conversionRate * 100;
+
                                 percent = parseFloat(percent).toFixed(0);
-                                percentGlobal = parseFloat(percentGlobal).toFixed(0);
+                                percentGlobal =parseFloat(percentGlobal).toFixed(0);
+                                conversionRate = parseFloat(conversionRate).toFixed(0);
 
                                 if(goalAmount-payTotal>0){
                                     if(GlobalFilterStores=="1"){
