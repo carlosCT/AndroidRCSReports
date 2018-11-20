@@ -3,6 +3,9 @@ $(document).ready(function () {
     function onDeviceReady() {
         document.addEventListener("backbutton", onBackKeyDown, true);
     }
+    function onBackKeyDown() {
+        goBackMenu();
+    }
 });
 
 $(window).load(function () {/***asegura que la pagina ya esta cargada**/
@@ -10,10 +13,12 @@ $(window).load(function () {/***asegura que la pagina ya esta cargada**/
     onInit();/**verificamos la base de datos**/
     existDataDate_report5();/**lleanmos tabla CustomRangeDate**/
     downloadAllcustomers();
-    
 });
 
-
+function goBackMenu() {
+    truncateTableCustomDateRange();
+    menu();
+}
 
 function showDialogStore55() {
     $("#show_modalStore5").modal();
@@ -202,6 +207,7 @@ function existDataDate_report5() {
                     //change of date ES->EN
                     var lang = navigator.language.split("-");
                     current_lang = (lang[0]);
+                    //console.log(current_lang);
                     if (current_lang == 'en') {
                         document.getElementById('dateStart').innerHTML = arrayDateStart[1] + "-" + arrayDateStart[2] + "-" + arrayDateStart[0];
                         document.getElementById('dateEnd').innerHTML = arraydateEnd[1] + "-" + arraydateEnd[2] + "-" + arraydateEnd[0];
@@ -210,21 +216,22 @@ function existDataDate_report5() {
                         document.getElementById('dateEnd').innerHTML = arraydateEnd[2] + "-" + arraydateEnd[1] + "-" + arraydateEnd[0];
                     }
                 } else {
+                    //current date of the month
                     var obj_date = new Date();
                     var monthToday = obj_date.getMonth() + 1;
                     var dayToday = obj_date.getDate();
                     var dateOfToday = obj_date.getFullYear() + '-' +
                             (('' + monthToday).length < 2 ? '0' : '') + monthToday + '-' +
                             (('' + dayToday).length < 2 ? '0' : '') + dayToday;
-                    /*** dateStart of Month ***/
+                    //first date of the month
                     var obj_date2 = new Date();
                     var month = obj_date2.getMonth() + 1;
-                    var firstDayMonth = new Date(obj_date2.getFullYear(), obj_date2.getMonth(), 1); /**only day**/
+                    var firstDayMonth = new Date(obj_date2.getFullYear(), obj_date2.getMonth(), 1);
                     var dateStartMonth = obj_date2.getFullYear() + '-' +
                             (('' + month).length < 2 ? '0' : '') + month + '-' +
                             (('' + firstDayMonth.getDate()).length < 2 ? '0' : '') + firstDayMonth.getDate();
-                    insertFirstTimeDate_report5(dateStartMonth, dateOfToday, dateOfToday);
                     //pinta la fecha de los calendarios al entrar por primera vez
+                    insertFirstTimeDate_report5(dateStartMonth, dateOfToday, dateOfToday);
                     var arrayDateStart = dateStartMonth.split("-");
                     var arraydateEnd = dateOfToday.split("-");
 
@@ -454,7 +461,6 @@ function BtnCancel5() {
     });
 }
 
-
 function writeStore5() {
     var storeName = "";
     var storeNo = "";
@@ -467,7 +473,6 @@ function writeStore5() {
     });
 }
 
-
 function focusToactiveStore() {
     var list5 = $('.list_store');
     list5.animate({
@@ -475,7 +480,18 @@ function focusToactiveStore() {
     });
 }
 
-
+function truncateTableCustomDateRange() {
+    try {
+        var query = "DELETE FROM " + TABLE_CUSTOM_DATE_RANGE;
+        localDB.transaction(function(transaction){
+            transaction.executeSql(query,[], function(transaction, results) {
+                //Limpia la tabla TABLE_CUSTOM_DATE_RANGE
+            });
+        });
+    } catch (e) {
+        console.log("Error en truncateTableCustomDateRange " + e + ".");
+    }
+}
 
 
 /***********************Language**********************************/
