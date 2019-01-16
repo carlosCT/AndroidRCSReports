@@ -170,6 +170,9 @@ function downloadByCompany() {
     var lblAvgTicket = "";
     var lblUnitPerTx = "";
 
+    var lblWeekHours = "";
+    var lblActualHours = "";
+
     localStorage.RCSReports_valuesGroupStore=1;
     //verifica si esta con impuestos
     var impuesto=localStorage.getItem("check_tax");
@@ -252,11 +255,19 @@ function downloadByCompany() {
                                 lblCurrentSale = "TS";
                                 lblGlobalGoal = "WG";
                                 lblGlobalSale = "WS";
+
+                                lblWeekHours = "WHR";
+                                lblActualHours = "THR";
+
                             } else if (option == 2) {
                                 lblCurrentGoal = "YG";
                                 lblCurrentSale = "YS";
                                 lblGlobalGoal = "WG";
                                 lblGlobalSale = "WS";
+
+                                lblWeekHours = "WHR";
+                                lblActualHours = "YHR";
+
                             } else if (option == 3) {
                                 lblCurrentGoal = "WG";
                                 lblCurrentSale = "WS";
@@ -281,6 +292,8 @@ function downloadByCompany() {
                             lblNumTx = "Trans";
                             lblAvgTicket = "ADS";
                             lblUnitPerTx = "UPT";
+
+                            
                         
                         }
 
@@ -300,6 +313,11 @@ function downloadByCompany() {
                             var avgTicket = value.avgTicket;
                             var unitPerTx = value.unitPerTx;
 
+                            var weekHours = value.weekHours;
+                            var actualHours = value.actualHours;
+
+
+
                             goalAmount = parseFloat(goalAmount.replace(",", ".")).toFixed(0);
                             goalAmountGlobal = parseFloat(goalAmountGlobal.replace(",", ".")).toFixed(0);
                             payTotal = parseFloat(payTotal.replace(",", ".")).toFixed(0);
@@ -307,6 +325,9 @@ function downloadByCompany() {
                             conversionRate = parseFloat(conversionRate.replace(",", "."));
                             avgTicket = parseFloat(avgTicket.replace(",", "."));
                             unitPerTx = parseFloat(unitPerTx.replace(",", "."));
+
+                            // weekHours = parseFloat(bgtHours.replace(",", "."));
+                            // actualHours = parseFloat(actHours.replace(",", "."));
 
                             var color = "";
                             var colorGlobal = "";
@@ -410,6 +431,16 @@ function downloadByCompany() {
                             mostrar += "<i>" + lblUnitPerTx + "</i>";
                             mostrar += "<p>" + parseFloat(unitPerTx).toFixed(1).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
                             mostrar += "</div>";
+
+                            if (option == 1 || option == 2){
+                                mostrar += "<div class='aditional'>";
+                                mostrar += "<i>" + lblWeekHours + "</i>";
+                                mostrar += "<p>" + parseFloat(weekHours).toFixed(1).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
+                                mostrar += "<i>" + lblActualHours + "</i>";
+                                mostrar += "<p>" + parseFloat(actualHours).toFixed(1).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
+                                mostrar += "</div>";
+                            }
+                            
 
                         });
                             mostrar +="<div id='graphCompanyDetails' class='graphic showGraphic'>";
@@ -526,6 +557,9 @@ function downloadByRegion() {
     var lblAvgTicket = "";
     var lblUnitPerTx = "";
 
+    var lblWeekHours = "";
+    var lblActualHours = "";
+
     localStorage.RCSReports_valuesGroupStore=2;
     //verifica si esta con impuestos
     var impuesto=localStorage.getItem("check_tax");
@@ -611,11 +645,19 @@ function downloadByRegion() {
                                 lblCurrentSale = "TS";
                                 lblGlobalGoal = "WG";
                                 lblGlobalSale = "WS";
+
+                                lblWeekHours = "WHR";
+                                lblActualHours = "THR";
+
                             } else if (option == 2) {
                                 lblCurrentGoal = "YG";
                                 lblCurrentSale = "YS";
                                 lblGlobalGoal = "WG";
                                 lblGlobalSale = "WS";
+
+                                lblWeekHours = "WHR";
+                                lblActualHours = "YHR";
+
                             } else if (option == 3) {
                                 lblCurrentGoal = "WG";
                                 lblCurrentSale = "WS";
@@ -660,6 +702,9 @@ function downloadByRegion() {
                             var avgTicket = value.avgTicket;
                             var unitPerTx = value.unitPerTx;
 
+                            var weekHours = value.weekHours;
+                            var actualHours = value.actualHours;
+
                             goalAmount = parseFloat(goalAmount.replace(",", ".")).toFixed(0);
                             goalAmountGlobal = parseFloat(goalAmountGlobal.replace(",", ".")).toFixed(0);
                             payTotal = parseFloat(payTotal.replace(",", ".")).toFixed(0);
@@ -667,6 +712,9 @@ function downloadByRegion() {
                             conversionRate = parseFloat(conversionRate.replace(",", "."));
                             avgTicket = parseFloat(avgTicket.replace(",", "."));
                             unitPerTx = parseFloat(unitPerTx.replace(",", "."));
+
+                            // weekHours = parseFloat(bgtHours.replace(",", "."));
+                            // actualHours = parseFloat(actHours.replace(",", "."));
 
                             var color = "";
                             var colorGlobal = "";
@@ -775,6 +823,15 @@ function downloadByRegion() {
                             mostrar += "<i>" + lblUnitPerTx + "</i>";
                             mostrar += "<p>" + parseFloat(unitPerTx).toFixed(1).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
                             mostrar += "</div>";
+
+                            if (option == 1 || option == 2){
+                                mostrar += "<div class='aditional'>";
+                                mostrar += "<i>" + lblWeekHours + "</i>";
+                                mostrar += "<p>" + parseFloat(weekHours).toFixed(1).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
+                                mostrar += "<i>" + lblActualHours + "</i>";
+                                mostrar += "<p>" + parseFloat(actualHours).toFixed(1).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
+                                mostrar += "</div>";
+                            }
                             
                             mostrar += "<div class='region_store regionList' id='graph_region"+cont+"' >"
                             mostrar += "</div>";
@@ -904,6 +961,9 @@ function downloadByStore(regionCode) {
     var lblAvgTicket = "";
     var lblUnitPerTx = "";
 
+    var lblWeekHours = "";
+    var lblActualHours = "";
+
     var option = localStorage.RCSReports_valuesRangeDates;
     
     var regioncode=regionCode;
@@ -992,11 +1052,19 @@ function downloadByStore(regionCode) {
                                 lblCurrentSale = "TS";
                                 lblGlobalGoal = "WG";
                                 lblGlobalSale = "WS";
+
+                                lblWeekHours = "WHR";
+                                lblActualHours = "THR";
+
                             } else if (option == 2) {
                                 lblCurrentGoal = "YG";
                                 lblCurrentSale = "YS";
                                 lblGlobalGoal = "WG";
                                 lblGlobalSale = "WS";
+
+                                lblWeekHours = "WHR";
+                                lblActualHours = "YHR";
+
                             } else if (option == 3) {
                                 lblCurrentGoal = "WG";
                                 lblCurrentSale = "WS";
@@ -1041,6 +1109,9 @@ function downloadByStore(regionCode) {
                             var avgTicket = value.avgTicket;
                             var unitPerTx = value.unitPerTx;
 
+
+                            var weekHours = value.weekHours;
+                            var actualHours = value.actualHours;
 
                             goalAmount = parseFloat(goalAmount.replace(",", ".")).toFixed(0);
                             goalAmountGlobal = parseFloat(goalAmountGlobal.replace(",", ".")).toFixed(0);
@@ -1184,6 +1255,15 @@ function downloadByStore(regionCode) {
                             mostrar += "<i>" + lblUnitPerTx + "</i>";
                             mostrar += "<p>" + parseFloat(unitPerTx).toFixed(1).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
                             mostrar += "</div>";
+
+                            if (option == 1 || option == 2){
+                                mostrar += "<div class='aditional'>";
+                                mostrar += "<i>" + lblWeekHours + "</i>";
+                                mostrar += "<p>" + parseFloat(weekHours).toFixed(1).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
+                                mostrar += "<i>" + lblActualHours + "</i>";
+                                mostrar += "<p>" + parseFloat(actualHours).toFixed(1).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
+                                mostrar += "</div>";
+                            }
 
                             mostrar +="<div id='graph" + indice + "' class='graphic showGraphic'>";
                             mostrar += "</div>";
