@@ -170,9 +170,6 @@ function downloadByCompany() {
     var lblAvgTicket = "";
     var lblUnitPerTx = "";
 
-    var lblWeekHours = "";
-    var lblActualHours = "";
-
     localStorage.RCSReports_valuesGroupStore=1;
     //verifica si esta con impuestos
     var impuesto=localStorage.getItem("check_tax");
@@ -256,17 +253,11 @@ function downloadByCompany() {
                                 lblGlobalGoal = "WG";
                                 lblGlobalSale = "WS";
 
-                                lblWeekHours = "WHR";
-                                lblActualHours = "THR";
-
                             } else if (option == 2) {
                                 lblCurrentGoal = "YG";
                                 lblCurrentSale = "YS";
                                 lblGlobalGoal = "WG";
                                 lblGlobalSale = "WS";
-
-                                lblWeekHours = "WHR";
-                                lblActualHours = "YHR";
 
                             } else if (option == 3) {
                                 lblCurrentGoal = "WG";
@@ -432,15 +423,7 @@ function downloadByCompany() {
                             mostrar += "<p>" + parseFloat(unitPerTx).toFixed(1).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
                             mostrar += "</div>";
 
-                            if (option == 1 || option == 2){
-                                mostrar += "<div class='aditional'>";
-                                mostrar += "<i>" + lblWeekHours + "</i>";
-                                mostrar += "<p>" + parseFloat(weekHours).toFixed(1).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
-                                mostrar += "<i>" + lblActualHours + "</i>";
-                                mostrar += "<p>" + parseFloat(actualHours).toFixed(1).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
-                                mostrar += "</div>";
-                            }
-                            
+                           
 
                         });
                             mostrar +="<div id='graphCompanyDetails' class='graphic showGraphic'>";
@@ -513,9 +496,9 @@ function  grapihcCompanyDetails(){
                             mostrar +="<div id='chartdiv' class='chartdiv'></div>";
                             mostrar += "<div class='detalle-0'>";
                             if (current_lang == 'es'){
-                                mostrar += "<div class='year'>Año</div><div class='quantity'>Cantidad</div>";
+                                mostrar += "<div class='year'>Año</div><div class='quantity'>Ventas</div>";
                             }else{
-                                mostrar += "<div class='year'>Year</div><div class='quantity'>Quantity</div>";
+                                mostrar += "<div class='year'>Year</div><div class='quantity'>Sales</div>";
                             }
                             mostrar += "<i>" + array_description[0] + "</i><span>" + parseFloat(array_total[0]).toFixed().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</span>";
                             mostrar += "<i>" + array_description[1] + "</i><span>" + parseFloat(array_total[1]).toFixed().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</span>";
@@ -556,9 +539,6 @@ function downloadByRegion() {
     var lblNumTx = "";
     var lblAvgTicket = "";
     var lblUnitPerTx = "";
-
-    var lblWeekHours = "";
-    var lblActualHours = "";
 
     localStorage.RCSReports_valuesGroupStore=2;
     //verifica si esta con impuestos
@@ -646,17 +626,11 @@ function downloadByRegion() {
                                 lblGlobalGoal = "WG";
                                 lblGlobalSale = "WS";
 
-                                lblWeekHours = "WHR";
-                                lblActualHours = "THR";
-
                             } else if (option == 2) {
                                 lblCurrentGoal = "YG";
                                 lblCurrentSale = "YS";
                                 lblGlobalGoal = "WG";
                                 lblGlobalSale = "WS";
-
-                                lblWeekHours = "WHR";
-                                lblActualHours = "YHR";
 
                             } else if (option == 3) {
                                 lblCurrentGoal = "WG";
@@ -824,14 +798,6 @@ function downloadByRegion() {
                             mostrar += "<p>" + parseFloat(unitPerTx).toFixed(1).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
                             mostrar += "</div>";
 
-                            if (option == 1 || option == 2){
-                                mostrar += "<div class='aditional'>";
-                                mostrar += "<i>" + lblWeekHours + "</i>";
-                                mostrar += "<p>" + parseFloat(weekHours).toFixed(1).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
-                                mostrar += "<i>" + lblActualHours + "</i>";
-                                mostrar += "<p>" + parseFloat(actualHours).toFixed(1).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
-                                mostrar += "</div>";
-                            }
                             
                             mostrar += "<div class='region_store regionList' id='graph_region"+cont+"' >"
                             mostrar += "</div>";
@@ -961,9 +927,6 @@ function downloadByStore(regionCode) {
     var lblAvgTicket = "";
     var lblUnitPerTx = "";
 
-    var lblWeekHours = "";
-    var lblActualHours = "";
-
     var option = localStorage.RCSReports_valuesRangeDates;
     
     var regioncode=regionCode;
@@ -1053,17 +1016,11 @@ function downloadByStore(regionCode) {
                                 lblGlobalGoal = "WG";
                                 lblGlobalSale = "WS";
 
-                                lblWeekHours = "WHR";
-                                lblActualHours = "THR";
-
                             } else if (option == 2) {
                                 lblCurrentGoal = "YG";
                                 lblCurrentSale = "YS";
                                 lblGlobalGoal = "WG";
                                 lblGlobalSale = "WS";
-
-                                lblWeekHours = "WHR";
-                                lblActualHours = "YHR";
 
                             } else if (option == 3) {
                                 lblCurrentGoal = "WG";
@@ -1256,15 +1213,6 @@ function downloadByStore(regionCode) {
                             mostrar += "<p>" + parseFloat(unitPerTx).toFixed(1).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
                             mostrar += "</div>";
 
-                            if (option == 1 || option == 2){
-                                mostrar += "<div class='aditional'>";
-                                mostrar += "<i>" + lblWeekHours + "</i>";
-                                mostrar += "<p>" + parseFloat(weekHours).toFixed(1).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
-                                mostrar += "<i>" + lblActualHours + "</i>";
-                                mostrar += "<p>" + parseFloat(actualHours).toFixed(1).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
-                                mostrar += "</div>";
-                            }
-
                             mostrar +="<div id='graph" + indice + "' class='graphic showGraphic'>";
                             mostrar += "</div>";
                             // mostrar += "</div><hr>";
@@ -1346,9 +1294,9 @@ function storeWitdhGraphic(indice,storeno) {
                             mostrar +="<div id='chartdiv' class='chartdiv'></div>";
                             mostrar += "<div class='detalle-" + indice + "'>";
                             if (current_lang == 'es'){
-                                mostrar += "<div class='year'>Año</div><div class='quantity'>Cantidad</div>";
+                                mostrar += "<div class='year'>Año</div><div class='quantity'>Ventas</div>";
                             }else{
-                                mostrar += "<div class='year'>Year</div><div class='quantity'>Quantity</div>";
+                                mostrar += "<div class='year'>Year</div><div class='quantity'>Sales</div>";
                             }
                             mostrar += "<i>" + array_description[0] + "</i><span>" + parseFloat(array_total[0]).toFixed().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</span>";
                             mostrar += "<i>" + array_description[1] + "</i><span>" + parseFloat(array_total[1]).toFixed().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</span>";
