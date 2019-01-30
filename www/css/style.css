@@ -96,10 +96,10 @@ label{
 }
 .hybrid_bg{
     background-color: none !important;
-    background-image: url('../img/background_1024.jpg') !important;
+    /*background-image: url('../img/background_1024.jpg') !important;*/
     background-repeat: no-repeat !important;
     background-size: cover !important;
-    
+    background: linear-gradient(135deg, #1e2550 0%,#2d637c 100%);
 }
 .hybrid_bg .content,
 .hybrid_bg #content{
@@ -241,7 +241,7 @@ header button:active{
     background-repeat: no-repeat;*/
     background-image: url(../img/iconItems.svg);
     background-position: center;
-    background-size: 33px;
+    background-size: 30px;
     background-repeat: no-repeat;
 }
 #btn_right.configuration{
@@ -274,7 +274,7 @@ header button:active{
     background-position: 2px 8px !important;
     background-size: 32px !important;
     background-repeat: no-repeat !important;*/
-    background-image: url(../img/iconReport.png) !important;
+    background-image: url(../img/iconIsotype.svg) !important;
     background-position: 0px 0px !important;
     background-size: 28px !important;
     background-repeat: no-repeat !important;
@@ -1637,7 +1637,7 @@ button.delete{
     padding: 5px 0px;
     width: 100%;
     line-height: 15pt;
-    background: #989898;
+    background: #a5a5a5;
 }
 
 .anuncios .iconAnuncio {
@@ -2574,7 +2574,8 @@ text{
         background: linear-gradient(135deg, #1e2550 0%,#2d637c 100%);
     }
     .hybrid_bg{
-        background-image: url('../img/background_667.jpg') !important;    
+        /*background-image: url('../img/background_667.jpg') !important;    */
+        background: linear-gradient(135deg, #1e2550 0%,#2d637c 100%);
     }
     .actual span, .global span, .aditional span{
         padding-top: 8px;
@@ -2631,7 +2632,8 @@ text{
         text-overflow: ellipsis;
     }
     .hybrid_bg{
-        background-image: url('../img/background_568.jpg') !important;    
+        /*background-image: url('../img/background_568.jpg') !important;    */
+        background: linear-gradient(135deg, #1e2550 0%,#2d637c 100%);
     }
     .titleLogo {
         /*height: 20pt;*/
