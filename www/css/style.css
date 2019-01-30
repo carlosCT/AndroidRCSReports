@@ -550,16 +550,35 @@ input[type="checkbox"]:checked + label:before {
 }
 
 /*Menu */
+#txt_maintitle {
+    width: 155px !important;
+    display: inline-block;
+    padding-left: 40px;
+    line-height: 48px;
+}
 .menu {
     width: 100%;
     font-size: 0;
     overflow-y: auto;
     /*padding-top: 11px;*/
     padding-top: 3px;
-    background-image: url('../img/Bottom-Waves-1024.png');
+    /*background-image: url('../img/Bottom-Waves-1024.png');*/
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+    background: linear-gradient(135deg, #1e2550 0%,#2d637c 100%);
+    z-index: 1;
+}
+.menu:after{
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    right: 5px;
+    background-image: url(../img/iconLogoRCS.svg);
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 70px;
+    opacity: 0.75;
 }
 
 .show_options{
@@ -597,16 +616,18 @@ input[type="checkbox"]:checked + label:before {
     background-color: rgba(241, 241, 241, 0.92);
 }*/
 .list .item,.menu .item{
-    width: 100%;
-    /*height: 100px;*/
+    width: 95%;
     height: 70px;
-    margin-bottom: 11px;
-    /*background-color: rgba(253, 253, 253, 0.92);*/
-    border-top: 1px solid rgb(200, 199, 204);
-    background-image: url(../img/nextBtnSilver.svg);
-    background-position: right center;
-    background-size: 24px 44px;
-    background-repeat: no-repeat;  
+    /*margin-bottom: 11px;*/
+    /*border-top: 1px solid rgb(200, 199, 204);*/
+    /*background-image: url(../img/nextBtnSilver.svg);*/
+    /*background-position: right center;*/
+    /*background-size: 24px 44px;*/
+    /*background-repeat: no-repeat;  */
+    margin: auto;
+    border-radius: 8px;
+    display: block;
+    margin-top: 10px;
 }
 .highlight_one{
     background-color: rgba(253, 253, 253, 0.92);
@@ -1056,6 +1077,7 @@ div[class^="detalle-"]{
     height: 100%;
     display: inline-block;
     float: right;
+    margin-top: 10px;
 }
 .year, .quantity{
     font-size: 12px;
@@ -1623,7 +1645,7 @@ button.delete{
     padding: 5px 0px;
     width: 100%;
     line-height: 15pt;
-    background: #198DE0;
+    background: #989898;
 }
 
 .anuncios .iconAnuncio {
@@ -2269,6 +2291,11 @@ text{
 
 
 
+.cmrcolor {
+        background-color: #486784;
+}
+
+
 /* iPad in portrait & landscape */
 @media only screen and (min-width : 768px) and (max-width : 1024px)  {
     #txt_login, #txt_maintitle, #txt_title, #top_txt_title, #txt_Options{
@@ -2551,7 +2578,8 @@ text{
         font-size: 15px;
     }
     .menu{
-        background-image: url('../img/Bottom-Waves-667.png');
+        /*background-image: url('../img/Bottom-Waves-667.png');*/
+        background: linear-gradient(135deg, #1e2550 0%,#2d637c 100%);
     }
     .hybrid_bg{
         background-image: url('../img/background_667.jpg') !important;    
@@ -2618,7 +2646,8 @@ text{
     }
     .list .item, .menu .item{
         /*height: 90px;*/
-        height: 70px;
+        /*height: 70px;*/
+        height: 72px;
     }
     .item .box, .menu .box{
         /*padding-left: 80px;*/

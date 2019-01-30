@@ -299,6 +299,8 @@ function downloadByCompany() {
                             var conversionRate = value.conversionRate;
                             var avgTicket = value.avgTicket;
                             var unitPerTx = value.unitPerTx;
+                            var contributionMarginRatio = value.contributionMarginRatio;
+                            var percentContributionMarginRatio = 0.00;
 
                             goalAmount = parseFloat(goalAmount.replace(",", ".")).toFixed(0);
                             goalAmountGlobal = parseFloat(goalAmountGlobal.replace(",", ".")).toFixed(0);
@@ -307,10 +309,12 @@ function downloadByCompany() {
                             conversionRate = parseFloat(conversionRate.replace(",", "."));
                             avgTicket = parseFloat(avgTicket.replace(",", "."));
                             unitPerTx = parseFloat(unitPerTx.replace(",", "."));
+                            contributionMarginRatio = parseFloat(contributionMarginRatio.replace(",", "."));
 
                             var color = "";
                             var colorGlobal = "";
                             var colorConvRate = "blue";
+                            var colorCMR = "cmrcolor";
 
                             //calculo de percent
                             if (payTotal > 0 && goalAmount == 0.00) {
@@ -371,9 +375,13 @@ function downloadByCompany() {
                             //calculo de conversion rate en %
                             conversionRate = conversionRate * 100;
 
+                            //calculo del margen de contribucion
+                            percentContributionMarginRatio = contributionMarginRatio * 100;
+
                             percent = parseFloat(percent).toFixed(0);
                             percentGlobal =parseFloat(percentGlobal).toFixed(0);
                             conversionRate = parseFloat(conversionRate).toFixed(0);
+                            percentContributionMarginRatio = parseFloat(percentContributionMarginRatio).toFixed(0);
 
                             if (actual == 1) {
                                 mostrar += "<div class='actual'>";
@@ -409,6 +417,7 @@ function downloadByCompany() {
                             mostrar += "<p>" + parseFloat(avgTicket).toFixed(1).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
                             mostrar += "<i>" + lblUnitPerTx + "</i>";
                             mostrar += "<p>" + parseFloat(unitPerTx).toFixed(1).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
+                            mostrar += "<span class='" + colorCMR + "'>" + percentContributionMarginRatio + " %</span>";
                             mostrar += "</div>";
 
                         });
@@ -659,6 +668,8 @@ function downloadByRegion() {
                             var conversionRate = value.conversionRate;
                             var avgTicket = value.avgTicket;
                             var unitPerTx = value.unitPerTx;
+                            var contributionMarginRatio = value.contributionMarginRatio;
+                            var percentContributionMarginRatio = 0.00;
 
                             goalAmount = parseFloat(goalAmount.replace(",", ".")).toFixed(0);
                             goalAmountGlobal = parseFloat(goalAmountGlobal.replace(",", ".")).toFixed(0);
@@ -667,10 +678,12 @@ function downloadByRegion() {
                             conversionRate = parseFloat(conversionRate.replace(",", "."));
                             avgTicket = parseFloat(avgTicket.replace(",", "."));
                             unitPerTx = parseFloat(unitPerTx.replace(",", "."));
+                            contributionMarginRatio = parseFloat(contributionMarginRatio.replace(",", "."));
 
                             var color = "";
                             var colorGlobal = "";
                             var colorConvRate = "blue";
+                            var colorCMR = "cmrcolor";
 
                             //calculo de percent
                             if (payTotal > 0 && goalAmount == 0.00) {
@@ -733,9 +746,14 @@ function downloadByRegion() {
                             //calculo de conversion rate en %
                             conversionRate = conversionRate * 100;
 
+
+                            //calculo del margen de contribucion
+                            percentContributionMarginRatio = contributionMarginRatio * 100;
+
                             percent = parseFloat(percent).toFixed(0);
                             percentGlobal =parseFloat(percentGlobal).toFixed(0);
                             conversionRate = parseFloat(conversionRate).toFixed(0);
+                            percentContributionMarginRatio = parseFloat(percentContributionMarginRatio).toFixed(0);
 
                             mostrar += "<div class='store waves-effect waves-light' onclick=storeWitdhGraphic2("+cont+",'"+regionCode+"') >";
                             mostrar += "<h1>" + regionName + "</h1>";
@@ -774,6 +792,7 @@ function downloadByRegion() {
                             mostrar += "<p>" + parseFloat(avgTicket).toFixed(1).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
                             mostrar += "<i>" + lblUnitPerTx + "</i>";
                             mostrar += "<p>" + parseFloat(unitPerTx).toFixed(1).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
+                            mostrar += "<span class='" + colorCMR + "'>" + percentContributionMarginRatio + " %</span>";
                             mostrar += "</div>";
                             
                             mostrar += "<div class='region_store regionList' id='graph_region"+cont+"' >"
@@ -1040,7 +1059,8 @@ function downloadByStore(regionCode) {
                             var conversionRate = value.conversionRate;
                             var avgTicket = value.avgTicket;
                             var unitPerTx = value.unitPerTx;
-
+                            var contributionMarginRatio = value.contributionMarginRatio;
+                            var percentContributionMarginRatio = 0.00;
 
                             goalAmount = parseFloat(goalAmount.replace(",", ".")).toFixed(0);
                             goalAmountGlobal = parseFloat(goalAmountGlobal.replace(",", ".")).toFixed(0);
@@ -1049,9 +1069,11 @@ function downloadByStore(regionCode) {
                             conversionRate = parseFloat(conversionRate.replace(",", "."));
                             avgTicket = parseFloat(avgTicket.replace(",", "."));
                             unitPerTx = parseFloat(unitPerTx.replace(",", "."));
+                            contributionMarginRatio = parseFloat(contributionMarginRatio.replace(",", "."));
                             var color = "";
                             var colorGlobal = "";
                             var colorConvRate = "blue";
+                            var colorCMR = "cmrcolor";
 
 
                             //calculo de percent
@@ -1116,10 +1138,14 @@ function downloadByStore(regionCode) {
                             //calculo de conversion rate en %
                             conversionRate = conversionRate * 100;
 
+                            //calculo del margen de contribucion
+                            percentContributionMarginRatio = contributionMarginRatio * 100;
+
 
                             percent = parseFloat(percent).toFixed(0);
                             percentGlobal = parseFloat(percentGlobal).toFixed(0);
                             conversionRate = parseFloat(conversionRate).toFixed(0);
+                            percentContributionMarginRatio = parseFloat(percentContributionMarginRatio).toFixed(0);
 
 
                             if(goalAmount-payTotal>0){
@@ -1183,6 +1209,7 @@ function downloadByStore(regionCode) {
                             mostrar += "<p>" + parseFloat(avgTicket).toFixed(1).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
                             mostrar += "<i>" + lblUnitPerTx + "</i>";
                             mostrar += "<p>" + parseFloat(unitPerTx).toFixed(1).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
+                            mostrar += "<span class='" + colorCMR + "'>" + percentContributionMarginRatio + " %</span>";
                             mostrar += "</div>";
 
                             mostrar +="<div id='graph" + indice + "' class='graphic showGraphic'>";
