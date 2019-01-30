@@ -2640,8 +2640,7 @@ text{
     }
     .list .item, .menu .item{
         /*height: 90px;*/
-        /*height: 70px;*/
-        height: 72px;
+        height: 70px;
     }
     .item .box, .menu .box{
         /*padding-left: 80px;*/
