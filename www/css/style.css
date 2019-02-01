@@ -74,7 +74,8 @@ label{
     /*width: 88%;
     font-size: 15px;*/
     width: 95%;
-    font-size: 14px;
+    /*font-size: 14px;*/
+    font-size: 92%;
 }
 /*preparando el entorno para la app hybrid*/
 .hybrid_container, #floatWindow{
@@ -280,12 +281,6 @@ header button:active{
     background-repeat: no-repeat !important;
 }
 
-.indexSection{
-    width: 100%;
-    padding-top: 2pt;
-    padding-bottom: 8pt;
-    background: rgba(255,255,255,0.88);
-}
 .white{
     color: white;
 }
@@ -352,6 +347,8 @@ header button:active{
     text-align: center;
 }
 .btn{ 
+    position: relative;
+    z-index: 100;
     width: 100%; 
     padding: 8px 12px; 
     border-radius: 3px; 
@@ -2294,10 +2291,10 @@ text{
         width: 255px;
     }
     .menu{
-        background-image: url('../img/Bottom-Waves-1024.png');
+        /*background-image: url('../img/Bottom-Waves-1024.png');*/
     }
     .hybrid_bg{
-        background-image: url('../img/background_1024.jpg') !important;    
+        /*background-image: url('../img/background_1024.jpg') !important;    */
     }
     .btn {
         padding: 10px 12px;
