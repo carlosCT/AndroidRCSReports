@@ -491,9 +491,9 @@ function  grapihcCompanyDetails(){
                             mostrar +="<div id='chartdiv' class='chartdiv'></div>";
                             mostrar += "<div class='detalle-0'>";
                             if (current_lang == 'es'){
-                                mostrar += "<div class='year'>Año</div><div class='quantity'>Cantidad</div>";
+                                mostrar += "<div class='year'>Año</div><div class='quantity'>Ventas</div>";
                             }else{
-                                mostrar += "<div class='year'>Year</div><div class='quantity'>Quantity</div>";
+                                mostrar += "<div class='year'>Year</div><div class='quantity'>Sales</div>";
                             }
                             mostrar += "<i>" + array_description[0] + "</i><span>" + parseFloat(array_total[0]).toFixed().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</span>";
                             mostrar += "<i>" + array_description[1] + "</i><span>" + parseFloat(array_total[1]).toFixed().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</span>";
@@ -1293,9 +1293,9 @@ function storeWitdhGraphic(indice,storeno) {
                             mostrar +="<div id='chartdiv' class='chartdiv'></div>";
                             mostrar += "<div class='detalle-" + indice + "'>";
                             if (current_lang == 'es'){
-                                mostrar += "<div class='year'>Año</div><div class='quantity'>Cantidad</div>";
+                                mostrar += "<div class='year'>Año</div><div class='quantity'>Ventas</div>";
                             }else{
-                                mostrar += "<div class='year'>Year</div><div class='quantity'>Quantity</div>";
+                                mostrar += "<div class='year'>Year</div><div class='quantity'>Sales</div>";
                             }
                             mostrar += "<i>" + array_description[0] + "</i><span>" + parseFloat(array_total[0]).toFixed().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</span>";
                             mostrar += "<i>" + array_description[1] + "</i><span>" + parseFloat(array_total[1]).toFixed().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</span>";

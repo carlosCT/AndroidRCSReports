@@ -1010,6 +1010,17 @@ hr {
     /*border-radius: 8pt;*/
     border-radius: 4pt;
 }
+.aditional span.cmrcolor{
+    border-radius: 4pt;
+}
+@media only screen and (min-width : 768px) {
+    .actual {
+        margin-bottom: 3px;
+    }
+    .global {
+        margin-bottom: 1px;
+    }
+}
 
 
 div[class^="region_store"]
