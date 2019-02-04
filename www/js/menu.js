@@ -51,8 +51,7 @@ $(window).load(function(){
         sliderResizeNotice();
         setTimeout(function(){ timeoutSliderNotice(); }, 5000);
 
-        // HT
-        printSettingsValue();
+        
     }else{
         $('#no_connection').modal('show');
         if (current_lang=='es'){
@@ -70,6 +69,9 @@ $(window).load(function(){
         var a=$(this).attr('data-value');
         localStorage.RCSReports_SetDate=a;
     });
+
+    // HT
+        printSettingsValue();
 });
 
 //rotation screem
