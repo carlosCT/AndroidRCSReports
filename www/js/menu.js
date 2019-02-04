@@ -16,6 +16,8 @@ $(document).ready(function () {
             updateHideReports();
             checktaxDefault();
             verificateSetDate();
+            // HT
+            printAlias();
             /*FJ*/
             sliderAutomaticNotice();
             sliderResizeNotice();
@@ -69,9 +71,7 @@ $(window).load(function(){
         var a=$(this).attr('data-value');
         localStorage.RCSReports_SetDate=a;
     });
-
-    // HT
-        printSettingsValue();
+    printAlias();
 });
 
 //rotation screem
@@ -1836,7 +1836,6 @@ function getDataInUse() {
             transaction.executeSql(query, [], function (transaction, results) {
                 var ip = results.rows.item(0).ip;
                 var alias = results.rows.item(0).alias;
-                $('.code-alias').text(results.rows.item(0).alias);
                 $("#txtIP").text(ip);
                 $("#txtServer").text(alias);
                 checktaxDefault();
@@ -1903,7 +1902,7 @@ function validateModalWhite(){
     }
 }
 
-function printSettingsValue() {
+function printAlias() {
 
     var query = "SELECT " + KEY_IP + "," + KEY_ALIAS + " FROM " + TABLE_URL + " WHERE " + KEY_USE + " = '1'";
     try {
@@ -1911,7 +1910,7 @@ function printSettingsValue() {
             transaction.executeSql(query, [], function (transaction, results) {
 
                 $('.code-alias').text(results.rows.item(0).alias);
-
+                console.log("aliad loaded successfully.");
             }, function (transaction, error) {
                 console.log("Error: " + error.code + "<br>Message: " + error.message);
             });
