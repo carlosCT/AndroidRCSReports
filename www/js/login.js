@@ -389,25 +389,35 @@ function updateStateServer(){
 
 function printSettingsValue() {
 
-    try {
-        var query = "SELECT * FROM " + TABLE_URL;
-        localDB.transaction(function (tx) {
-            tx.executeSql(query, [], function (tx, results) {
+    // try {
+    //     var query = "SELECT * FROM " + TABLE_URL;
+    //     localDB.transaction(function (tx) {
+    //         tx.executeSql(query, [], function (tx, results) {
 
-                var s = "";
+    //             var s = "";
 
 
-                for (var i = 0; i < results.rows.length; i++) {
+    //             for (var i = 0; i < results.rows.length; i++) {
                     
-                    $('#data_ipcentral').text(results.rows.item(i).ip);
-                    s = results.rows.item(i).site;
+    //                 $('#data_ipcentral').text(results.rows.item(i).ip);
+    //                 s = results.rows.item(i).site;
+    //                 s = s.substring(0, s.indexOf('/'));
+    //                 $('#data_site').text(s);
+    //             }
+    //         });
+    //     });
+
+    // } catch (e) {
+    //     console.log("Error verificSignOut " + e + ".");
+    // }   
+
+    $('#data_ipcentral').text(getIp_Parameter());
+    var s = "";
+    s = getSite_Parameter();
                     s = s.substring(0, s.indexOf('/'));
                     $('#data_site').text(s);
-                }
-            });
-        });
-
-    } catch (e) {
-        console.log("Error verificSignOut " + e + ".");
-    }   
+    // $('#data_site').text(getSite_Parameter());
+    // var ip = getIp_Parameter();
+    //                     var port = getPort_Parameter();
+    //                     var site = getSite_Parameter();
 }

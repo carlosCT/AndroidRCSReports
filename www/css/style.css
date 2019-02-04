@@ -534,7 +534,7 @@ input[type="checkbox"]:checked + label:before {
 
 /*Menu */
 #txt_maintitle {
-    width: 155px !important;
+    width: 180px !important;
     display: inline-block;
     padding-left: 40px;
     line-height: 48px;

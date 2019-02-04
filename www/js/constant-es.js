@@ -4,15 +4,15 @@ function MSG_INSERT_ADDRESS_SERVER() {
 }
 
 function MSG_PORT() {
-    $("#lblmsg2").html("Puerto: ");
+    $("#lblmsg2").html("Puerto");
 }
 
 function MSG_ALIAS() {
-    $("#lblmsg3").html("Alias: ");
+    $("#lblmsg3").html("Alias ");
 }
 
 function MSG_SITE() {
-    $("#lblmsg4").html("Sitio: ");
+    $("#lblmsg4").html("Sitio");
 }
 
 function MSG_RETURN() {
@@ -27,18 +27,20 @@ function MSG_GO_ADD() {
         $("#btnenter").val("Agregar");
     else
         $("#btnenter").val("Add");
+
+    $('.lblmsgNext').text("Siguiente");
 }
 
 function MSG_GO() {
     var lang = navigator.language.split("-");
     var current_lang = (lang[0]);
-    if (current_lang == 'es'){
-        $("#btnenter").val("Ingresar");
-        $("#btnenter").text("Ingresar");
-    }else{
-        $("#btnenter").val("Ok");
-        $("#btnenter").text("Ok");
-    }
+    // if (current_lang == 'es'){
+    //     $("#btnenter").val("Ingresar");
+    //     $("#btnenter").text("Ingresar");
+    // }else{
+    //     $("#btnenter").val("Ok");
+    //     $("#btnenter").text("Ok");
+    // }
 }
 // Errores Index
 function MSG_CONNECTION_FAILURE() {
@@ -64,11 +66,13 @@ function MSG_REMEMBER_PIN() {
 function MSG_BACK_LOGIN() {
     $("#txtback_login").html("Atrás");
 }
+// function BTN_LOGIN() {
+//     $("#btnlogin").val("Entrar");
+//     $("#btnlogin").text("Entrar");
+// }
 function BTN_LOGIN() {
-    $("#btnlogin").val("Entrar");
-    $("#btnlogin").text("Entrar");
+    $(".lblmsgNext").text("Siguiente");
 }
-
 
 
 
