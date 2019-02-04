@@ -50,6 +50,9 @@ $(window).load(function(){
         sliderAutomaticNotice();
         sliderResizeNotice();
         setTimeout(function(){ timeoutSliderNotice(); }, 5000);
+
+        // HT
+        printSettingsValue();
     }else{
         $('#no_connection').modal('show');
         if (current_lang=='es'){
@@ -1831,12 +1834,12 @@ function getDataInUse() {
             transaction.executeSql(query, [], function (transaction, results) {
                 var ip = results.rows.item(0).ip;
                 var alias = results.rows.item(0).alias;
-                console.log("ip: " + ip + " - alias: " + alias);
+                $('.code-alias').text(results.rows.item(0).alias);
                 $("#txtIP").text(ip);
                 $("#txtServer").text(alias);
                 checktaxDefault();
             }, function (transaction, error) {
-                console.log("Error: " + error.code + "<br>Mensage: " + error.message);
+                console.log("Error: " + error.code + "<br>Message: " + error.message);
             });
         });
     } catch (e) {
@@ -1895,5 +1898,23 @@ function validateModalWhite(){
         menu.height($(window).height() - $('header').height());
     } else {
         menu.height($(window).height() - $('header').height() - 40);
+    }
+}
+
+function printSettingsValue() {
+
+    var query = "SELECT " + KEY_IP + "," + KEY_ALIAS + " FROM " + TABLE_URL + " WHERE " + KEY_USE + " = '1'";
+    try {
+        localDB.transaction(function (transaction) {
+            transaction.executeSql(query, [], function (transaction, results) {
+
+                $('.code-alias').text(results.rows.item(0).alias);
+
+            }, function (transaction, error) {
+                console.log("Error: " + error.code + "<br>Message: " + error.message);
+            });
+        });
+    } catch (e) {
+        console.log("Error getAliasIn Use " + e + ".");
     }
 }

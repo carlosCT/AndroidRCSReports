@@ -146,7 +146,7 @@ header button,
 .item button{
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     /*font-size: 17px;*/
-    color: #0000CD;
+    color: #03034b;
     padding-left: 4px;
     font-weight: 300;
     text-overflow: ellipsis !important;
@@ -190,7 +190,7 @@ header button:active{
     background-size: 70px 25px;
     background-repeat: no-repeat;
     border-radius: 15px;
-    border: 1px solid #0000CD;
+    border: 1px solid #03034b;
     padding-right: 7px;
     margin-left: 3px;
 }
@@ -235,16 +235,7 @@ header button:active{
     background-size: 32px;
     background-repeat: no-repeat;
 }
-#btn_right.config{
-    /*background-image: url(../img/iconItems.svg);
-    background-position: center;
-    background-size: 36px;
-    background-repeat: no-repeat;*/
-    background-image: url(../img/iconItems.svg);
-    background-position: center;
-    background-size: 30px;
-    background-repeat: no-repeat;
-}
+
 #btn_right.configuration{
     background-image: url(../img/iconConfig.svg);
     background-position: 4px;
@@ -271,16 +262,19 @@ header button:active{
     margin-left: -5px;    
 }
 .img_logotitle {
-    /*background-image: url(../img/iconReport.png) !important;
-    background-position: 2px 8px !important;
-    background-size: 32px !important;
-    background-repeat: no-repeat !important;*/
     background-image: url(../img/iconIsotype.svg) !important;
     background-position: 0px 0px !important;
     background-size: 28px !important;
     background-repeat: no-repeat !important;
 }
-
+#btn_right button.config{
+    background-image: url(../img/iconItems.svg);
+    background-position: center;
+    background-size: 30px;
+    background-repeat: no-repeat;
+    height: 34px;
+    line-height: 34px;
+}
 .white{
     color: white;
 }
@@ -371,7 +365,7 @@ header button:active{
     color:white;
 }
 .btn-modal,.btn-modal:hover{
-    color: #0000CD;
+    color: #03034b;
     /*font-size: 18px;*/
     font-size: 15px;
 }
@@ -619,10 +613,10 @@ input[type="checkbox"]:checked + label:before {
     margin-top: 10px;
 }
 .highlight_one{
-    background-color: rgba(253, 253, 253, 0.92);
+    background-color: #ffffff;
 }
 .highlight_two{
-    background-color: rgba(241, 241, 241, 0.92); 
+    background-color: #f1f1f1; 
 }
 .list .item:last-of-type,.menu .item:last-of-type{
     border-bottom: 1px solid rgb(200, 199, 204);
@@ -864,7 +858,7 @@ hr {
 }
 .item.selected{    
     color: #fff;
-    background-color: #0000CD;
+    background-color: #03034b;
     -webkit-transition: all 0.12s;
     transition: all 0.12s;
 }
@@ -966,7 +960,7 @@ hr {
     /*font-size: 16px;*/
     font-size: 11px;
     font-style: normal;
-    color: #0000CD;
+    color: #03034b;
 }
 .actual p,.global p,.aditional p{
     /*width: 26.5%;*/
@@ -1103,7 +1097,7 @@ div[class^="detalle-"] span{
     width: 50px;
     height: 50px;
     opacity: 1;
-    color: #0000CD;
+    color: #03034b;
 
     font-size: 14px;
 }
@@ -1364,7 +1358,7 @@ div[class^="detalle-"] span{
 }
 .infoReport1 i{
     width: 13%;
-    color: #0000CD;
+    color: #03034b;
     vertical-align: text-top;
     font-size: 11px;
     padding-left: 5px;
@@ -1413,6 +1407,40 @@ div[class^="detalle-"] span{
     display: block;
     font-weight: bold;
 }
+header span[class^="code-"] {
+    position: absolute;
+    margin: auto;
+    right: 18px;
+    top: 0;
+    bottom: 0;
+    height: 17px;
+}
+.bar-right-center {
+    display: inline-block;
+    height: 34px;
+    min-width: 72px;
+    position: relative;
+}
+.code-alias {
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 17px;
+}
+header span[class^="icon-"] {
+    position: absolute;
+    margin: auto;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 17px;
+    width: 17px;
+    background-size: 14px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.icon-alias {
+    background-image: url(../img/iconDBSmall.svg);
+}
 button.delete{
     position: absolute;
     left: 0;
@@ -1424,6 +1452,13 @@ button.delete{
     background-size: 22px;
     background-repeat: no-repeat;
     background-position: center center;
+}
+.divider{
+    position: relative;
+    top: -10px;
+    padding-left: 0px;
+    padding-right: 4px;
+    opacity: 0.5;    
 }
 .danger, .danger:hover, .danger:active{color: #EF4036;}
 .nostrong, .nostrong:hover, .nostrong:active{font-weight: normal;}
