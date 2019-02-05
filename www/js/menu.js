@@ -41,29 +41,29 @@ $(document).ready(function () {
 
 
 $(window).load(function(){
-    deteclenguage();
-    onInit();
-    if(checkNetConnection()==true){
-        localStorage.RCSReportsAppVersion = 2;
-        updateHideReports();
-        checktaxDefault();
-        verificateSetDate();
-        /*FJ*/
-        sliderAutomaticNotice();
-        sliderResizeNotice();
-        setTimeout(function(){ timeoutSliderNotice(); }, 5000);
+    // deteclenguage();
+    // onInit();
+    // if(checkNetConnection()==true){
+    //     localStorage.RCSReportsAppVersion = 2;
+    //     updateHideReports();
+    //     checktaxDefault();
+    //     verificateSetDate();
+    //     /*FJ*/
+    //     sliderAutomaticNotice();
+    //     sliderResizeNotice();
+    //     setTimeout(function(){ timeoutSliderNotice(); }, 5000);
 
         
-    }else{
-        $('#no_connection').modal('show');
-        if (current_lang=='es'){
-            $('.titleMessage').text('Mensaje');
-            $('.textNoConnection').text('No hay conexión de red');
-            $('.btnok').text('Aceptar');
-        }else{
-           //modal para no conexión
-        }
-    }  
+    // }else{
+    //     $('#no_connection').modal('show');
+    //     if (current_lang=='es'){
+    //         $('.titleMessage').text('Mensaje');
+    //         $('.textNoConnection').text('No hay conexión de red');
+    //         $('.btnok').text('Aceptar');
+    //     }else{
+    //        //modal para no conexión
+    //     }
+    // }  
 
     $('.radio_wrapper').click(function(){
         $('.radio_wrapper').removeClass('checked');
