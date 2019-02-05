@@ -1,0 +1,151 @@
+@import url("style.css");
+
+.form-settings,
+label,
+input{
+	color: white;
+}
+
+.input_effect {
+    margin: 0 15px 5px;
+}
+
+input[type="text"], input[type="password"], input[type="number"], input[type="email"], textarea{
+	width: 100%;
+	font-size: 96%;
+    border: 0px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 7px;
+    padding: 6px 8px;
+}
+
+label {
+    width: 100%;
+    padding: 0px;
+}
+.form-btn label {
+    padding-top: 5px;
+    text-align: center;
+    font-size: 15px !important;
+    line-height: 20px;
+}
+
+.hybrid_container:after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    right: 5px;
+    background-image: url(../img/iconLogoRCS.svg);
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 70px;
+    opacity: 0.6;
+}
+
+header {
+	position: relative;
+}
+
+.btn-round {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: white;
+	color: transparent;
+	-webkit-box-shadow: 0 0px 10px rgba(0, 0, 0, 0.16);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.btn-round:active {
+	background-color: white;
+	color: transparent;
+	-webkit-box-shadow: 0 0px 10px rgba(0, 0, 0, 0);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0);
+}
+
+.indexSection {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 65px;
+    background-color: transparent !important;
+}
+
+.hybrid_container {	
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon-arrow-right {
+	position: absolute;
+	left:0;
+	top: 0;
+	width: 40px;
+	height: 40px;
+	background-image: url('../img/iconArrowRight.png');
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.fadeOut {
+    animation: fadeOut 0.65s ease 1 forwards;
+    -webkit-animation: fadeOut 0.65s ease 1 forwards;
+}
+
+.form-settings {
+    margin: 0 auto;
+    display: block;
+    padding: 15px 0;
+}
+
+.ic-animate {
+    text-align: center;
+    margin: 0 auto;
+    padding: 0px 0 10px;
+}
+
+/* The animation code */
+@keyframes fadeOut {
+    0%   {opacity: 1; transform: scale(1);}
+    75% {opacity: 0.5;transform: scale(0.85);}
+    100% {opacity: 0;transform: translateX(-100px) scale(0.85);}
+}
+
+@-webkit-keyframes fadeOut {
+    0%   {opacity: 1; -webkit-transform: scale(1);}
+    75% {opacity: 0.5;-webkit-transform: scale(0.85);}
+    100% {opacity: 0;-webkit-transform: translateX(-100px) scale(0.85);}
+}
+
+.fadeIn {
+    opacity: 0;
+    animation: fadeIn 0.65s ease 1 forwards;
+    -webkit-animation: fadeIn 0.65s ease 1 forwards;
+}
+
+/* The animation code */
+@keyframes fadeIn {
+    0%   {opacity: 0; transform: scale(0.85);}
+    100% {opacity: 1;transform: scale(1);}
+}
+
+@-webkit-keyframes fadeIn {
+    0%   {opacity: 0; -webkit-transform: scale(0.85);}
+    100% {opacity: 1;-webkit-transform: scale(1);}
+}
+
+.input_effect label {
+    font-size: 94% !important;
+    margin-left: 7px;
+}
+
+.input_effect.focus label {
+	font-size: 98% !important;
+	margin-left: 2px;
+}
+
+.lblmsg1_pu,
+.lblmsg1_pr,
+.lblmsgNext {
+	font-size: 92% !important;	
+}
