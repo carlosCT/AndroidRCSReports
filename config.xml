@@ -3,7 +3,7 @@
     <name>RCS Reports</name>
     <description>RCS Reports</description>
     <author email="devmobile@realcs.com" href="http://retailcs.com/">
-        Retail Custom Solutions
+    Retail Custom Solutions
     </author>
     <content src="data/ios/ip.html" />
     <preference name="AutoHideSplashScreen" value="true" />
