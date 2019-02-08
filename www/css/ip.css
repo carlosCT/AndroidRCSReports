@@ -149,3 +149,19 @@ header {
 .lblmsgNext {
 	font-size: 92% !important;	
 }
+
+@media only screen and (max-width : 320px) {
+    .hybrid_container:after {
+        width: 240px;
+    }
+    .icon-public img{
+        width: 150px;
+    }
+    #txt_maintitle {
+        width: 150px !important;
+    }
+    .indexSection {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}

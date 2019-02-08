@@ -19,3 +19,16 @@
 .fadeIn-8{animation-delay: 0.45s;-webkit-animation-delay: 0.45s;}
 .fadeIn-9{animation-delay: 0.5s;-webkit-animation-delay: 0.5s;}
 .fadeIn-10{animation-delay: 0.55s;-webkit-animation-delay: 0.55s;}
+
+
+@media only screen and (max-width : 320px) {
+    .menu:after {
+        width: 240px;
+    }
+    .icon-login img{
+        width: 150px;
+    }
+    #txt_maintitle {
+        width: 150px !important;
+    }
+}

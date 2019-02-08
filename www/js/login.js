@@ -17,6 +17,13 @@ $(window).load(function(){
 	verific();
     printSettingsValue();
 
+
+    $('input').keypress(function (event) {
+        if(event.which == 13) {
+           $("#btnlogin").click();
+        }
+    });
+
     $("#btnlogin").click(function(){
         /******Borramos la informacion de la tabla Store porque es un nuevo servidor******/
         var queryDelete= "DELETE FROM " +TABLE_STORE;

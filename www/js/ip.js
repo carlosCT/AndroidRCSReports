@@ -128,65 +128,73 @@ $(window).load(function(){
             return false;
         }
     });
+    $('input').keypress(function (event) {
+        if(event.which == 13) {
+            puBtnEnter();
+        }
+    });
 
-    $("#btnenter").click(function () {
-        var ip_1 = $("#ip_1").val();
-        var ip_2 = $("#ip_2").val();
-        var ip_3 = $("#ip_3").val();
-        var ip_4 = $("#ip_4").val();
-        var port = $("#port").val();
-        var alias = $("#aliastext").val();
-        var site = $("#sitetext").val();
+    
+});
 
-        if (ip_1.length > 0 && ip_2.length > 0 && ip_3.length > 0 && ip_4.length > 0) {
-            if (port.length > 0) {
-                if (alias.length > 0) {
-                    if (site.length > 0) {
-                        site = site + "/WCFRCSReports.svc";
-                        //site = site + "/Service1.svc";
-                        var ip = ip_1 + "." + ip_2 + "." + ip_3 + "." + ip_4;
-                        var urlBase = "http://" + ip + ":" + port + "/" + site;
-                        var variablEE = obtenerVariables("variable");
-                        //entra al ejecutar el APP
-                        if (variablEE == -1) {
-                            validIP(ip, port, urlBase, alias, "1", site, variablEE);
-                        } else {
-                            //entra al agregar un servidor
-                            capture_variable(variablEE);
-                            validIP(ip, port, urlBase, alias, "1", site, "1");
-                        }
+
+function puBtnEnter() {
+    var ip_1 = $("#ip_1").val();
+    var ip_2 = $("#ip_2").val();
+    var ip_3 = $("#ip_3").val();
+    var ip_4 = $("#ip_4").val();
+    var port = $("#port").val();
+    var alias = $("#aliastext").val();
+    var site = $("#sitetext").val();
+
+    if (ip_1.length > 0 && ip_2.length > 0 && ip_3.length > 0 && ip_4.length > 0) {
+        if (port.length > 0) {
+            if (alias.length > 0) {
+                if (site.length > 0) {
+                    site = site + "/WCFRCSReports.svc";
+                    //site = site + "/Service1.svc";
+                    var ip = ip_1 + "." + ip_2 + "." + ip_3 + "." + ip_4;
+                    var urlBase = "http://" + ip + ":" + port + "/" + site;
+                    var variablEE = obtenerVariables("variable");
+                    //entra al ejecutar el APP
+                    if (variablEE == -1) {
+                        validIP(ip, port, urlBase, alias, "1", site, variablEE);
                     } else {
-                        if (current_lang == 'es'){
-                            mostrarModalGeneral("Sitio Inválido");
-                        }
-                        else{
-                            mostrarModalGeneral("Invalid site");
-                        }    
+                        //entra al agregar un servidor
+                        capture_variable(variablEE);
+                        validIP(ip, port, urlBase, alias, "1", site, "1");
                     }
                 } else {
                     if (current_lang == 'es'){
-                        mostrarModalGeneral("Alias Inválido");
-
-                    }else{
-                        mostrarModalGeneral("Invalid alias");
+                        mostrarModalGeneral("Sitio Inválido");
                     }
+                    else{
+                        mostrarModalGeneral("Invalid site");
+                    }    
                 }
             } else {
                 if (current_lang == 'es'){
-                    mostrarModalGeneral("Puerto Inválido");
+                    mostrarModalGeneral("Alias Inválido");
+
                 }else{
-                    mostrarModalGeneral("Invalid Port");
+                    mostrarModalGeneral("Invalid alias");
                 }
             }
-        }else{
+        } else {
             if (current_lang == 'es'){
-                mostrarModalGeneral("IP Inválido");
+                mostrarModalGeneral("Puerto Inválido");
             }else{
-                mostrarModalGeneral("Insert IP");
+                mostrarModalGeneral("Invalid Port");
             }
         }
-    });
-});
+    }else{
+        if (current_lang == 'es'){
+            mostrarModalGeneral("IP Inválido");
+        }else{
+            mostrarModalGeneral("Insert IP");
+        }
+    }
+}
 
 
 /************************ funcion valida IP ********************************************/
