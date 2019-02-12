@@ -132,7 +132,8 @@ function isMobileType(){
     }
 
     //console.log(ruta);
-    $(location).attr('href', ruta);
+    // $(location).attr('href', ruta);
+    window.location.href = ruta;
 }
 
 
