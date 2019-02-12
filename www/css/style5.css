@@ -40,7 +40,7 @@
 #lblDateStart,#lblDateEnd,
 .item #lbldateStart,
 .item #lbldateEnd{
-  display: inline-block;
+  /*display: inline-block;*/
 }
 
 .item div {
@@ -129,6 +129,17 @@
   }
 }
 
+.middle_storename{
+  width: 205px !important;
+  display: inline-flex;
+  justify-content: center;
+  transform: translateY(-5px);
+  -webkit-transform: translateY(-5px);
+}
+.nameStore5{
+  white-space: normal !important;
+  line-height: normal !important;
+}
 
 
 

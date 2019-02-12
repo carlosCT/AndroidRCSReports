@@ -69,6 +69,17 @@
   position: relative;
   z-index: 100;
 }
+.middle_storename{
+  width: 205px !important;
+  display: inline-flex;
+  justify-content: center;
+  transform: translateY(-5px);
+  -webkit-transform: translateY(-5px);
+}
+.nameStore{
+  white-space: normal !important;
+  line-height: normal !important;
+}
 
 
 
