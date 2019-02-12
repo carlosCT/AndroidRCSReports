@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget android-versionCode="302501" id="com.realcs.report" version="3.25.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.realcs.report" android-versionCode="302501" version="3.25.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<!--<widget id="com.retailcustomsolutions.reports" ios-CFBundleVersion="3.3.5" version="3.3.5" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">-->
     <name>RCS Reports</name>
     <description>RCS Reports</description>
     <author email="devmobile@realcs.com" href="http://retailcs.com/">
