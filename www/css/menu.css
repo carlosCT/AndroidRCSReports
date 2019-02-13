@@ -1,5 +1,11 @@
 @import url("style.css");
 
+a.href_link,
+a.href_link:hover,
+a.href_link:focus{
+    text-decoration: none;
+}
+
 /* The animation code */
 @keyframes fadeIn {
     0%   {opacity: 0; transform: scale(0.65);}
