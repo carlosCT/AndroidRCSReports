@@ -1,9 +1,12 @@
 @import url("style.css");
 
 a.href_link,
-a.href_link:hover,
-a.href_link:focus{
-    text-decoration: none;
+a.href_link:focus,
+a.href_link:active,
+a span,
+a span:focus,
+a span:active{
+    text-decoration: none !important;
 }
 
 /* The animation code */
