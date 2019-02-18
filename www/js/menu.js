@@ -52,8 +52,6 @@ $(window).load(function(){
     //     sliderAutomaticNotice();
     //     sliderResizeNotice();
     //     setTimeout(function(){ timeoutSliderNotice(); }, 5000);
-
-        
     // }else{
     //     $('#no_connection').modal('show');
     //     if (current_lang=='es'){
