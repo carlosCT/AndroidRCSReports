@@ -133,7 +133,12 @@ $(window).load(function(){
             puBtnEnter();
         }
     });
-
+    $('input').focusin(function (event) {
+        $('.footer-tools').fadeOut();
+    });
+    $('input').focusout(function (event) {
+        $('.footer-tools').fadeIn();
+    });
     
 });
 

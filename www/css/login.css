@@ -219,6 +219,37 @@ header {
     line-height: 17px;
 }
 
+
+@media only screen and (max-width : 384px) {
+    .form-group {
+        margin-bottom: 15px;
+    }
+    .input_effect label{
+        position: absolute;
+    }
+    .form-settings {
+        padding: 10px 0;
+    }
+    .hybrid_container:after {
+        width: 250px;
+    }
+    .icon-login img{
+        width: 160px;
+    }
+    #txt_maintitle {
+        width: 160px !important;
+    }
+    .loginsection {
+        padding-bottom: 10px;
+    }
+    .group-icon {
+        margin: 5px 0px 5px 40px;
+    }
+    label#lbllmsg1 {
+        padding: 5px 0 10px;
+    }
+}
+
 @media only screen and (max-width : 320px) {
     .hybrid_container:after {
         width: 240px;
@@ -229,8 +260,7 @@ header {
     #txt_maintitle {
         width: 150px !important;
     }
-    .indexSection {
-        padding-top: 15px;
-        padding-bottom: 15px;
+    .loginsection {
+        padding-bottom: 5px;
     }
 }

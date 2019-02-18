@@ -158,6 +158,32 @@ header {
 	font-size: 92% !important;	
 }
 
+
+@media only screen and (max-width : 384px) {
+    .form-group {
+        margin-bottom: 15px;
+    }
+    .input_effect label{
+        position: absolute;
+    }
+    .form-settings {
+        padding: 10px 0;
+    }
+    .hybrid_container:after {
+        width: 250px;
+    }
+    .icon-public img{
+        width: 160px;
+    }
+    #txt_maintitle {
+        width: 160px !important;
+    }
+    .indexSection {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+}
+
 @media only screen and (max-width : 320px) {
     .hybrid_container:after {
         width: 240px;
@@ -169,7 +195,7 @@ header {
         width: 150px !important;
     }
     .indexSection {
-        padding-top: 15px;
-        padding-bottom: 15px;
+        padding-top: 5px;
+        padding-bottom: 5px;
     }
 }
