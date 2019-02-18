@@ -311,7 +311,7 @@ function downloadByCompany() {
                             unitPerTx = parseFloat(unitPerTx.replace(",", "."));
 
                             //calculo del margen de contribucion    
-                            if(contributionMarginRatio != undefined){
+                            if(contributionMarginRatio != undefined && contributionMarginRatio != null){
                                 contributionMarginRatio = parseFloat(contributionMarginRatio.replace(",", "."));
                                 percentContributionMarginRatio = contributionMarginRatio * 100;
                                 percentContributionMarginRatio = parseFloat(percentContributionMarginRatio).toFixed(0);
@@ -532,7 +532,6 @@ function  grapihcCompanyDetails(){
 //************** Descargar data por Region, en el array en el indice byRegion:2*********//
 function downloadByRegion() {
     filterStoreShowCombo();
-
     var xurl = "";
     var c_ip = "";
     var c_port = "";
@@ -694,7 +693,7 @@ function downloadByRegion() {
 
 
                             //calculo del margen de contribucion    
-                            if(contributionMarginRatio != undefined){
+                            if(contributionMarginRatio != undefined && contributionMarginRatio != null){
                                 contributionMarginRatio = parseFloat(contributionMarginRatio.replace(",", "."));
                                 percentContributionMarginRatio = contributionMarginRatio * 100;
                                 percentContributionMarginRatio = parseFloat(percentContributionMarginRatio).toFixed(0);
@@ -772,7 +771,7 @@ function downloadByRegion() {
                             percentGlobal =parseFloat(percentGlobal).toFixed(0);
                             conversionRate = parseFloat(conversionRate).toFixed(0);
 
-                            mostrar += "<div class='store waves-effect waves-light' onclick=storeWitdhGraphic2("+cont+",'"+regionCode+"') >";
+                            mostrar += "<div class='store waves-effect waves-light' onclick=downloadStoreByRegion("+cont+",'"+regionCode+"') >";
                             mostrar += "<h1>" + regionName + "</h1>";
 
                             if (actual == 1) {
@@ -1094,7 +1093,7 @@ function downloadByStore(regionCode) {
                             unitPerTx = parseFloat(unitPerTx.replace(",", "."));
 
                             //calculo del margen de contribucion    
-                            if(contributionMarginRatio != undefined){
+                            if(contributionMarginRatio != undefined && contributionMarginRatio != null){
                                 contributionMarginRatio = parseFloat(contributionMarginRatio.replace(",", "."));
                                 percentContributionMarginRatio = contributionMarginRatio * 100;
                                 percentContributionMarginRatio = parseFloat(percentContributionMarginRatio).toFixed(0);
@@ -1361,7 +1360,7 @@ function storeWitdhGraphic(indice,storeno) {
     }
 }
 
-function storeWitdhGraphic2(indice,regionCode) {
+function downloadStoreByRegion(indice,regionCode) {
     var altura = $('#graph_region'+indice).height();
     if (altura > 0) { // esta mostrandose ; se debe ocultar
         $('.region_store').empty();
@@ -1494,6 +1493,8 @@ function storeWitdhGraphic2(indice,regionCode) {
                                 var conversionRate = value.conversionRate;
                                 var avgTicket = value.avgTicket;
                                 var unitPerTx = value.unitPerTx;
+                                var contributionMarginRatio = value.contributionMarginRatio;
+                                var percentContributionMarginRatio = 0.00;
 
                                 goalAmount = parseFloat(goalAmount.replace(",", ".")).toFixed(0);
                                 goalAmountGlobal = parseFloat(goalAmountGlobal.replace(",", ".")).toFixed(0);
@@ -1503,9 +1504,19 @@ function storeWitdhGraphic2(indice,regionCode) {
                                 avgTicket = parseFloat(avgTicket.replace(",", "."));
                                 unitPerTx = parseFloat(unitPerTx.replace(",", "."));
 
+                                //calculo del margen de contribucion    
+                                if(contributionMarginRatio != undefined && contributionMarginRatio != null){
+                                    contributionMarginRatio = parseFloat(contributionMarginRatio.replace(",", "."));
+                                    percentContributionMarginRatio = contributionMarginRatio * 100;
+                                    percentContributionMarginRatio = parseFloat(percentContributionMarginRatio).toFixed(0);
+                                }else{
+                                    percentContributionMarginRatio = '-';
+                                }
+
                                 var color = "";
                                 var colorGlobal = "";
                                 var colorConvRate = "blue";
+                                var colorCMR = "cmrcolor";
 
                                 //calculo de percent
                                 if (payTotal > 0 && goalAmount == 0.00) {
@@ -1626,6 +1637,13 @@ function storeWitdhGraphic2(indice,regionCode) {
                                 mostrar += "<p>" + parseFloat(avgTicket).toFixed(1).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
                                 mostrar += "<i>" + lblUnitPerTx + "</i>";
                                 mostrar += "<p>" + parseFloat(unitPerTx).toFixed(1).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "</p>";
+
+                                 if(percentContributionMarginRatio == '-'){
+                                    mostrar += "<span class='" + colorCMR + "'>" + percentContributionMarginRatio + " </span>";
+                                }else{
+                                    mostrar += "<span class='" + colorCMR + "'>" + percentContributionMarginRatio + " %</span>";
+                                }   
+
                                 mostrar += "</div>";
 
                                 mostrar += "</div>";
