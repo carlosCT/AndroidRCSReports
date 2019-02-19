@@ -536,6 +536,8 @@ input[type="checkbox"]:checked + label:before {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat; 
+    overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch;
 }
 .items{
     overflow: auto;
@@ -2071,6 +2073,8 @@ thead {
 .table-body
 {
     overflow: auto;
+    overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch;
 }
 
 .header-cell
