@@ -1,6 +1,7 @@
 /*************INDEX**********/
 function MSG_INSERT_ADDRESS_SERVER() {
-    $("#lblmsg1").html("Ingrese la dirección IP del Servidor");
+    $("#lblmsg1").html("Ingrese la dirección IP");
+    $("#lblmsg1Domain").html("Ingrese el Dominio");
 }
 
 function MSG_PORT() {
@@ -57,6 +58,10 @@ function MSG_INVALID_IP() {
 
 
 /*************LOGIN*********/
+function MSG_IP_DOMAIN_SITE() {
+    $("#lblIpDomain").html("IP/Dominio");
+    $("#lblSite").html("Sitio");
+}
 function MSG_NUMBER_PIN() {
     $("#lbllmsg1").html("Ingrese su número Pin de empleado");
 }
@@ -155,7 +160,7 @@ function MSG_LBL_CHANGE_ALIAS_CONFIRM_SI() {
 function MSG_LBL_CHANGE_ALIAS_SETTINGS(){
     $('#lblToolsTitle').html("Configuraciones"); 
     $('#txtServerT').text('Servidor: ');
-    $('#txtIpT').text('IP: ');
+    $('#txtIpT').text('IP/Dominio: ');
     $('#txtUserT').text('Usuario: ');
 }
 

@@ -969,6 +969,7 @@ function deteclenguage() {
 		MSG_RETURN();
 
 		//Login
+		MSG_IP_DOMAIN_SITE();
 		MSG_NUMBER_PIN();
 		MSG_REMEMBER_PIN();
 		BTN_LOGIN();

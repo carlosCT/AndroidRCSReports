@@ -133,12 +133,50 @@ $(window).load(function(){
             puBtnEnter();
         }
     });
+
+
     $('input').focusin(function (event) {
         $('.footer-tools').fadeOut();
     });
     $('input').focusout(function (event) {
         $('.footer-tools').fadeIn();
     });
+
+    // set width input enter-domain
+    $('.enter-domain').width($('.enter-ip').outerWidth(true));
+
+    $('.control.prev').click(function(){
+        $('.enter-ip').removeClass('move-right');
+        $('.enter-domain').removeClass('move-right');
+        if($('.enter-ip').hasClass('show')){
+            $('.enter-ip').removeClass('show').addClass('move-left');
+            $('.label-ip').removeClass('show');
+            $('.enter-domain').addClass('show').removeClass('move-left');
+            $('.label-domain').addClass('show');
+        }else{
+            $('.enter-domain').removeClass('show').addClass('move-left');
+            $('.label-domain').removeClass('show');
+            $('.enter-ip').addClass('show').removeClass('move-left');;  
+            $('.label-ip').addClass('show');          
+        }
+    });
+
+    $('.control.next').click(function(){
+        $('.enter-ip').removeClass('move-left');
+        $('.enter-domain').removeClass('move-left');
+        if($('.enter-ip').hasClass('show')){
+            $('.enter-ip').removeClass('show').addClass('move-right');
+            $('.label-ip').removeClass('show');
+            $('.enter-domain').addClass('show').removeClass('move-right');;
+            $('.label-domain').addClass('show');
+        }else{
+            $('.enter-domain').removeClass('show').addClass('move-right');
+            $('.label-domain').removeClass('show');
+            $('.enter-ip').addClass('show').removeClass('move-right');;  
+            $('.label-ip').addClass('show');          
+        }
+    });
+
     
 });
 
@@ -148,57 +186,112 @@ function puBtnEnter() {
     var ip_2 = $("#ip_2").val();
     var ip_3 = $("#ip_3").val();
     var ip_4 = $("#ip_4").val();
+
+    var domain_input = $('#domain').val();
+
     var port = $("#port").val();
     var alias = $("#aliastext").val();
     var site = $("#sitetext").val();
 
-    if (ip_1.length > 0 && ip_2.length > 0 && ip_3.length > 0 && ip_4.length > 0) {
-        if (port.length > 0) {
-            if (alias.length > 0) {
-                if (site.length > 0) {
-                    site = site + "/WCFRCSReports.svc";
-                    //site = site + "/Service1.svc";
-                    var ip = ip_1 + "." + ip_2 + "." + ip_3 + "." + ip_4;
-                    var urlBase = "http://" + ip + ":" + port + "/" + site;
-                    var variablEE = obtenerVariables("variable");
-                    //entra al ejecutar el APP
-                    if (variablEE == -1) {
-                        validIP(ip, port, urlBase, alias, "1", site, variablEE);
+    if( $('.enter-ip').hasClass('show') ){
+        if (ip_1.length > 0 && ip_2.length > 0 && ip_3.length > 0 && ip_4.length > 0) {
+            if (port.length > 0) {
+                if (alias.length > 0) {
+                    if (site.length > 0) {
+                        site = site + "/WCFRCSReports.svc";
+                        //site = site + "/Service1.svc";
+                        var ip = ip_1 + "." + ip_2 + "." + ip_3 + "." + ip_4;
+                        var urlBase = "http://" + ip + ":" + port + "/" + site;
+                        var variablEE = obtenerVariables("variable");
+                        //entra al ejecutar el APP
+                        if (variablEE == -1) {
+                            validIP(ip, port, urlBase, alias, "1", site, variablEE);
+                        } else {
+                            //entra al agregar un servidor
+                            capture_variable(variablEE);
+                            validIP(ip, port, urlBase, alias, "1", site, "1");
+                        }
                     } else {
-                        //entra al agregar un servidor
-                        capture_variable(variablEE);
-                        validIP(ip, port, urlBase, alias, "1", site, "1");
+                        if (current_lang == 'es'){
+                            mostrarModalGeneral("Sitio Inválido");
+                        }
+                        else{
+                            mostrarModalGeneral("Invalid site");
+                        }    
                     }
                 } else {
                     if (current_lang == 'es'){
-                        mostrarModalGeneral("Sitio Inválido");
+                        mostrarModalGeneral("Alias Inválido");
+
+                    }else{
+                        mostrarModalGeneral("Invalid alias");
                     }
-                    else{
-                        mostrarModalGeneral("Invalid site");
-                    }    
                 }
             } else {
                 if (current_lang == 'es'){
-                    mostrarModalGeneral("Alias Inválido");
-
+                    mostrarModalGeneral("Puerto Inválido");
                 }else{
-                    mostrarModalGeneral("Invalid alias");
+                    mostrarModalGeneral("Invalid Port");
                 }
             }
-        } else {
+        }else{
             if (current_lang == 'es'){
-                mostrarModalGeneral("Puerto Inválido");
+                mostrarModalGeneral("IP Inválido");
             }else{
-                mostrarModalGeneral("Invalid Port");
+                mostrarModalGeneral("Invalid IP");
             }
         }
     }else{
-        if (current_lang == 'es'){
-            mostrarModalGeneral("IP Inválido");
+        //esta mostrando Dominio
+        if (domain_input.length > 0) {
+            if (port.length > 0) {
+                if (alias.length > 0) {
+                    if (site.length > 0) {
+                        site = site + "/WCFRCSReports.svc";
+                        //site = site + "/Service1.svc";
+                        var urlBase = "http://" + domain_input + ":" + port + "/" + site;
+                        var variablEE = obtenerVariables("variable");
+                        //entra al ejecutar el APP
+                        if (variablEE == -1) {
+                            validIP(domain_input, port, urlBase, alias, "1", site, variablEE);
+                        } else {
+                            //entra al agregar un servidor
+                            capture_variable(variablEE);
+                            validIP(domain_input, port, urlBase, alias, "1", site, "1");
+                        }
+                    } else {
+                        if (current_lang == 'es'){
+                            mostrarModalGeneral("Sitio Inválido");
+                        }
+                        else{
+                            mostrarModalGeneral("Invalid site");
+                        }    
+                    }
+                } else {
+                    if (current_lang == 'es'){
+                        mostrarModalGeneral("Alias Inválido");
+
+                    }else{
+                        mostrarModalGeneral("Invalid alias");
+                    }
+                }
+            } else {
+                if (current_lang == 'es'){
+                    mostrarModalGeneral("Puerto Inválido");
+                }else{
+                    mostrarModalGeneral("Invalid Port");
+                }
+            }
         }else{
-            mostrarModalGeneral("Insert IP");
+            if (current_lang == 'es'){
+                mostrarModalGeneral("Dominio Inválido");
+            }else{
+                mostrarModalGeneral("Invalid Domain");
+            }
         }
     }
+        
+
 }
 
 

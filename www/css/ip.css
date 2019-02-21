@@ -1,5 +1,9 @@
 @import url("style.css");
-
+#ip_1,#ip_2,#ip_3,#ip_4{
+    width: 45px;
+    display: inline-block;
+    text-align: center;
+}
 .form-settings,
 label,
 input{
@@ -159,9 +163,130 @@ header {
 }
 
 
+/*ip domain*/
+.container-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-group{
+    margin-bottom: 5px;
+}
+.form-group.group-inputs{
+    display: inline-block;
+}
+.control,
+.group-input{
+    
+    display: inline-block;
+}
+.group-input{
+    position: relative;
+}
+.label-ip,
+.label-domain,
+.enter-ip,
+.enter-domain{
+    display: none;
+}
+.label-ip.show,
+.label-domain.show,
+.enter-ip.show,
+.enter-domain.show{
+    display: inline-block;
+}
+.group-inputs{
+    margin: 0 25px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 27px;
+    padding: 8px;
+}
+.control{
+    position: relative;
+}
+.control.prev,
+.control.next{
+    width: 34px;
+    height: 22px;
+}
+.icon-prev,
+.icon-next{
+    display: block;
+    padding: 15px;
+    background-size: 22px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.icon-prev{
+    background-image: url(../img/iconPrev.svg);
+}
+.icon-next{
+    background-image: url(../img/iconNext.svg);
+}
+.enter-ip,
+.enter-domain{
+    visibility: visible;
+    transform: translateX(0);
+    transform-origin: center center; 
+}
+.enter-ip{
+    /*min-width: 250px;*/
+}
+.move-left,
+.move-right{
+    display: block;
+    position: absolute;
+    top: 0;    
+}
+.enter-ip.move-left,
+.enter-ip.move-right{
+    min-width: 250px !important;
+}
+.move-left{
+    animation-name: moveLeft;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+/* The animation code */
+@keyframes moveLeft {
+    0%   {transform: translateX(0px); }
+    100% {transform: translateX(-30px); opacity: 0; visibility: hidden;}
+}
+@-webkit-keyframes moveLeft {
+   
+}
+.move-right{
+    animation-name: moveRight;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+/* The animation code */
+@keyframes moveRight {
+    0%   {transform: translateX(0px); }
+    100% {transform: translateX(30px); opacity: 0; visibility: hidden;}
+}
+@-webkit-keyframes moveLeft {
+   
+}
+/* endip domain*/
+
+
 @media only screen and (max-width : 384px) {
+    #ip_1,#ip_2,#ip_3,#ip_4{
+        width: 32px;
+    }
     .form-group {
         margin-bottom: 15px;
+    }
+    .form-group.group-inputs{
+        margin-bottom: 10px;
+    }
+    .form-group.text-center{
+        margin-bottom: 5px;
     }
     .input_effect label{
         position: absolute;
@@ -185,6 +310,9 @@ header {
 }
 
 @media only screen and (max-width : 320px) {
+    #ip_1,#ip_2,#ip_3,#ip_4{
+        width: 30px;
+    }
     .hybrid_container:after {
         width: 240px;
     }

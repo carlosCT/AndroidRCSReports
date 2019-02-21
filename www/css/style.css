@@ -335,11 +335,6 @@ header button:active{
 .ip span{
     vertical-align: bottom;
 }
-#ip_1,#ip_2,#ip_3,#ip_4{
-    width: 50px;
-    display: inline-block;
-    text-align: center;
-}
 .btn{ 
     position: relative;
     z-index: 100;
