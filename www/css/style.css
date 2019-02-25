@@ -267,7 +267,8 @@ header button:active{
     background-size: 28px !important;
     background-repeat: no-repeat !important;
 }
-#btn_right button.config{
+#btn_right .config,
+.config{
     background-image: url(../img/iconItems.svg);
     background-position: center;
     background-size: 30px;
