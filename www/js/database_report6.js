@@ -34,7 +34,7 @@ function graphicReport6(option) {
             ip = results.rows.item(0).ip;
             port = results.rows.item(0).port;
             site = results.rows.item(0).site;
-            xurl = "http://" + ip + ":" + port + "/" + site + "/ReportAdvancedByStore/POST";
+            xurl = localStorage.RCSReporst_Protocol + ip + ":" + port + "/" + site + "/ReportAdvancedByStore/POST";
 
             var query2 = "SELECT * FROM " + TABLE_STORE + " WHERE UsedStore= '1'";
             var StoreNoT ="";
@@ -147,7 +147,7 @@ function downloadStore6(){
             port = results.rows.item(0).port;
             alias = results.rows.item(0).alias;
             site = results.rows.item(0).site;
-            xurl = "http://" + ip + ":" + port + "/" + site + "/ReportStore/POST";
+            xurl = localStorage.RCSReporst_Protocol + ip + ":" + port + "/" + site + "/ReportStore/POST";
             var employeeCode=localStorage.RCSReportsEmployeeCode;
             var array = {EmployeeCode: employeeCode};
 

@@ -162,6 +162,36 @@ header {
 	font-size: 92% !important;	
 }
 
+/*secure SSL*/
+.checkbox_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 24px;
+}
+.switch-label,
+.switch-container {
+  max-width: 200px;
+  position: relative;
+}
+.input-checkbox{
+    position: relative;
+}
+.chk_effect{
+    margin: 0 15px 5px;
+}
+.switch-label label{
+    display: inline-block;
+    width: auto;
+    font-size: 85%;
+}
+.small_item .input-checkbox{
+    top: 3px;
+    margin-left: 10px;
+}
+.small_item .switch{
+    top: 5px;
+}
 
 /*ip domain*/
 .container-form{
@@ -278,6 +308,18 @@ header {
 @media only screen and (max-width : 384px) {
     #ip_1,#ip_2,#ip_3,#ip_4{
         width: 32px;
+        padding-left: 2px;
+        padding-right: 2px;
+        font-size: 90%;
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+    #domain{
+        padding-left: 2px;
+        padding-right: 2px;
+        font-size: 90%;
+        padding-top: 7px;
+        padding-bottom: 7px;
     }
     .form-group {
         margin-bottom: 15px;
@@ -312,12 +354,17 @@ header {
 @media only screen and (max-width : 320px) {
     #ip_1,#ip_2,#ip_3,#ip_4{
         width: 30px;
+        padding-left: 2px;
+        padding-right: 2px;
+        font-size: 90%;
+        padding-top: 7px;
+        padding-bottom: 7px;
     }
     .hybrid_container:after {
         width: 240px;
     }
     .icon-public img{
-        width: 150px;
+        width: 130px;
     }
     #txt_maintitle {
         width: 150px !important;

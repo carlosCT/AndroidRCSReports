@@ -366,7 +366,7 @@ function getRemenberPinTableUrl() {
 				var c_site = results.rows.item(0).site;
 				var c_pin= results.rows.item(0).pin;
 				
-				var yurl = 'http://' + c_ip + ':' + c_port + '/' + c_site + '/login/session/post';
+				var yurl = localStorage.RCSReporst_Protocol + c_ip + ':' + c_port + '/' + c_site + '/login/session/post';
 				var array = {Pin: c_pin};
 				$.ajax({
 					url: yurl,

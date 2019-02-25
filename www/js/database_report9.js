@@ -45,7 +45,7 @@ function GetDatesDatabase(){
                 c_ip = results.rows.item(0).ip;
                 c_port = results.rows.item(0).port;
                 c_site = results.rows.item(0).site;
-                xurl = 'http://' + c_ip + ':' + c_port + '/' + c_site + '/reportGetDates/GET';
+                xurl = localStorage.RCSReporst_Protocol + c_ip + ':' + c_port + '/' + c_site + '/reportGetDates/GET';
                 $.ajax({
                     url: xurl,
                     type: 'GET',
@@ -110,7 +110,7 @@ function CompanyProductivity() {
             c_port = results.rows.item(0).port;
             c_site = results.rows.item(0).site;
 
-            xurl = 'http://' + c_ip + ':' + c_port + '/' + c_site + '/Report9CompanyPerformance/POST';
+            xurl = localStorage.RCSReporst_Protocol + c_ip + ':' + c_port + '/' + c_site + '/Report9CompanyPerformance/POST';
 
             var option =RCSReports_report9_valuesRangeDates;
             var day=todayreport();

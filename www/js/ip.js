@@ -177,8 +177,40 @@ $(window).load(function(){
         }
     });
 
+
+    var protocol_insecurite= "http://";
+    var protocol_securite= "https://";
+    
+    checkProtocol(protocol_insecurite);
+
+    $('.check_protocol').click(function(){
+
+        if($('.check_protocol').hasClass('checked')){
+
+            checkProtocol(protocol_insecurite);
+            $('.check_protocol').removeClass('checked');   
+
+        }else{
+
+            checkProtocol(protocol_securite);
+            $('.check_protocol').addClass('checked');
+
+        }
+
+    });
     
 });
+
+
+function checkProtocol(protocol) {
+    
+    if (localStorage.RCSReporst_Protocol == '' && localStorage.RCSReporst_Protocol == undefined) {
+        localStorage.RCSReporst_Protocol = "http://";
+    }
+
+    localStorage.RCSReporst_Protocol = protocol;
+
+}
 
 
 function puBtnEnter() {
@@ -201,7 +233,7 @@ function puBtnEnter() {
                         site = site + "/WCFRCSReports.svc";
                         //site = site + "/Service1.svc";
                         var ip = ip_1 + "." + ip_2 + "." + ip_3 + "." + ip_4;
-                        var urlBase = "http://" + ip + ":" + port + "/" + site;
+                        var urlBase = localStorage.RCSReporst_Protocol + ip + ":" + port + "/" + site;
                         var variablEE = obtenerVariables("variable");
                         //entra al ejecutar el APP
                         if (variablEE == -1) {
@@ -249,7 +281,7 @@ function puBtnEnter() {
                     if (site.length > 0) {
                         site = site + "/WCFRCSReports.svc";
                         //site = site + "/Service1.svc";
-                        var urlBase = "http://" + domain_input + ":" + port + "/" + site;
+                        var urlBase = localStorage.RCSReporst_Protocol + domain_input + ":" + port + "/" + site;
                         var variablEE = obtenerVariables("variable");
                         //entra al ejecutar el APP
                         if (variablEE == -1) {

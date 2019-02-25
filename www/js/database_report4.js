@@ -37,7 +37,7 @@ function downloadAllStore2() {
             alias = results.rows.item(0).alias;
             site = results.rows.item(0).site;
 
-            xurl = "http://" + ip + ":" + port + "/" + site + "/ReportStore/POST";
+            xurl = localStorage.RCSReporst_Protocol + ip + ":" + port + "/" + site + "/ReportStore/POST";
             var employeeCode=localStorage.RCSReportsEmployeeCode;
             var array = {EmployeeCode: employeeCode};
 
@@ -219,7 +219,7 @@ function downloadReportGraphic() {
             alias = results.rows.item(0).alias;
             site = results.rows.item(0).site;
 
-            xurl = "http://" + ip + ":" + port + "/" + site + "/ReportGraphicStore/POST";
+            xurl = localStorage.RCSReporst_Protocol + ip + ":" + port + "/" + site + "/ReportGraphicStore/POST";
 
 
             /*****OBTENEMOS EL VALOR DE STORENO DE LA BASE DE DATOS PARA LA TIENDA USADA***/

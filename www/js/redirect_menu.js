@@ -20,7 +20,7 @@ function goToVerificateAppVersion() {
                         var query3 = "SELECT * FROM " + TABLE_REPORTS;
                         localDB.transaction(function (transaction) {
                             transaction.executeSql(query3, [], function (transaction, results) {
-                                var yurl = 'http://' + c_ip + ':' + c_port + '/' + c_site + '/login/session/post';
+                                var yurl = localStorage.RCSReporst_Protocol + c_ip + ':' + c_port + '/' + c_site + '/login/session/post';
                                 var array = {Pin: pin};
 
                                 $.ajax({

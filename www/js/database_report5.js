@@ -40,7 +40,7 @@ function downloadAllstore52() {
             port = results.rows.item(0).port;
             alias = results.rows.item(0).alias;
             site = results.rows.item(0).site;
-            xurl = "http://" + ip + ":" + port + "/" + site + "/ReportStore/POST";
+            xurl = localStorage.RCSReporst_Protocol + ip + ":" + port + "/" + site + "/ReportStore/POST";
             var employeeCode=localStorage.RCSReportsEmployeeCode;
             var array = {EmployeeCode: employeeCode};
 
@@ -283,7 +283,7 @@ function downloadAllcustomers() {
             port = results.rows.item(0).port;
             alias = results.rows.item(0).alias;
             site = results.rows.item(0).site;
-            xurl = "http://" + ip + ":" + port + "/" + site + "/ReportScopeClerk/POST";
+            xurl = localStorage.RCSReporst_Protocol + ip + ":" + port + "/" + site + "/ReportScopeClerk/POST";
             var query = "SELECT * FROM " + TABLE_CUSTOM_DATE_RANGE;
             localDB.transaction(function (tx) {
                 tx.executeSql(query, [], function (tx, results) {

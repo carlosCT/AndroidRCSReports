@@ -101,7 +101,7 @@ function GetDatesDatabase(){
                 c_ip = results.rows.item(0).ip;
                 c_port = results.rows.item(0).port;
                 c_site = results.rows.item(0).site;
-                xurl = 'http://' + c_ip + ':' + c_port + '/' + c_site + '/reportGetDates/GET';
+                xurl = localStorage.RCSReporst_Protocol + c_ip + ':' + c_port + '/' + c_site + '/reportGetDates/GET';
                 $.ajax({
                     url: xurl,
                     type: 'GET',
@@ -180,7 +180,7 @@ function downloadByCompany() {
             c_port = results.rows.item(0).port;
             c_site = results.rows.item(0).site;
             c_alias = results.rows.item(0).alias;
-            xurl = 'http://' + c_ip + ':' + c_port + '/' + c_site + '/reportCompany/POST';
+            xurl = localStorage.RCSReporst_Protocol + c_ip + ':' + c_port + '/' + c_site + '/reportCompany/POST';
             
             var option = localStorage.RCSReports_valuesRangeDates;
             var day=todayreport();
@@ -469,7 +469,7 @@ function  grapihcCompanyDetails(){
                 var c_ip = results.rows.item(0).ip;
                 var c_port = results.rows.item(0).port;
                 var c_site = results.rows.item(0).site;
-                var xurl = 'http://' + c_ip + ':' + c_port + '/' + c_site + '/reportCompanyDetails/POST';
+                var xurl = localStorage.RCSReporst_Protocol + c_ip + ':' + c_port + '/' + c_site + '/reportCompanyDetails/POST';
                 var option = localStorage.RCSReports_valuesRangeDates;
                 var tax=localStorage.getItem("check_tax");
                 var day=todayreport();
@@ -558,7 +558,7 @@ function downloadByRegion() {
             c_port = results.rows.item(0).port;
             c_site = results.rows.item(0).site;
 
-            xurl = 'http://' + c_ip + ':' + c_port + '/' + c_site + '/reportByRegion/POST';
+            xurl = localStorage.RCSReporst_Protocol + c_ip + ':' + c_port + '/' + c_site + '/reportByRegion/POST';
 
             var option = localStorage.RCSReports_valuesRangeDates;
             var day=todayreport();
@@ -861,7 +861,7 @@ function loadComboRegions() {
             c_ip = results.rows.item(0).ip;
             c_port = results.rows.item(0).port;
             c_site = results.rows.item(0).site;
-            yurl = 'http://' + c_ip + ':' + c_port + '/' + c_site + '/region/';
+            yurl = localStorage.RCSReporst_Protocol + c_ip + ':' + c_port + '/' + c_site + '/region/';
 
             $.ajax({
                 url: yurl,
@@ -964,7 +964,7 @@ function downloadByStore(regionCode) {
             c_ip = results.rows.item(0).ip;
             c_port = results.rows.item(0).port;
             c_site = results.rows.item(0).site;
-            xurl = 'http://' + c_ip + ':' + c_port + '/' + c_site + '/reportgoal/post';
+            xurl = localStorage.RCSReporst_Protocol + c_ip + ':' + c_port + '/' + c_site + '/reportgoal/post';
 
 
             /*********************/
@@ -1291,7 +1291,7 @@ function storeWitdhGraphic(indice,storeno) {
                 var c_ip = results.rows.item(0).ip;
                 var c_port = results.rows.item(0).port;
                 var c_site = results.rows.item(0).site;
-                var xurl = 'http://' + c_ip + ':' + c_port + '/' + c_site + '/reportgoalDetails/post';
+                var xurl = localStorage.RCSReporst_Protocol + c_ip + ':' + c_port + '/' + c_site + '/reportgoalDetails/post';
                 var option = $(".select-dateP .init").attr("data-value");
                 var impuesto=localStorage.getItem("check_tax");
                 var day=todayreport();
@@ -1381,7 +1381,7 @@ function downloadStoreByRegion(indice,regionCode) {
                 var actual = localStorage.check_actual_report1;
                 var global = localStorage.check_global_report1;
                 
-                var xurl = 'http://' + c_ip + ':' + c_port + '/' + c_site + '/reportgoal/post';
+                var xurl = localStorage.RCSReporst_Protocol + c_ip + ':' + c_port + '/' + c_site + '/reportgoal/post';
 
                 /*********************/
                 $.ajax({

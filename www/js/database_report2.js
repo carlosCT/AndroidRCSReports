@@ -443,7 +443,7 @@ function downloadStoreClasification(_valueSelected) {
             port = results.rows.item(0).port;
             alias = results.rows.item(0).alias;
             site = results.rows.item(0).site;
-            xurl = "http://" + ip + ":" + port + "/" + site + "/ReportClasification/POST";
+            xurl = localStorage.RCSReporst_Protocol + ip + ":" + port + "/" + site + "/ReportClasification/POST";
             /*******************   Verificamos si    ***************************/
             localDB.transaction(function (tx) {
                 tx.executeSql('SELECT * FROM ' + TABLE_CLASIFICATION, [], function (tx, results) {

@@ -413,7 +413,7 @@ function updateHideReports() {
                         var query3 = "SELECT * FROM " + TABLE_REPORTS;
                         localDB.transaction(function (transaction) {
                             transaction.executeSql(query3, [], function (transaction, results) {
-                                var yurl = 'http://' + c_ip + ':' + c_port + '/' + c_site + '/login/session/post';
+                                var yurl = localStorage.RCSReporst_Protocol + c_ip + ':' + c_port + '/' + c_site + '/login/session/post';
                                 var array = {Pin: pin};
 
                                 $.ajax({
@@ -1213,7 +1213,7 @@ function downloadStore4() {
             alias = results.rows.item(0).alias;
             site = results.rows.item(0).site;
 
-            xurl = "http://" + ip + ":" + port + "/" + site + "/ReportStore/POST";
+            xurl = localStorage.RCSReporst_Protocol + ip + ":" + port + "/" + site + "/ReportStore/POST";
             
             var employeeCode=localStorage.RCSReportsEmployeeCode;
             var query1 = "SELECT * FROM " + TABLE_STORE + " WHERE UsedStore= '1'";
@@ -1284,7 +1284,7 @@ function downloadAllStore4() {
             port = results.rows.item(0).port;
             alias = results.rows.item(0).alias;
             site = results.rows.item(0).site;
-            xurl = "http://" + ip + ":" + port + "/" + site + "/ReportStore/POST";
+            xurl = localStorage.RCSReporst_Protocol + ip + ":" + port + "/" + site + "/ReportStore/POST";
             var employeeCode=localStorage.RCSReportsEmployeeCode;
             var array = {EmployeeCode: employeeCode};
             $.ajax({
@@ -1383,7 +1383,7 @@ function downloadStore5() {
             port = results.rows.item(0).port;
             alias = results.rows.item(0).alias;
             site = results.rows.item(0).site;
-            xurl = "http://" + ip + ":" + port + "/" + site + "/ReportStore/POST";
+            xurl = localStorage.RCSReporst_Protocol + ip + ":" + port + "/" + site + "/ReportStore/POST";
             var employeeCode=localStorage.RCSReportsEmployeeCode;
             var array = {EmployeeCode: employeeCode};
             var query1 = "SELECT * FROM " + TABLE_STORE + " WHERE UsedStore= '1'";
@@ -1459,7 +1459,7 @@ function downloadAllStore5() {
             port = results.rows.item(0).port;
             alias = results.rows.item(0).alias;
             site = results.rows.item(0).site;
-            xurl = "http://" + ip + ":" + port + "/" + site + "/ReportStore/POST";
+            xurl = localStorage.RCSReporst_Protocol + ip + ":" + port + "/" + site + "/ReportStore/POST";
             var employeeCode=localStorage.RCSReportsEmployeeCode;
             var array = {EmployeeCode: employeeCode};
             $.ajax({
@@ -1552,7 +1552,7 @@ function downloadStore6() {
             port = results.rows.item(0).port;
             alias = results.rows.item(0).alias;
             site = results.rows.item(0).site;
-            xurl = "http://" + ip + ":" + port + "/" + site + "/ReportStore/POST";
+            xurl = localStorage.RCSReporst_Protocol + ip + ":" + port + "/" + site + "/ReportStore/POST";
             var employeeCode=localStorage.RCSReportsEmployeeCode;
             var array = {EmployeeCode: employeeCode};
 
@@ -1628,7 +1628,7 @@ function downloadAllStore6() {
             port = results.rows.item(0).port;
             alias = results.rows.item(0).alias;
             site = results.rows.item(0).site;
-            xurl = "http://" + ip + ":" + port + "/" + site + "/ReportStore/POST";
+            xurl = localStorage.RCSReporst_Protocol + ip + ":" + port + "/" + site + "/ReportStore/POST";
             var employeeCode=localStorage.RCSReportsEmployeeCode;
             var array = {EmployeeCode: employeeCode};
 
@@ -1714,15 +1714,35 @@ function updateStateURL(id) {
     }
 
     var query2 = "UPDATE " + TABLE_URL + " SET " + KEY_USE + " = '1' WHERE " + KEY_ID + " = ? ";
+
     console.log("query2 " + query2);
+  
+
     try {
         localDB.transaction(function (transaction) {
             transaction.executeSql(query2, [id], function (transaction, results) {
                 if (!results.rowsAffected) {
                     console.log("Error updateState");
+
                 } else {
                     
                     console.log("Update realizado:" + results.rowsAffected);
+
+                    try {
+                        var query1 = "SELECT * FROM " + TABLE_URL + " WHERE  " + KEY_USE + " = '1'";
+                        localDB.transaction(function (transaction) {
+                            transaction.executeSql(query1, [], function (tx, results) {
+
+                                var c_protocol = results.rows.item(0).urlBase;
+                                var arg_protocol = c_protocol.split("/");
+                                var url_protocol = arg_protocol[0] + "//";
+                                //chequear sincronia
+                                localStorage.RCSReporst_Protocol = url_protocol;
+                            });
+                        });
+                    } catch (e) {
+                        console.log("Error get localStorage.RCSReporst_Protocol " + e + ".");
+                    }
                     
                 }
             }, errorHandler);

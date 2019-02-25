@@ -27,7 +27,7 @@ function combo() {
             port = results.rows.item(0).port;
             alias = results.rows.item(0).alias;
             site = results.rows.item(0).site;
-            var xurl = "http://" + ip + ":" + port + "/" + site + "/Region/";
+            var xurl = localStorage.RCSReporst_Protocol + ip + ":" + port + "/" + site + "/Region/";
             $.ajax({
                 type: 'get',
                 timeout: 15000,
@@ -106,7 +106,7 @@ function refresh_report3(regionCode) {
             port = results.rows.item(0).port;
             alias = results.rows.item(0).alias;
             site = results.rows.item(0).site;
-            xurl = "http://" + ip + ":" + port + "/" + site + "/ReportClasification/POST";
+            xurl = localStorage.RCSReporst_Protocol + ip + ":" + port + "/" + site + "/ReportClasification/POST";
             localDB.transaction(function (tx) {
                 tx.executeSql('SELECT * FROM CRANGEDATE', [], function (tx, results) {
                     dateStart = results.rows.item(0).dateStart;
@@ -216,7 +216,7 @@ function existDataDate_report3() {
             port = results.rows.item(0).port;
             alias = results.rows.item(0).alias;
             site = results.rows.item(0).site;
-            xurl = "http://" + ip + ":" + port + "/" + site + "/ReportClasification/POST";
+            xurl = localStorage.RCSReporst_Protocol + ip + ":" + port + "/" + site + "/ReportClasification/POST";
             var query = "SELECT COUNT(*) AS countRDate FROM " + TABLE_CUSTOM_DATE_RANGE;
             try {
                 localDB.transaction(function (transaction) {

@@ -81,7 +81,7 @@ function GetDatesDatabase(){
                 c_ip = results.rows.item(0).ip;
                 c_port = results.rows.item(0).port;
                 c_site = results.rows.item(0).site;
-                xurl = 'http://' + c_ip + ':' + c_port + '/' + c_site + '/reportGetDates/GET';
+                xurl = localStorage.RCSReporst_Protocol + c_ip + ':' + c_port + '/' + c_site + '/reportGetDates/GET';
                 $.ajax({
                     url: xurl,
                     type: 'GET',
@@ -160,7 +160,7 @@ function downloadByCompany() {
             c_port = results.rows.item(0).port;
             c_site = results.rows.item(0).site;
             c_alias = results.rows.item(0).alias;
-            xurl = 'http://' + c_ip + ':' + c_port + '/' + c_site + '/report7Company/POST';
+            xurl = localStorage.RCSReporst_Protocol + c_ip + ':' + c_port + '/' + c_site + '/report7Company/POST';
             //******************* captura los datos del report1.html *************************//
             var option =RCSReports_report7_valuesRangeDates;
             var day=todayreport();
@@ -515,7 +515,7 @@ function detailsNewCompStore(indice,typecode,regionCode){
                 c_ip = results.rows.item(0).ip;
                 c_port = results.rows.item(0).port;
                 c_site = results.rows.item(0).site;
-                xurl = 'http://' + c_ip + ':' + c_port + '/' + c_site + '/Report8NewOrCompStore/POST';
+                xurl = localStorage.RCSReporst_Protocol + c_ip + ':' + c_port + '/' + c_site + '/Report8NewOrCompStore/POST';
                 $.ajax({
                     url: xurl,
                     type: 'POST',

@@ -93,7 +93,7 @@ function validData(pin, check) {
         var urlbase = getUrlBase_Parameter();
         var alias = getAlias_Parameter();
         var activo = getActivo_Parameter();
-        var yurl = 'http://' + ip + ':' + port + '/' + site + '/login/session/post';
+        var yurl = localStorage.RCSReporst_Protocol + ip + ':' + port + '/' + site + '/login/session/post';
         var array = {Pin: pin};
         $.ajax({
             url: yurl,
@@ -170,7 +170,7 @@ function validData(pin, check) {
                         var urlbase = getUrlBase_Parameter();
                         var alias = getAlias_Parameter();
                         var activo = getActivo_Parameter();
-                        var yurl = 'http://' + ip + ':' + port + '/' + site + '/login/session/post';
+                        var yurl = localStorage.RCSReporst_Protocol + ip + ':' + port + '/' + site + '/login/session/post';
                         var array = {Pin: pin};
                         $.ajax({
                             url: yurl,
@@ -237,7 +237,7 @@ function validData(pin, check) {
                                 c_ip = results.rows.item(0).ip;
                                 c_port = results.rows.item(0).port;
                                 c_site = results.rows.item(0).site;
-                                var yurl = 'http://' + c_ip + ':' + c_port + '/' + c_site + '/login/session/post';
+                                var yurl = localStorage.RCSReporst_Protocol + c_ip + ':' + c_port + '/' + c_site + '/login/session/post';
                                 var array = {Pin: pin};
                                 $.ajax({
                                     url: yurl,
