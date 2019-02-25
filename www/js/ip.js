@@ -340,7 +340,7 @@ function puBtnEnter() {
 /*esta funcion es muy importante para no tener problemas de no poder ingresar a datos de servidores*/
 //entra al ejecutar el APP
 function validIP(ip, port, _url, alias, use, site, variable) {
-    var xurl = 'http://' + ip + ':' + port + '/' + site + '/Country/';
+    var xurl = localStorage.RCSReporst_Protocol + ip + ':' + port + '/' + site + '/Country/';
     $.ajax({
         type: 'GET',
         timeout: 15000,
