@@ -2,6 +2,7 @@
 function MSG_INSERT_ADDRESS_SERVER() {
     $("#lblmsg1").html("Ingrese la dirección IP");
     $("#lblmsg1Domain").html("Ingrese el Dominio");
+    $("#lblUseSLL").html("Usar conexión segura SSL")
 }
 
 function MSG_PORT() {

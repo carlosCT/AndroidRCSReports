@@ -134,13 +134,22 @@ $(window).load(function(){
         }
     });
 
-
     $('input').focusin(function (event) {
         $('.footer-tools').fadeOut();
     });
     $('input').focusout(function (event) {
         $('.footer-tools').fadeIn();
     });
+
+    if($(window).width() < 768){
+        $('#sitetext').focusin( function (event){
+            $('.icon-public').slideUp();
+        });
+        $('#sitetext').focusout( function (event){
+            $('.icon-public').slideDown();
+        });
+    }
+        
 
     // set width input enter-domain
     $('.enter-domain').width($('.enter-ip').outerWidth(true));
@@ -180,7 +189,7 @@ $(window).load(function(){
 
     var protocol_insecurite= "http://";
     var protocol_securite= "https://";
-    
+
     checkProtocol(protocol_insecurite);
 
     $('.check_protocol').click(function(){
