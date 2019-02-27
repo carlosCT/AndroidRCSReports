@@ -4,6 +4,7 @@
   width: 64px;
   height: 43px;
   display: inline-flex;
+  justify-content:center;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   opacity: 0;
@@ -135,6 +136,8 @@
   justify-content: center;
   transform: translateY(-5px);
   -webkit-transform: translateY(-5px);
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .nameStore5{
   white-space: normal !important;
