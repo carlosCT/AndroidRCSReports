@@ -1,7 +1,7 @@
 .dateStartSection,
 .dateEndSection{
   position: relative;
-  width: 75px;
+  width: 65px;
   height: 43px;
   display: inline-flex;
   justify-content:center;
